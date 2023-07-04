@@ -2,7 +2,7 @@
  * @Description: 定制侧边栏
  * @Author: panrui
  * @Date: 2021-05-20 16:43:32
- * @LastEditTime: 2023-07-04 14:09:08
+ * @LastEditTime: 2023-07-04 14:14:30
  * @LastEditors: panrui
  * 不忘初心,不负梦想
 -->
@@ -26,10 +26,10 @@
   - [代码规范](/h5/html)
   - [使用技巧](/h5/skill)
 - [interview](/interview/)
-  - [前端面试](/interview/frontEnd)
+  - [前端面试](/interview/FrontEnd)
 - [javascript](/javascript/)
   - [代码规范](/javascript/airbnb)
-  - [数组](/javascript/array)
+  - [数组](/javascript/Array)
   - [ES6](/javascript/ES6)
   - [事件](/javascript/event)
   - [执行上下文与作用域](/javascript/executionContextScope)
@@ -37,7 +37,7 @@
   - [正则](/javascript/regex)
   - [使用技巧](/javascript/skill)
   - [ts](/javascript/typescript)
-  - [网络请求](/javascript/xMLHttpRequest)
+  - [网络请求](/javascript/XMLHttpRequest)
 - [linux](/linux/)
   - [vim](/linux/vim)
 - [nginx](/nginx/)
@@ -88,15 +88,15 @@
 - [vant](/vant/)
   - [weapp](/vant/weapp)
 - [vue](/vue/)
-  - [V2 使用技巧](/vue/v2/v2skill)
+  - [V2 使用技巧](/vue/v2/V2skill)
   - [pinia](/vue/v3/pinia)
-  - [V3 基础使用](/vue/v3/v3base)
+  - [V3 基础使用](/vue/v3/V3base)
   - [V3 使用技巧](/vue/v3/v3skill)
   - [自定义组件库开发文档](/vue/componentLib)
   - [nuxt](/vue/nuxt)
   - [vue 插件使用](/vue/plug)
-  - [从 Vue2 迁移](/vue/vue2_3)
-  - [Vue3 新特性](/vue/vue3)
+  - [从 Vue2 迁移](/vue/Vue2_3)
+  - [Vue3 新特性](/vue/Vue3)
   - [状态管理器](/vue/vuex)
 - [vxetable](/vxetable/)
 - [web](/web/)
