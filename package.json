@@ -1,0 +1,20 @@
+{
+  "name": "docs",
+  "version": "1.0.0",
+  "description": "初心不负的文档网站",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "docs": "docsify serve docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitee.com:wesweet/docs.git"
+  },
+  "keywords": [
+    "docsify"
+  ],
+  "author": "panrui",
+  "license": "ISC"
+}
