@@ -83,7 +83,7 @@
 ## http://wesweet.gitee.io/ant-design-vue-two/#/
 
 - [x] canvas 圆环渐变色组件 (2023 年 6 月 30 日)
-- [ ] canvas 签名组件
+- [x] canvas 签名组件 (2023 年 7 月 5 日)
 - [ ] echart 地图组件
 
 ## go.panrui.top
