@@ -2,7 +2,7 @@
  * @Description:
  * @Author: panrui
  * @Date: 2023-04-25 08:57:17
- * @LastEditTime: 2023-06-30 13:13:08
+ * @LastEditTime: 2023-07-05 08:38:56
  * @LastEditors: panrui
  * 不忘初心,不负梦想
 -->
@@ -15,8 +15,13 @@
 <canvas id="circleProgress" ref="canvas"></canvas>
 ```
 
+- getContext 获取渲染上下文对象
+- getBoundingClientRect 获取元素的边界框信息，包含元素的大小、位置等信息
+
 ```js
 const canvas = this.$refs.canvas;
+
+// 获取渲染上下文对象
 const ctx = canvas.getContext("2d");
 // 设置canvas css 宽高
 canvas.style.width = "100%";
@@ -24,12 +29,9 @@ canvas.style.height = "100%";
 // 设置canvas 画布宽高
 canvas.width = canvas.offsetWidth;
 canvas.height = canvas.offsetHeight;
-```
 
-## 获取画布上下文
-
-```js
-const ctx = canvas.getContext("2d");
+// 获取元素的边界框信息，包含元素的大小、位置等信息
+const rect = canvas.getBoundingClientRect();
 ```
 
 ## 常用 api
@@ -40,7 +42,7 @@ ctx.translate(x, y); // x,y 坐标原点
 // 旋转角度
 ctx.rotate(angle); // angle 旋转角度
 // 保存画布状态
-ctx.save(); 
+ctx.save();
 // 恢复画布状态
 ctx.restore();
 // 清除画布 x,y,width,height
@@ -96,8 +98,8 @@ ctx.fill();
 ## createLinearGradient 和 createRadialGradient
 
 ```js
-// 线性渐变 x1,y1,x2,y2 
-const linearGradient = ctx.createLinearGradient(x1, y1, x2, y2); // x1,y1 起点坐标 x2,y2 终点坐标 
+// 线性渐变 x1,y1,x2,y2
+const linearGradient = ctx.createLinearGradient(x1, y1, x2, y2); // x1,y1 起点坐标 x2,y2 终点坐标
 // 径向渐变
 const radialGradient = ctx.createRadialGradient(x1, y1, r1, x2, y2, r2); // x1,y1,r1 起点坐标和半径 x2,y2,r2 终点坐标和半径
 ```

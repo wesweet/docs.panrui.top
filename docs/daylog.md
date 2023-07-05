@@ -29,11 +29,13 @@
 - [ ] 数据结构与算法学习
 - [ ] PM2 学习 及配置文件
 - [ ] webpack 学习
-- [ ] vite 学习
+- [ ] vite 学习和配置
 - [ ] canvas 学习
 - [ ] socket 学习
 - [ ] sveltejs 学习
 - [ ] mysql 学习
+- [ ] webpack 学习和配置
+- [ ] uniappApp 调用蓝牙、摄像头、调用位置、播放视频、调用话筒等等功能
 
 ## next.panrui.top
 
