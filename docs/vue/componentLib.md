@@ -70,9 +70,11 @@ if (typeof window !== "undefined" && window.Vue) {
   install(window.Vue);
 }
 
+export { PrCityPicker };
+
 export default {
   install,
-  PrCityPicker,
+  ...components,
 };
 ```
 
