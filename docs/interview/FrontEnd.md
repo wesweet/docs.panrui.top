@@ -2,7 +2,7 @@
  * @Description:
  * @Author: panrui
  * @Date: 2023-04-25 08:57:17
- * @LastEditTime: 2023-05-19 09:14:08
+ * @LastEditTime: 2023-07-07 09:32:37
  * @LastEditors: panrui
  * 不忘初心,不负梦想
 -->
@@ -16,6 +16,26 @@
 > 通过 Object.defineProperty 的 get、set 方法对对象的属性进行劫持，每一个属性拥有自己的消息订阅器 dep，用于存放所有订阅了该属性的观察者对象，watcher 观察者对象再监听到结果后，主动触发回调进行响应
 
 > V2 所有 property 必须在 data 对象上存在才能让他将它转化内响应式， V3 采用 proxy
+
+```
+vue2：`Object.defineProperty(obj,key,descriptor)`拦截对象属性访问，当数据被访问或改变时，感知并作出反应。结合发布订阅者模式。
+
+第一步：需要observe对数据对象进行递归遍历，都加上setter和getter这样的话，给这个对象的某个值赋值，就会触发setter，那么就能监听到了数据变化
+
+第二步：在数据发生改变时告诉订阅者、
+
+第三步：解析器解析模板指令，将模板中的变量替换成数据，然后初始化渲染页面视图，并将每个指令对应的节点绑定更新函数，添加监听数据的订阅者，一旦数据有变动，收到通知，更新视图
+
+vue3：中利用`ES6`的`Proxy`机制代理需要响应化的数据。可以同时支持对象和数组，动态属性增、删都可以拦截
+```
+
+#### vue添加key的作用
+
+```
+`key`的作用主要是`为了更加高效的更新虚拟 DOM`。
+
+Vue 判断两个节点是否相同时，主要是判断两者的`key`和`元素类型tag`。因此，如果不设置`key` ，它的值就是 undefined，则可能永远认为这是两个相同的节点，只能去做更新操作，将造成大量的 DOM 更新操作。
+```
 
 #### 路由钩子
 
@@ -61,7 +81,7 @@
 
 #### vue.use 与 vue 原型链区别
 
-> use 试用与生态内、原型链适用于生态外。use 主要是执行 install 方法，而原型链不需要实现该方法、use 在功能方面更加灵活，原型链使用更方便
+> use 适用于生态内、原型链适用于生态外。use 主要是执行 install 方法，而原型链不需要实现该方法、use 在功能方面更加灵活，原型链使用更方便
 
 #### Vue 路由传递参数的区别
 
@@ -159,64 +179,101 @@
 
 ## 小程序
 
+## 前端性能优化
+
+1：使用缓存、压缩响应、使用多个域名、避免图片src为空
+
+2：将css放入到header、降低css的复杂度、不适用css表达式
+
+3：使用外联的css和js
+
+4：使用字体图标iconfont代替图片
+
+5：使用骨架图还有按需加载
+
+6：使用事件委托、防抖、节流、
+
+7：使用渐进式jpeg图片、使用css3代替图片
+
+## 微信小程序
+
+#### 渲染流程
+
+小程序的渲染层和逻辑层分别由两个线程管理：渲染层的界面使用 WebView 进行渲染；逻辑层采用 JSCore 运行 JavaScript 代码。一个小程序存在多个界面，所以渲染层存在多个 WebView。这两个线程间的通信经由小程序 Native 侧中转，逻辑层发送网络请求也经由 Native 侧转发
+
+## http
+
+#### 请求头包含的内容
+
+host、content-type、origin、User-Agent、Accept
+
+#### 返回头
+
+1.  Access-Control-Allow-Credentials:
+
+    True 允许携带cookie 
+
+1.  Access-Control-Allow-Headers:
+
+    Content-Type,AccessToken,X-CSRF-Token,Authorization,Token  允许携带的请求
+
+1.  Access-Control-Allow-Methods:
+
+    POST,GET,OPTIONS  允许方式
+
+1.  Access-Control-Allow-Origin:
+
+    * 跨域
+
+1.  Access-Control-Expose-Headers:
+
+    Content-Length,Access-Control-Allow-Origin,Access-Control-Allow-Headers,Content-Type
+
+1.  Connection:
+
+    keep-alive
+
+1.  Content-Type:
+
+    application/json; charset=utf-8
+
+1.  Date:
+
+    Tue, 07 Mar 2023 09:11:03 GMT
+
 ## webpack
 
-```
-loader
-image-loader：加载并且压缩图片文件
+#### loader
 
-babel-loader：把 ES6 转换成 ES5
+-   `image-loader`：加载并且压缩图片文件
+-   `babel-loader`：把 ES6 转换成 ES5
+-   `css-loader`：加载 CSS，支持模块化、压缩、文件导入等特性
+-   `vue-loader`：加载 Vue.js 单文件组件
+-   `style-loader`：把 CSS 代码注入到 JavaScript 中，通过 DOM 操作去加载 CSS
 
-css-loader：加载 CSS，支持模块化、压缩、文件导入等特性
+#### plugin
 
-vue-loader：加载 Vue.js 单文件组件
+-   `html-webpack-plugin`：简化 HTML 文件创建 (依赖于 html-loader)
+-   `clean-webpack-plugin`: 目录清理
 
-style-loader：把 CSS 代码注入到 JavaScript 中，通过 DOM 操作去加载 CSS
+#### 差别
 
-plugin
-html-webpack-plugin：简化 HTML 文件创建 (依赖于 html-loader)
+`Loader` 本质就是一个函数，在该函数中对接收到的内容进行转换，返回转换后的结果。  
 
-clean-webpack-plugin: 目录清理
 
-差别
-Loader 本质就是一个函数，在该函数中对接收到的内容进行转换，返回转换后的结果。
+`Plugin` 就是插件，基于事件流框架 `Tapable`，插件可以扩展 Webpack 的功能，在 Webpack 运行的生命周期中会广播出许多事件，Plugin 可以监听这些事件，在合适的时机通过 Webpack 提供的 API 改变输出结果。
 
-Plugin 就是插件，基于事件流框架 Tapable，插件可以扩展 Webpack 的功能，在 Webpack 运行的生命周期中会广播出许多事件，Plugin 可以监听这些事件，在合适的时机通过 Webpack 提供的 API 改变输出结果。
+`Loader` 在 module.rules 中配置，作为模块的解析规则，类型为数组。每一项都是一个 Object，内部包含了 test(类型文件)、loader、options (参数)等属性。
 
-Loader 在 module.rules 中配置，作为模块的解析规则，类型为数组。每一项都是一个 Object，内部包含了 test(类型文件)、loader、options (参数)等属性。
+`Plugin` 在 plugins 中单独配置，类型为数组，每一项是一个 Plugin 的实例，参数都通过构造函数传入。
 
-Plugin 在 plugins 中单独配置，类型为数组，每一项是一个 Plugin 的实例，参数都通过构造函数传入。
-
-初始化参数、开始编译、确定入口、编译模块
-```
-
+初始化参数、开始编译、`确定入口、编译模块`
 
 <!-- ## Vue
-
-### vue的响应式原理
-
-vue2：`Object.defineProperty(obj,key,descriptor)`拦截对象属性访问，当数据被访问或改变时，感知并作出反应。结合发布订阅者模式。
-
-第一步：需要observe对数据对象进行递归遍历，都加上setter和getter这样的话，给这个对象的某个值赋值，就会触发setter，那么就能监听到了数据变化
-
-第二步：在数据发生改变时告诉订阅者、
-
-第三步：解析器解析模板指令，将模板中的变量替换成数据，然后初始化渲染页面视图，并将每个指令对应的节点绑定更新函数，添加监听数据的订阅者，一旦数据有变动，收到通知，更新视图
-
-vue3：中利用`ES6`的`Proxy`机制代理需要响应化的数据。可以同时支持对象和数组，动态属性增、删都可以拦截
-
-### vue添加key的作用
-
-`key`的作用主要是`为了更加高效的更新虚拟 DOM`。
-
-Vue 判断两个节点是否相同时，主要是判断两者的`key`和`元素类型tag`。因此，如果不设置`key` ，它的值就是 undefined，则可能永远认为这是两个相同的节点，只能去做更新操作，将造成大量的 DOM 更新操作。
 
 ### vue $on 与$emit的
 
 $on 监听自定义事件，$emit 触发指定事件，也可以当作组件传递的一种方式
-
-  
-
 
 ### vue的优点
 
@@ -270,7 +327,7 @@ $on 监听自定义事件，$emit 触发指定事件，也可以当作组件传�
 生成DOM树 --> 生成CSS规则树 --> 构建渲染树 --> 布局 --> 绘制  
 
 
-### 回流与重绘
+<!-- ### 回流与重绘
 
 `回流`：当 DOM 的变化影响了元素的几何信息  
 
@@ -303,104 +360,4 @@ defer 解析完不执行
 
 ### 闭包
 
-闭包就是能够读取其他函数内部变量的函数  
-
-
-## 前端性能优化
-
-1：使用缓存、压缩响应、使用多个域名、避免图片src为空
-
-2：将css放入到header、降低css的复杂度、不适用css表达式
-
-3：使用外联的css和js
-
-4：使用字体图标iconfont代替图片
-
-5：使用骨架图还有按需加载
-
-6：使用事件委托、防抖、节流、
-
-7：使用渐进式jpeg图片、使用css3代替图片
-
-  
-
-
-## 微信小程序
-
-### 渲染流程
-
-小程序的渲染层和逻辑层分别由两个线程管理：渲染层的界面使用 WebView 进行渲染；逻辑层采用 JSCore 运行 JavaScript 代码。一个小程序存在多个界面，所以渲染层存在多个 WebView。这两个线程间的通信经由小程序 Native 侧中转，逻辑层发送网络请求也经由 Native 侧转发
-
-  
-
-
-## http
-
-### 请求头包含的内容
-
-host、content-type、origin、User-Agent、Accept
-
-### 返回头
-
-1.  Access-Control-Allow-Credentials:
-
-    True 允许携带cookie 
-
-1.  Access-Control-Allow-Headers:
-
-    Content-Type,AccessToken,X-CSRF-Token,Authorization,Token  允许携带的请求
-
-1.  Access-Control-Allow-Methods:
-
-    POST,GET,OPTIONS  允许方式
-
-1.  Access-Control-Allow-Origin:
-
-    * 跨域
-
-1.  Access-Control-Expose-Headers:
-
-    Content-Length,Access-Control-Allow-Origin,Access-Control-Allow-Headers,Content-Type
-
-1.  Connection:
-
-    keep-alive
-
-1.  Content-Type:
-
-    application/json; charset=utf-8
-
-1.  Date:
-
-    Tue, 07 Mar 2023 09:11:03 GMT
-
-  
-
-
-## webpack
-
-### loader
-
--   `image-loader`：加载并且压缩图片文件
--   `babel-loader`：把 ES6 转换成 ES5
--   `css-loader`：加载 CSS，支持模块化、压缩、文件导入等特性
--   `vue-loader`：加载 Vue.js 单文件组件
--   `style-loader`：把 CSS 代码注入到 JavaScript 中，通过 DOM 操作去加载 CSS
-
-### plugin
-
--   `html-webpack-plugin`：简化 HTML 文件创建 (依赖于 html-loader)
--   `clean-webpack-plugin`: 目录清理
-
-### 差别
-
-`Loader` 本质就是一个函数，在该函数中对接收到的内容进行转换，返回转换后的结果。  
-
-
-`Plugin` 就是插件，基于事件流框架 `Tapable`，插件可以扩展 Webpack 的功能，在 Webpack 运行的生命周期中会广播出许多事件，Plugin 可以监听这些事件，在合适的时机通过 Webpack 提供的 API 改变输出结果。
-
-`Loader` 在 module.rules 中配置，作为模块的解析规则，类型为数组。每一项都是一个 Object，内部包含了 test(类型文件)、loader、options (参数)等属性。
-
-`Plugin` 在 plugins 中单独配置，类型为数组，每一项是一个 Plugin 的实例，参数都通过构造函数传入。
-
-初始化参数、开始编译、`确定入口、编译模块` -->
+闭包就是能够读取其他函数内部变量的函数   -->
