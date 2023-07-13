@@ -2,12 +2,12 @@
  * @Description:
  * @Author: panrui
  * @Date: 2023-05-22 15:40:54
- * @LastEditTime: 2023-05-22 15:41:05
+ * @LastEditTime: 2023-07-13 09:52:35
  * @LastEditors: panrui
  * 不忘初心,不负梦想
 -->
 
-## 最后更新时间：2023-05-22 15-41-05
+## 最后更新时间：2023-07-12 13-15-06
 
 ## DatePicker 组件
 
@@ -139,4 +139,103 @@ handleRemove(file) {
   fileList.splice(index, 1)
 }
 
+```
+
+## 嵌套 form 表单校验
+
+```html
+<el-form
+  :model="dynamicValidateForm"
+  ref="dynamicValidateForm"
+  label-width="100px"
+  class="demo-dynamic"
+>
+  <el-form-item
+    v-for="(domain, index) in dynamicValidateForm.domains"
+    :label="'域名' + index"
+    :key="domain.key"
+    :prop="'domains.' + index + '.value'"
+    :rules="{
+      required: true, message: '域名不能为空', trigger: 'blur'
+    }"
+  >
+    <el-input v-model="domain.value"></el-input
+    ><el-button @click.prevent="removeDomain(domain)">删除</el-button>
+  </el-form-item>
+  <el-form-item>
+    <el-button type="primary" @click="submitForm('dynamicValidateForm')"
+      >提交</el-button
+    >
+    <el-button @click="addDomain">新增域名</el-button>
+    <el-button @click="resetForm('dynamicValidateForm')">重置</el-button>
+  </el-form-item>
+</el-form>
+```
+
+```js
+export default {
+  data() {
+    return {
+      dynamicValidateForm: {
+        domains: [
+          {
+            value: "",
+          },
+        ],
+      },
+    };
+  },
+  methods: {
+    submitForm(formName) {
+      this.$refs[formName].validate((valid) => {
+        if (valid) {
+          alert("submit!");
+        } else {
+          console.log("error submit!!");
+          return false;
+        }
+      });
+    },
+    resetForm(formName) {
+      this.$refs[formName].resetFields();
+    },
+    removeDomain(item) {
+      var index = this.dynamicValidateForm.domains.indexOf(item);
+      if (index !== -1) {
+        this.dynamicValidateForm.domains.splice(index, 1);
+      }
+    },
+    addDomain() {
+      this.dynamicValidateForm.domains.push({
+        value: "",
+        key: Date.now(),
+      });
+    },
+  },
+};
+```
+
+## 嵌套表单传参
+
+```html
+<el-form-item
+  v-for="(item, index) in formList"
+  :key="index"
+  :label="item.label"
+  :prop="item.prop"
+  :rules="item.rules"
+>
+  <el-select
+    v-model="obj.dept"
+    size="mini"
+    @change="getEnableLicenseList(index, obj.dept)"
+    placeholder="请选择"
+    filterable
+  >
+  </el-select>
+</el-form-item>
+```
+
+```js
+getEnableLicenseList(index, val) {}
 ```

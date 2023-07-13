@@ -2,12 +2,12 @@
  * @Description: 计划表
  * @Author: panrui
  * @Date: 2021-09-28 12:50:13
- * @LastEditTime: 2023-07-03 10:09:26
+ * @LastEditTime: 2023-07-10 08:51:21
  * @LastEditors: panrui
  * 不忘初心,不负梦想
 -->
 
-## 最后更新时间 2023-06-13 09-06-34
+## 最后更新时间: 2023-07-10 08-51-21
 
 ## 开发内容&学习计划
 
@@ -45,7 +45,7 @@
 
 ## nuxt.panrui.top
 
-- [] 项目部署到服务器
+- [ ] 项目部署到服务器
 
 ## admin.react.panrui.top
 
