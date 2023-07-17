@@ -22,7 +22,21 @@ box-shadow: 水平阴影的位置 垂直阴影的位置 模糊距离 阴影的�
 background-image: linear-gradient(to right, red , yellow); 从左到右 默认从上到下啊
 ```
 
-#### background-clip
+#### client 属性 和 offset 属性
+
+```
+clientWidth：元素的内部宽度(包含内边距)
+clientHeight：元素的内部高度(包含内边距)
+clientTop：元素的上边框宽度
+clientLeft：元素的左边框宽度
+
+offsetWidth：元素的外部宽度(包含内边距、边框、滚动条)
+offsetHeight：元素的外部高度(包含内边距、边框、滚动条)
+offsetTop：元素的上外边框至包含元素的上内边框之间的像素距离
+offsetLeft：元素的左外边框至包含元素的左内边框之间的像素距离
+```
+
+<!-- #### background-clip
 
 定义背景的绘制区域
 
@@ -40,7 +54,7 @@ background-clip: content-box; // 背景被裁剪到内容框
 background-origin: border-box; // 背景图片相对于边框盒定位
 background-origin: padding-box; // 背景图片相对于内边距框定位
 background-origin: content-box; // 背景图片相对于内容框定位
-```
+``` -->
 
 <!-- #### border 属性
 
