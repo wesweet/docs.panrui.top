@@ -36,6 +36,7 @@
 - [ ] mysql 学习
 - [ ] webpack 学习和配置
 - [ ] uniappApp 调用蓝牙、摄像头、调用位置、播放视频、调用话筒等等功能
+- [ ] 如何限制一个请求多次发送
 
 ## next.panrui.top
 

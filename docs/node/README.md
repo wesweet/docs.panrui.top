@@ -17,3 +17,5 @@ npm install -g cnpm --registry=https://registry.npm.taobao.org
 // 还原npm配置
 npm config set registry http://registry.npmjs.org
 ```
+
+#### 查看项目中安装的包是否存在更新
