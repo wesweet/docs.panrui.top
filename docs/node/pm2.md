@@ -2,7 +2,7 @@
  * @Description:
  * @Author: panrui
  * @Date: 2023-05-18 17:17:52
- * @LastEditTime: 2023-05-18 17:20:01
+ * @LastEditTime: 2023-07-24 14:00:01
  * @LastEditors: panrui
  * 不忘初心,不负梦想
 -->
@@ -42,4 +42,11 @@ pm2 monit
 pm2 web
 // 清除日志
 pm2 flush
+```
+
+## 重启所有pm2进程
+
+```js
+// 查看PM2 文件有那些进程
+[PM2] Successfully saved in /root/.pm2/dump.pm2
 ```

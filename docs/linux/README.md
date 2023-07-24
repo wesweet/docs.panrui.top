@@ -19,6 +19,9 @@ cat /etc/*release
 
 查看端口占用情况
 ss -lntup
+
+查看指定端口占用情况
+netstat -tuln | grep 80
 ```
 
 #### Rocky Linux 系统命令
@@ -68,3 +71,7 @@ sudo tail -f /var/log/cron.log
 
 添加计划任务
 ```
+
+#### 查看域名配置情况
+
+> 1. cat /etc/ddns/config.json

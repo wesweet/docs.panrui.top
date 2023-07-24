@@ -12,5 +12,11 @@
 ## 常用命令
 
 ```js
-systemctl start nginx
+nginx -t // 检测nginx配置文件
+
+systemctl start nginx // 启动nginx
+
+systemctl restart nginx // 重启nginx
+
+systemctl status nginx.service // 查看nginx状态
 ```
