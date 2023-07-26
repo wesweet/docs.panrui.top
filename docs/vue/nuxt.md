@@ -2,7 +2,7 @@
  * @Description: nuxt文档
  * @Author: panrui
  * @Date: 2021-08-13 13:34:20
- * @LastEditTime: 2023-07-21 13:30:12
+ * @LastEditTime: 2023-07-26 13:10:35
  * @LastEditors: panrui
  * 不忘初心,不负梦想
 -->
@@ -22,6 +22,30 @@ npm i -g create-nuxt-app
 > 1. 在已有的 web 服务器中使用，则可以作为中间件使用 SPA
 > 2. 服务端渲染 SSR
 > 3. 静态站点生成 SSG
+
+## 做为中间件使用
+
+> 1. 在已有的 web 服务器中使用，则可以作为中间件使用 SPA
+
+<!-- ```js
+// server.js
+const { Nuxt, Builder } = require('nuxt')
+const app = require('express')()
+
+// 传入配置初始化 Nuxt.js 实例
+const config = require('./nuxt.config.js')
+const nuxt = new Nuxt(config)
+
+// 生产模式不需要 build
+if (config.dev) {
+  const builder = new Builder(nuxt)
+  builder.build()
+}
+
+app.use(nuxt.render)
+
+app.listen(3000)
+``` -->
 
 ## 使用 less css 预处理器
 
@@ -67,3 +91,4 @@ export default {
   },
 }
 ```
+

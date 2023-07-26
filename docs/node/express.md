@@ -2,7 +2,7 @@
  * @Description: express 文档
  * @Author: panrui
  * @Date: 2021-06-24 09:59:43
- * @LastEditTime: 2023-06-08 08:55:06
+ * @LastEditTime: 2023-07-26 13:37:21
  * @LastEditors: panrui
  * 不忘初心,不负梦想
 -->
@@ -59,6 +59,10 @@ export interface response {
 503: '服务不可用，服务器暂时过载或维护。',
 504: '网关超时。',
 ```
+
+## 中间件
+
+- Express的中间件，本质上就是一个function处理函数，函数的形参列表中，必须包含next参数，而路由处理函数中只包含req和res。next函数是实现多个中间件连续调用的关键，它表示把流转关系转交给下一个中间件或路由。
 
 <!-- ## 配置 -->
 
