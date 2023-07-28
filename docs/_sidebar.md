@@ -66,6 +66,7 @@
   - [morgan](/node/morgan)
   - [multer](/node/multer)
   - [mysql](/node/mysql)
+  - [nest](/node/nest)
   - [node-mysql](/node/nodeMysql)
   - [nvm](/node/nvm)
   - [Path](/node/path)
