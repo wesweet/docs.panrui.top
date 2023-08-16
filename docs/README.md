@@ -19,7 +19,7 @@
 根本找不到报错。
 ```
 
-> 1. [个人简历](http://vue.panrui.top:8001)
+> 1. [个人简历](http://nuxt.panrui.top:8007)
 <!-- > 2. [管理后台](http://admin.vue.panrui.top:8002) -->
 <!-- > 2. [文档](http://wesweet.gitee.io/docs/#/) -->
 <!-- > 4. [npm 包仓库](https://www.npmjs.com/~snailnpm) -->
