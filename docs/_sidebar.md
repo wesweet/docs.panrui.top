@@ -2,7 +2,7 @@
  * @Description: 定制侧边栏
  * @Author: panrui
  * @Date: 2021-05-20 16:43:32
- * @LastEditTime: 2023-07-04 14:14:30
+ * @LastEditTime: 2023-08-29 15:24:09
  * @LastEditors: panrui
  * 不忘初心,不负梦想
 -->
@@ -21,8 +21,6 @@
 - [钉钉](/dingding/)
 - [elementui](/elementui/)
   - [组件使用](/elementui/skill)
-- [游戏](/game/)
-  - [天龙八部](/game/tl)
 - [git](/git/)
 - [go](/go/)
   - [基础语法](/go/go)
