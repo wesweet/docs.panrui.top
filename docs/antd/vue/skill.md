@@ -1,5 +1,5 @@
 <!--
- * @Description:
+ * @Description: antd组件vue版本使用技巧
  * @Author: panrui
  * @Date: 2023-06-06 08:37:32
  * @LastEditTime: 2023-06-06 08:38:37

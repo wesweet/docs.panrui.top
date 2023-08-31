@@ -1,5 +1,5 @@
 <!--
- * @Description:
+ * @Description: go语言使用规范
  * @Author: panrui
  * @Date: 2023-06-13 13:10:14
  * @LastEditTime: 2023-06-13 13:10:41

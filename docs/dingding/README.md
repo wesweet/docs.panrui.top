@@ -1,5 +1,5 @@
 <!--
- * @Description:
+ * @Description: 钉钉机器人使用规范
  * @Author: panrui
  * @Date: 2023-04-25 08:57:17
  * @LastEditTime: 2023-05-19 09:07:43

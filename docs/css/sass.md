@@ -1,5 +1,5 @@
 <!--
- * @Description: 
+ * @Description: css预处理器sass使用规范
  * @Author: panrui
  * @Date: 2023-07-25 09:52:50
  * @LastEditTime: 2023-07-25 09:53:35

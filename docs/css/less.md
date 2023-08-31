@@ -1,5 +1,5 @@
 <!--
- * @Description: 
+ * @Description: css预处理器less使用规范
  * @Author: panrui
  * @Date: 2023-07-20 08:35:09
  * @LastEditTime: 2023-07-20 08:35:41
