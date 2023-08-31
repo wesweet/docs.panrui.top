@@ -2,12 +2,12 @@
  * @Description:
  * @Author: panrui
  * @Date: 2023-07-07 08:59:05
- * @LastEditTime: 2023-07-07 09:02:29
+ * @LastEditTime: 2023-08-31 09:08:04
  * @LastEditors: panrui
  * 不忘初心,不负梦想
 -->
 
-## 最后更新时间：2023-07-07 09-01-12
+## 最后更新时间：2021-08-31 09-08-04
 
 - v2 使用小技巧
 
@@ -15,7 +15,11 @@
 
 ```js
 // 表示 active 这个 class 存在与否将取决于数据 property isActive
-<div v-bind:class="{ active: isActive }"></div>
+<div :class="{ active: isActive }"></div>
+// 动态与静态 class 共存
+<div :class="{ 'static-class': true, 'dynamic-class': isDynamic }"></div>
+// 数组语法
+<div :class="['static-class', dynamicClass]"></div>
 ```
 
 ## 通过 style 动态设置图片
