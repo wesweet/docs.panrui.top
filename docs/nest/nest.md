@@ -2,7 +2,7 @@
  * @Description: nest
  * @Author: panrui
  * @Date: 2023-07-27 08:47:00
- * @LastEditTime: 2023-07-28 14:15:14
+ * @LastEditTime: 2023-09-04 14:30:20
  * @LastEditors: panrui
  * 不忘初心,不负梦想
 -->
@@ -11,7 +11,7 @@
 
 ## 文档
 
-- [nest](https://docs.nestjs.cn/)
+- [nest](https://docs.nestjs.cn/9/introduction)
 - [TypeORM](https://typeorm.biunav.com/zh/embedded-entities.html)
 
 ```js
@@ -28,6 +28,87 @@ nest g controller cats
 // 创建服务
 nest g service cats
 ```
+
+## 模块(module)
+
+普通模块
+
+- 模块是一个由 @Module() 装饰器函数修饰的类
+- 根模块引入其他模块，其他模块也可以引入其他模块，最终组成一个模块树(也就是一个应用程序的路由树)
+- 由于循环依赖的关系，模块类不能注入到服务中
+
+```js
+@Module({
+  imports: [],
+  exports: [], // 可以导出服务、模块
+  controllers: [], // 这个模块有那些控制器
+  providers: [], // 这个模块有那些服务,策略,守卫
+})
+export class AppModule {
+  // 用于配置目的的话，也可以注入服务
+  constructor(private readonly connection: Connection) {}
+}
+```
+
+全局模块
+
+- 全局模块是一个模块，它影响整个应用程序
+- 通常，全局模块由 @Global() 装饰器修饰
+- 全局模块应该只由根模块引入
+
+```js
+@Global()
+@Module({
+  imports: [],
+  exports: [],
+  controllers: [],
+  providers: [],
+})
+export class AppModule {}
+```
+
+动态模块(功能正在开发中)
+
+## 中间件
+
+中间件
+
+- 中间件功能可以执行任何操作，但是它们通常用于在路由处理程序之前执行额外的操作，例如验证、日志记录、数据转换等。可以访问请求和响应对象，以及应用程序请求响应周期中的 next()函数
+
+```js
+// 在函数中或在类中使用 @Injectable() 装饰器来注入中间件，这个类必须实现 NestMiddleware 接口
+@Injectable()
+export class LoggerMiddleware implements NestMiddleware {
+  use(req: Request, res: Response, next: NextFunction) {
+    console.log("Request...");
+    next();
+  }
+}
+```
+
+依赖注入(代码开发中)
+
+- Nest 中间件是可注入的，这意味着它们可以依赖注入其他服务或者模块(通过 constructor 注入)
+
+应用中间件
+
+- 中间件不能在@Module()装饰器列出，必须使用模块类的 configure()方法来配置。并且包含中间件的模块必须实现 NestModule 接口
+```js
+  import { Module, NestModule, MiddlewareConsumer } from "@nestjs/common";
+  import { LoggerMiddleware } from "./common/middleware/logger.middleware";
+  import { CatsModule } from "./cats/cats.module";
+  @Module({
+    imports: [CatsModule],
+  })
+  export class AppModule implements NestModule {
+    configure(consumer: MiddlewareConsumer) {
+      consumer
+      .apply(LoggerMiddleware)
+      .forRoutes('cats');
+    }
+  }
+```
+
 
 ## 控制器
 
@@ -56,36 +137,42 @@ export class CatsController {
 - Provider 是由 @Injectable() 装饰器修饰的类
 - 服务可以注入到控制器、其他服务中
 
-## 模块
-
-- 模块是一个由 @Module() 装饰器函数修饰的类
-- 根模块引入其他模块，其他模块也可以引入其他模块，最终组成一个模块树(也就是一个应用程序的路由树)
-
-```
-@Module({
-  imports: [引入的模块],
-  exports: [导出的模块],
-  controllers: [AppController], // 这个模块有那些控制器
-  providers: [AppService], // 这个模块有那些服务,策略,守卫
-})
-export class AppModule {}
-```
-
 ## 策略
-
-## 中间件
-
-- 中间件功能可以执行任何操作，但是它们通常用于在路由处理程序之前执行额外的操作，例如验证、日志记录、数据转换等。可以访问请求和响应对象，以及应用程序请求响应周期中的 next()函数
-- 中间件不能在@Module()装饰器列出，必须使用模块类的 configure()方法来配置。并且包含中间件的模块必须实现 NestModule 接口
 
 ## 异常过滤器
 
 ## 管道
 
-## 守卫
+## 守卫(guard)
 
 - guard 是由 @Injectable() 装饰器修饰的类，实现 CanActivate 接口
 - 守卫的主要目的是保护路由，根据运行时候的某些条件来确定请求是否应该被处理
+```js
+import { ExecutionContext, Injectable } from '@nestjs/common';
+import { Reflector } from '@nestjs/core';
+import { AuthGuard } from '@nestjs/passport';
+import { IS_PUBLIC_KEY } from './public.decorator';
+
+@Injectable()
+export class JwtAuthGuard extends AuthGuard('jwt') {
+  constructor(private reflector: Reflector) {
+    super();
+  }
+
+  canActivate(context: ExecutionContext) {
+    // Add your custom authentication logic here
+    // for example, call super.logIn(request) to establish a session.
+    const isPublic = this.reflector.getAllAndOverride<boolean>(IS_PUBLIC_KEY, [
+      context.getHandler(),
+      context.getClass(),
+    ]);
+    if (isPublic) {
+      return true;
+    }
+    return super.canActivate(context);
+  }
+}
+```
 
 ## 拦截器
 

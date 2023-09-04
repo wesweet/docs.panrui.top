@@ -9,4 +9,11 @@
 
 # nest 最后更新时间：2023-09-04 13-29-42
 
-功能正在开发中
+- [nest](https://nestjs.bootcss.com/)
+
+## NestFactory
+
+> NestFactory 是 Nest 应用程序实例的创建者。它也是一个基本的应用程序上下文，它是一个 NestApplicationContext 实例。它提供了一组方法，用于创建应用程序并创建一个可用于管理应用程序的应用程序实例。
+
+## module
+
