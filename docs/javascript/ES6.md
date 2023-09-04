@@ -1,15 +1,15 @@
 <!--
  * @Description:
  * @Author: panrui
- * @Date: 2023-04-25 08:57:17
- * @LastEditTime: 2023-06-07 14:10:23
+ * @Date: 2023-07-04 13:55:49
+ * @LastEditTime: 2023-09-04 09:33:26
  * @LastEditors: panrui
  * 不忘初心,不负梦想
 -->
 
 ## 最后更新时间：2023-06-07 14-10-23
 
-> 1. [ES6 文档](https://es6.ruanyifeng.com/)
+- [ES6 文档](https://es6.ruanyifeng.com/)
 
 ## Promise
 
@@ -129,16 +129,15 @@ console.log(name, age, address); // panrui 18 北京
 
 ## import
 
-> 1. import 命令用于加载模块，提供了一个对外接口，其他模块可以加载这个模块。
+- import 命令用于加载模块，提供了一个对外接口，其他模块可以加载这个模块。
 
 ```js
 import { name, age, address } from "./export";
-console.log(name, age, address); // panrui 18 北京
 ```
 
 #### import()
 
-> 1.  import()函数可以用在任何地方，不仅仅是模块，非模块的脚本也可以使用。它是运行时执行，也就是说，什么时候运行到这一句，也会加载指定的模块。另外，import()函数与所加载的模块没有静态连接关系，这点也是与 import 不相同。import()类似于 Node 的 require 方法，区别主要是前者是异步加载，后者是同步加载。
+- import()函数可以用在任何地方，不仅仅是模块，非模块的脚本也可以使用。它是运行时执行，也就是说，什么时候运行到这一句，也会加载指定的模块。另外，import()函数与所加载的模块没有静态连接关系，这点也是与 import 不相同。import()类似于 Node 的 require 方法，区别主要是前者是异步加载，后者是同步加载。
 
 ```js
 const main = document.querySelector("main");
@@ -150,6 +149,20 @@ import(`./section-modules/${someVariable}.js`)
   .catch((err) => {
     main.textContent = err.message;
   });
+```
+
+#### import.meta.glob()
+
+- import.meta.glob 是 JavaScript 中的一个特殊属性，用于在模块中获取匹配指定模式的模块路径列表。它通常与动态导入（dynamic import）结合使用，用于动态加载模块。
+- import.meta.glob 属性返回一个异步迭代器（AsyncIterator），您可以使用 for await...of 循环来遍历匹配的模块路径列表。每个迭代的值都是一个包含 url 和 module 属性的对象，其中 url 是匹配的模块路径，module 是对应模块的默认导出
+
+```js
+// eager: true 表示立即加载匹配的模块。这意味着在调用 import.meta.glob 方法后，会立即开始加载匹配的模块，而不是在后续使用时再进行加载。
+// import: 'default' 表示加载模块的默认导出。当模块被加载时，只会导入模块的默认导出，而不是导入整个模块对象。
+const metaRouters: any = import.meta.glob("./modules/*.tsx", {
+  eager: true,
+  import: "default",
+});
 ```
 
 ## require

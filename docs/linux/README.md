@@ -9,7 +9,7 @@
 
 # linux 最后更新时间: 2023-05-19 08-50-02
 
-> 1.  [linux 命令大全](https://www.linuxcool.com/)
+- [linux 命令大全](https://www.linuxcool.com/)
 
 #### 其他命令
 
