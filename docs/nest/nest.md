@@ -12,7 +12,6 @@
 ## 文档
 
 - [nest](https://docs.nestjs.cn/9/introduction)
-- [TypeORM](https://typeorm.biunav.com/zh/embedded-entities.html)
 
 ```js
 // 创建项目
