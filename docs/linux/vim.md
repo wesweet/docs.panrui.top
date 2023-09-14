@@ -1,8 +1,8 @@
 <!--
- * @Description: 
+ * @Description: vim使用规范
  * @Author: panrui
  * @Date: 2023-07-04 13:55:49
- * @LastEditTime: 2023-08-01 08:48:18
+ * @LastEditTime: 2023-09-14 09:13:29
  * @LastEditors: panrui
  * 不忘初心,不负梦想
 -->
@@ -19,6 +19,13 @@
 > 3. 可视模式 按 v 进入
 
 > 4. 普通模式
+
+#### 插入模式
+    
+```js
+// 移动整行
+
+```
 
 #### 普通模式
 ```js

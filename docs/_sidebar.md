@@ -45,6 +45,7 @@
 - [leetcode](/leetcode/)
   - [数组与字符串](/leetcode/arrayandstring)
 - [linux](/linux/)
+  - [ddns](/linux/ddns)
   - [vim](/linux/vim)
 - [nest](/nest/)
   - [bcrypt](/nest/bcrypt)

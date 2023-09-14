@@ -9,11 +9,6 @@
 
 # Nginx 最后更新时间： 2023-04-05 09-12-36
 
->1. [文档](http://nginx.p2hp.com/en/docs/index.html)
->2. [中文文档](https://blog.redis.com.cn/doc/)
-
-#### 配置
-
-```
-
-```
+- [文档](http://nginx.p2hp.com/en/docs/index.html)
+- [中文文档](https://blog.redis.com.cn/doc/)
+- [Nginx 命令大全](https://www.nginx.cn/doc/)

@@ -110,8 +110,9 @@ module.exports = {
         repo: '', // Git地址，用于deploy功能
         path: '/var/www/development', // 项目路径
         pre-setup: 'npm install', // 在安装应用程序之前执行的脚本
-        post-setup: 'ls -la', // 在安装应用程序之后执行的脚本
+        pre-deploy: 'git fetch --all', // 在拉取新代码之前执行的脚本
         pre-deploy-local: 'echo \'This is a local executed command\'', // 在push代码到远程仓库之前执行
+        post-setup: 'ls -la', // 在安装应用程序之后执行的脚本
         post-deploy: 'npm install', // 在成功部署之后执行的脚本
     }
   ],
