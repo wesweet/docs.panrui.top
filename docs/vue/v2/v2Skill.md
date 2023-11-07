@@ -106,3 +106,12 @@ post: {
 input 事件在输入的过程中不断被触发
 change 在输入之后,input标签blur才会触发
 ```
+
+## 修改 element-ui 组件默认样式(通过::v-deep)
+
+```css
+::v-deep .el-dialog {
+  height: 70%;
+  overflow: auto;
+}
+```
