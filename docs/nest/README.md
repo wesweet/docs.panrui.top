@@ -7,7 +7,7 @@
  * 不忘初心,不负梦想
 -->
 
-# nest 最后更新时间：2023-10-31 09:08:01
+# nest 最后更新时间：2023-10-31
 
 - [nest](https://nestjs.bootcss.com/)
 - [中文文档](https://docs.nestjs.cn/9/introduction)

@@ -2,12 +2,12 @@
  * @Description: nest
  * @Author: panrui
  * @Date: 2023-07-27 08:47:00
- * @LastEditTime: 2023-09-04 14:30:20
+ * @LastEditTime: 2023-11-07 15:25:48
  * @LastEditors: panrui
  * 不忘初心,不负梦想
 -->
 
-## 最后更新时间：2023-07-28 14-15-14
+## 最后更新时间：2023-11-07
 
 ## 文档
 
@@ -92,22 +92,20 @@ export class LoggerMiddleware implements NestMiddleware {
 应用中间件
 
 - 中间件不能在@Module()装饰器列出，必须使用模块类的 configure()方法来配置。并且包含中间件的模块必须实现 NestModule 接口
-```js
-  import { Module, NestModule, MiddlewareConsumer } from "@nestjs/common";
-  import { LoggerMiddleware } from "./common/middleware/logger.middleware";
-  import { CatsModule } from "./cats/cats.module";
-  @Module({
-    imports: [CatsModule],
-  })
-  export class AppModule implements NestModule {
-    configure(consumer: MiddlewareConsumer) {
-      consumer
-      .apply(LoggerMiddleware)
-      .forRoutes('cats');
-    }
-  }
-```
 
+```js
+import { Module, NestModule, MiddlewareConsumer } from "@nestjs/common";
+import { LoggerMiddleware } from "./common/middleware/logger.middleware";
+import { CatsModule } from "./cats/cats.module";
+@Module({
+  imports: [CatsModule],
+})
+export class AppModule implements NestModule {
+  configure(consumer: MiddlewareConsumer) {
+    consumer.apply(LoggerMiddleware).forRoutes("cats");
+  }
+}
+```
 
 ## 控制器
 
@@ -146,6 +144,7 @@ export class CatsController {
 
 - guard 是由 @Injectable() 装饰器修饰的类，实现 CanActivate 接口
 - 守卫的主要目的是保护路由，根据运行时候的某些条件来确定请求是否应该被处理
+
 ```js
 import { ExecutionContext, Injectable } from '@nestjs/common';
 import { Reflector } from '@nestjs/core';
@@ -192,6 +191,16 @@ export class JwtAuthGuard extends AuthGuard('jwt') {
 #### Helmet
 
 #### CORS
+
+```
+1：再mian.ts中使用
+app.enableCors(); // 允许跨域 尽量放在其他中间件前面
+2：enableCors方法可以接受一个参数，是一个CorsOptions对象，可以配置跨域的一些参数
+app.enableCors({
+  origin: '*', // 允许访问所有域
+  credentials: true, // 允许携带cookie
+});
+```
 
 #### CSRF
 
@@ -251,3 +260,9 @@ findAll(@Res() response) {
 }
 // 注意！Nest 检测处理程序何时使用 @Res() 或 @Next()，表明你选择了特定于库的选项。如果在一个处理函数上同时使用了这两个方法，那么此处的标准方式就是自动禁用此路由, 你将不会得到你想要的结果。如果需要在某个处理函数上同时使用这两种方法（例如，通过注入响应对象，单独设置 cookie / header，但把其余部分留给框架），你必须在装饰器 @Res({ passthrough: true }) 中将 passthrough 选项设为 true
 ```
+
+
+## 参数接受
+
+#### multipart/form-data
+
