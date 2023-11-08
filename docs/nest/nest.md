@@ -2,12 +2,12 @@
  * @Description: nest
  * @Author: panrui
  * @Date: 2023-07-27 08:47:00
- * @LastEditTime: 2023-11-07 15:25:48
+ * @LastEditTime: 2023-11-08 10:02:08
  * @LastEditors: panrui
  * 不忘初心,不负梦想
 -->
 
-## 最后更新时间：2023-11-07
+## 最后更新时间：2023-11-08
 
 ## 文档
 
@@ -174,10 +174,6 @@ export class JwtAuthGuard extends AuthGuard('jwt') {
 
 ## 拦截器
 
-## 自定义装饰器
-
-- 装饰器是一个表达式，它返回一个可以将目标、名称和属性描述符作为参数的函数。通过在装饰器前面添加一个 @ 字符并将其放置在你要装饰的内容的最顶部来应用它。可以为类、方法或属性定义装饰器。
-
 ## 技术
 
 ## 安全
@@ -222,26 +218,53 @@ app.enableCors({
 
 ## E2E 测试
 
-#### 装饰器
+## 装饰器
 
 > 1. 装饰器是一种特殊类型的声明，它能够被附加到类声明、方法、属性或参数上，可以修改类的行为
 
-```
-@Module() 模块
-@Controller() 控制器
-@Injectable() 服务
-@Get()、@Post()、@Put()、@Delete()、@Patch()、@Options()、@Head()、@All() 路由
-@Req() 请求对象
-@Res() 响应对象
-@Next() 下一个中间件
-@UseGuards() 守卫
-@UseInterceptors() 拦截器
-@UseFilters() 过滤器
-@UsePipes() 管道
-@Param() 路由参数
-@Query() 查询参数
-@Body() 请求体
-```
+| nest               | express        | 描述                           |
+| ------------------ | -------------- | ------------------------------ |
+| @Module()          |                | 定义模块                       |
+| @Controller()      |                | 定义控制器                     |
+| @Injectable()      |                | 定义服务                       |
+| @Get()             | app.get()      | 定义路由                       |
+| @Post()            | app.post()     | 定义路由                       |
+| @Req()             | req            | 定义请求                       |
+| @Res()             | res            | 定义响应                       |
+| @Next()            | next           | 定义管道                       |
+| @Param()           | req.params     | 定义参数                       |
+| @Query()           | req.query      | 常用于使用 GET 请求发出的参数  |
+| @Body()            | req.body       | 常用于接受 POST 请求发出的参数 |
+| @Put()             | app.put()      |                                |
+| @Delete()          | app.delete()   |                                |
+| @Patch()           | app.patch()    |                                |
+| @Options()         | app.options()  |                                |
+| @Head()            | app.head()     |                                |
+| @UseGuards()       | app.use()      | 定义守卫                       |
+| @UseInterceptors() | app.use()      |                                |
+| @UseFilters()      | app.use()      |                                |
+| @UsePipes()        | app.use()      |                                |
+| @UseInterceptors() | app.use()      |                                |
+| @UseFilters()      | app.use()      |                                |
+| @UsePipes()        | app.use()      |                                |
+| @Headers()         | req.headers    |                                |
+| @Session()         | req.session    |                                |
+| @File()            | req.file       |                                |
+| @Files()           | req.files      |                                |
+| @Cookie()          | req.cookies    |                                |
+| @UploadedFile()    | req.file       |                                |
+| @UploadedFiles()   | req.files      |                                |
+| @Render()          | res.render()   |                                |
+| @Redirect()        | res.redirect() |                                |
+| @SetMetadata()     |                |                                |
+| @HttpCode()        | res.status()   |                                |
+| @Header()          | res.set()      |                                |
+| @Location()        | res.location() |                                |
+| @Redirect()        | res.redirect() |                                |
+| @Ip()              | req.ip         |                                |
+| @HostParam()       | req.host       |                                |
+
+#### 自定义装饰器
 
 #### 操作响应选项
 
@@ -261,8 +284,6 @@ findAll(@Res() response) {
 // 注意！Nest 检测处理程序何时使用 @Res() 或 @Next()，表明你选择了特定于库的选项。如果在一个处理函数上同时使用了这两个方法，那么此处的标准方式就是自动禁用此路由, 你将不会得到你想要的结果。如果需要在某个处理函数上同时使用这两种方法（例如，通过注入响应对象，单独设置 cookie / header，但把其余部分留给框架），你必须在装饰器 @Res({ passthrough: true }) 中将 passthrough 选项设为 true
 ```
 
-
 ## 参数接受
 
 #### multipart/form-data
-
