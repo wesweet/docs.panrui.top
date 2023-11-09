@@ -7,7 +7,7 @@
  * 不忘初心,不负梦想
 -->
 
-## 最后更新时间：2023-11-08
+## 最后更新时间：2023-11-09
 
 ## 文档
 
@@ -222,47 +222,48 @@ app.enableCors({
 
 > 1. 装饰器是一种特殊类型的声明，它能够被附加到类声明、方法、属性或参数上，可以修改类的行为
 
-| nest               | express        | 描述                           |
-| ------------------ | -------------- | ------------------------------ |
-| @Module()          |                | 定义模块                       |
-| @Controller()      |                | 定义控制器                     |
-| @Injectable()      |                | 定义服务                       |
-| @Get()             | app.get()      | 定义路由                       |
-| @Post()            | app.post()     | 定义路由                       |
-| @Req()             | req            | 定义请求                       |
-| @Res()             | res            | 定义响应                       |
-| @Next()            | next           | 定义管道                       |
-| @Param()           | req.params     | 定义参数                       |
-| @Query()           | req.query      | 常用于使用 GET 请求发出的参数  |
-| @Body()            | req.body       | 常用于接受 POST 请求发出的参数 |
-| @Put()             | app.put()      |                                |
-| @Delete()          | app.delete()   |                                |
-| @Patch()           | app.patch()    |                                |
-| @Options()         | app.options()  |                                |
-| @Head()            | app.head()     |                                |
-| @UseGuards()       | app.use()      | 定义守卫                       |
-| @UseInterceptors() | app.use()      |                                |
-| @UseFilters()      | app.use()      |                                |
-| @UsePipes()        | app.use()      |                                |
-| @UseInterceptors() | app.use()      |                                |
-| @UseFilters()      | app.use()      |                                |
-| @UsePipes()        | app.use()      |                                |
-| @Headers()         | req.headers    |                                |
-| @Session()         | req.session    |                                |
-| @File()            | req.file       |                                |
-| @Files()           | req.files      |                                |
-| @Cookie()          | req.cookies    |                                |
-| @UploadedFile()    | req.file       |                                |
-| @UploadedFiles()   | req.files      |                                |
-| @Render()          | res.render()   |                                |
-| @Redirect()        | res.redirect() |                                |
-| @SetMetadata()     |                |                                |
-| @HttpCode()        | res.status()   |                                |
-| @Header()          | res.set()      |                                |
-| @Location()        | res.location() |                                |
-| @Redirect()        | res.redirect() |                                |
-| @Ip()              | req.ip         |                                |
-| @HostParam()       | req.host       |                                |
+| nest               | express        | 描述                                         |
+| ------------------ | -------------- | -------------------------------------------- |
+| @Module()          |                | 定义模块                                     |
+| @Controller()      |                | 定义控制器                                   |
+| @Injectable()      |                | 定义服务                                     |
+| @Get()             | app.get()      | 定义路由                                     |
+| @Post()            | app.post()     | 定义路由                                     |
+| @Req()             | req            | 定义请求                                     |
+| @Res()             | res            | 定义响应                                     |
+| @Next()            | next           | 定义管道                                     |
+| @Param()           | req.params     | 定义参数                                     |
+| @Query()           | req.query      | 常用于使用 GET 请求发出的参数                |
+| @Body()            | req.body       | 常用于接受 POST 请求发出的参数               |
+| @UploadedFile()    | req.file       | 常用于接受 formData 表单传递的 file 文件参数 |
+| @Put()             | app.put()      |                                              |
+| @Delete()          | app.delete()   |                                              |
+| @Patch()           | app.patch()    |                                              |
+| @Options()         | app.options()  |                                              |
+| @Head()            | app.head()     |                                              |
+| @UseGuards()       | app.use()      | 定义守卫                                     |
+| @UseInterceptors() | app.use()      |                                              |
+| @UseFilters()      | app.use()      |                                              |
+| @UsePipes()        | app.use()      |                                              |
+| @UseInterceptors() | app.use()      |                                              |
+| @UseFilters()      | app.use()      |                                              |
+| @UsePipes()        | app.use()      |                                              |
+| @Headers()         | req.headers    |                                              |
+| @Session()         | req.session    |                                              |
+| @File()            | req.file       |                                              |
+| @Files()           | req.files      |                                              |
+| @Cookie()          | req.cookies    |                                              |
+| @UploadedFile()    | req.file       |                                              |
+| @UploadedFiles()   | req.files      |                                              |
+| @Render()          | res.render()   |                                              |
+| @Redirect()        | res.redirect() |                                              |
+| @SetMetadata()     |                |                                              |
+| @HttpCode()        | res.status()   |                                              |
+| @Header()          | res.set()      |                                              |
+| @Location()        | res.location() |                                              |
+| @Redirect()        | res.redirect() |                                              |
+| @Ip()              | req.ip         |                                              |
+| @HostParam()       | req.host       |                                              |
 
 #### 自定义装饰器
 
