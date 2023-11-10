@@ -19,4 +19,7 @@ systemctl start nginx // 启动nginx
 systemctl restart nginx // 重启nginx
 
 systemctl status nginx.service // 查看nginx状态
+
+cd /var/log/nginx/error.log // 查看错误日志
+
 ```

@@ -2,7 +2,7 @@
  * @Description: nest
  * @Author: panrui
  * @Date: 2023-07-27 08:47:00
- * @LastEditTime: 2023-11-08 10:02:08
+ * @LastEditTime: 2023-11-10 14:25:50
  * @LastEditors: panrui
  * 不忘初心,不负梦想
 -->
@@ -236,6 +236,7 @@ app.enableCors({
 | @Query()           | req.query      | 常用于使用 GET 请求发出的参数                |
 | @Body()            | req.body       | 常用于接受 POST 请求发出的参数               |
 | @UploadedFile()    | req.file       | 常用于接受 formData 表单传递的 file 文件参数 |
+| @Headers()         | req.headers    |                                              |
 | @Put()             | app.put()      |                                              |
 | @Delete()          | app.delete()   |                                              |
 | @Patch()           | app.patch()    |                                              |
@@ -248,7 +249,6 @@ app.enableCors({
 | @UseInterceptors() | app.use()      |                                              |
 | @UseFilters()      | app.use()      |                                              |
 | @UsePipes()        | app.use()      |                                              |
-| @Headers()         | req.headers    |                                              |
 | @Session()         | req.session    |                                              |
 | @File()            | req.file       |                                              |
 | @Files()           | req.files      |                                              |
