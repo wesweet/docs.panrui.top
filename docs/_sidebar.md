@@ -49,6 +49,7 @@
   - [ddns](/linux/ddns)
   - [vim](/linux/vim)
 - [nest](/nest/)
+  - [基础文档](/nest/base)
   - [bcrypt](/nest/bcrypt)
   - [Passport](/nest/Passport)
   - [TypeORM](/nest/TypeORM)

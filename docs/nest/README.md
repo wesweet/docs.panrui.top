@@ -2,7 +2,7 @@
  * @Description:
  * @Author: panrui
  * @Date: 2023-09-04 13:29:42
- * @LastEditTime: 2023-11-14 10:00:30
+ * @LastEditTime: 2023-11-14 14:20:45
  * @LastEditors: panrui
  * 不忘初心,不负梦想
 -->
@@ -111,26 +111,7 @@ export class AppModule implements NestModule {
 }
 ```
 
-##### 控制器
 
-- 控制器的目的是接收应用的特定请求
-- 每个控制器有多个路由，不同路由执行不同操作
-- 路由机制控制那个控制器接收那些请求
-- 基本的控制器由类和装饰器(@Controller())组成
-- 控制器里面的路由，有许许多多的装饰器来装饰此路由
-
-```js
-// cats.controller.ts 可能最前面还有全局守卫策略等装饰器
-@Controller("cats")
-export class CatsController {
-  @SkipAuth() // 自定义装饰器
-  @UseGuards(AuthGuard("local")) // 使用本地策略装饰器
-  @Get() // 路由方式装饰器
-  findAll(): string {
-    return "This action returns all cats";
-  }
-}
-```
 
 ##### 服务(提供者)
 

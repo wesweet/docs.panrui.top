@@ -2,7 +2,7 @@
  * @Description: 日志中间件
  * @Author: panrui
  * @Date: 2023-04-25 08:57:17
- * @LastEditTime: 2023-05-12 13:47:13
+ * @LastEditTime: 2023-11-14 13:18:08
  * @LastEditors: panrui
  * 不忘初心,不负梦想
 -->
@@ -14,7 +14,7 @@
 - [辅助模块(按日期切割日志文件) winston-daily-rotate-file](https://github.com/winstonjs/winston-daily-rotate-file)
 
 ```js
-npm i morgan winston moment winston-daily-rotate-file -S
+npm i morgan winston winston-daily-rotate-file -S
 ```
 
 ## 配置
