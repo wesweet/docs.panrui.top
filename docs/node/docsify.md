@@ -14,6 +14,4 @@
 > 1.  [docsify](https://docsify.js.org/#/?id=docsify)
 > 2.  [命令行工具](https://github.com/docsifyjs/docsify-cli)
 
-```js
-npm install -g docsify-cli
-```
+

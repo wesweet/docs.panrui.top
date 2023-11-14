@@ -7,9 +7,7 @@
  * 不忘初心,不负梦想
 -->
 
-## 最后更新时间：2023-07-24 14-00-01
-
-## 文档
+## 最后更新时间(2023-11-14)
 
 - [pm2](https://pm2.keymetrics.io/docs/usage/quick-start/)
 
@@ -66,7 +64,7 @@ module.exports = {
             'logs'
         ],
         max_memory_restart: '1G', // 最大内存限制数，超出自动重启
-        env: {
+        env_production: {
             NODE_ENV: 'production', // 环境参数，当前指定为生产环境 process.env.NODE_ENV
         },
         env_dev: {

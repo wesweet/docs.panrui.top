@@ -2,7 +2,7 @@
  * @Description:
  * @Author: panrui
  * @Date: 2023-04-25 08:57:17
- * @LastEditTime: 2023-11-14 10:41:35
+ * @LastEditTime: 2023-11-14 10:49:47
  * @LastEditors: panrui
  * 不忘初心,不负梦想
 -->
@@ -31,7 +31,6 @@ npm config set registry http://registry.npmjs.org
 | chalk.md             |          |          |                  |
 | cli.md               |          |          |                  |
 | commander.md         |          |          |                  |
-| docsify.md           |          |          |                  |
 | dotenv.md            |          |          |                  |
 | download-git-repo.md |          |          |                  |
 | ejs.md               |          |          |                  |
@@ -39,7 +38,7 @@ npm config set registry http://registry.npmjs.org
 | fs.md                |          |          |                  |
 | inquirer.md          |          |          |                  |
 | installCommand.md    |          |          |                  |
-| JWT.md               |          |          |                  |
+| JWT.md               | Token    |          | 登录鉴权         |
 | logger.md            | 日志     |          | 应用日志功能     |
 | metaismith.md        |          |          |                  |
 | morgan.md            |          |          |                  |

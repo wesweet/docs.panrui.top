@@ -7,12 +7,9 @@
  * 不忘初心,不负梦想
 -->
 
-# GIT 最后更新时间：2023-05-19 08-40-55
-
-## 文档
+# GIT 最后更新时间(2023-11-14)
 
 - [学习教程](https://learngitbranching.js.org/?locale=zh_CN)
-
 - [提交格式](https://github.com/kazupon/git-commit-message-convention)
 
 ## Git 代码提交

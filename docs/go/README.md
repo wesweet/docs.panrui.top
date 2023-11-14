@@ -7,9 +7,7 @@
  * 不忘初心,不负梦想
 -->
 
-# GO 最后更新时间：2023-06-13 13-13-12
-
-#### 文档
+# GO 最后更新时间(2023-11-14)
 
 - [中文社区](https://www.golangtc.com/)
 - [入门教程](http://c.biancheng.net/golang/)
@@ -17,3 +15,14 @@
 - [中文网](https://studygolang.com/)
 - [Go 系列教程](https://studygolang.com/subject/2)
 - [安装参考文档](https://blog.csdn.net/qq_44830881/article/details/123457805)
+
+### 子菜单技术文档
+
+| 菜单        | 说明     | 包含文件 | 功能说明 |
+| ----------- | -------- | -------- | -------- |
+| base.md     | 基础文档 |          |          |
+
+
+### 基础文档
+
+### 记录文档

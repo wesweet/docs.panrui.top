@@ -7,7 +7,8 @@
  * 不忘初心,不负梦想
 -->
 
-## 最后更新时间：2023-08-31 15-05-16
+## 最后更新时间(2023-11-14)
+
 ## 移动端调试工具
 
 ```Javascript
@@ -46,4 +47,10 @@ attachFastClick(document.body);
 // 使用needsclick过滤特定的元素  特定的元素不需要使用fastclick来立刻触发点击事件 可以在元素的class上添加needsclick
 <a class="needsclick">Ignored by FastClick</a>
 
+```
+
+## 阻止 a 标签默认事件：href="javaScript:;"
+
+```Javascript
+<a href="javaScript:;">阻止a标签默认事件</a>
 ```

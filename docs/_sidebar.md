@@ -2,7 +2,7 @@
  * @Description: 定制侧边栏
  * @Author: panrui
  * @Date: 2021-05-20 16:43:32
- * @LastEditTime: 2023-11-14 10:01:06
+ * @LastEditTime: 2023-11-14 11:06:51
  * @LastEditors: panrui
  * 不忘初心,不负梦想
 -->
@@ -15,7 +15,7 @@
 - [canvas](/canvas/)
 - [css](/css/)
   - [less](/css/less)
-  - [sass](/css/less)
+  - [sass](/css/sass)
   - [使用技巧](/css/skill)
   - [代码规范](/css/standard)
 - [钉钉](/dingding/)
@@ -23,7 +23,7 @@
   - [组件使用](/elementui/skill)
 - [git](/git/)
 - [go](/go/)
-  - [基础语法](/go/go)
+  - [基础语法](/go/base)
 - [h5](/h5/)
   - [代码规范](/h5/html)
   - [使用技巧](/h5/skill)
@@ -32,6 +32,7 @@
 - [javascript](/javascript/)
   - [代码规范](/javascript/airbnb)
   - [数组](/javascript/Array)
+  - [基础文档](/javascript/base)
   - [ES6](/javascript/ES6)
   - [事件](/javascript/event)
   - [执行上下文与作用域](/javascript/executionContextScope)
@@ -58,7 +59,6 @@
   - [axios](/node/axios)
   - [脚手架](/node/cli)
   - [commander](/node/commander)
-  - [docsify](/node/docsify)
   - [dotenv](/node/dotenv)
   - [download-git-repo](/node/download-git-repo)
   - [ejs](/node/ejs)

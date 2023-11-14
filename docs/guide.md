@@ -2,12 +2,19 @@
  * @Description: 指南
  * @Author: panrui
  * @Date: 2021-05-20 16:42:32
- * @LastEditTime: 2023-11-14 10:00:36
+ * @LastEditTime: 2023-11-14 10:49:02
  * @LastEditors: panrui
  * 不忘初心,不负梦想
 -->
 
 # 文档指南 最后更新时间(2023-11-14)
+
+- [docsify](https://docsify.js.org/#/?id=docsify)
+- [命令行工具](https://github.com/docsifyjs/docsify-cli)
+
+```js
+npm install -g docsify-cli
+```
 
 ### 文档结构
 

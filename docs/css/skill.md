@@ -2,12 +2,12 @@
  * @Description: css使用技巧
  * @Author: panrui
  * @Date: 2023-04-25 08:57:17
- * @LastEditTime: 2023-06-26 08:53:49
+ * @LastEditTime: 2023-11-14 11:04:21
  * @LastEditors: panrui
  * 不忘初心,不负梦想
 -->
 
-## 最后更新时间：2023-05-19 09-12-08
+## 最后更新时间(2023-11-14)
 
 ## 设置 input 标签 placeholder 的字体样式
 
