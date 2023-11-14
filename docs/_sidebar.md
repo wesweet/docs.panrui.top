@@ -2,7 +2,7 @@
  * @Description: 定制侧边栏
  * @Author: panrui
  * @Date: 2021-05-20 16:43:32
- * @LastEditTime: 2023-08-29 15:24:09
+ * @LastEditTime: 2023-11-14 10:01:06
  * @LastEditors: panrui
  * 不忘初心,不负梦想
 -->
@@ -49,7 +49,6 @@
   - [vim](/linux/vim)
 - [nest](/nest/)
   - [bcrypt](/nest/bcrypt)
-  - [nest](/nest/nest)
   - [Passport](/nest/Passport)
   - [TypeORM](/nest/TypeORM)
 - [nginx](/nginx/)

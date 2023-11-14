@@ -7,17 +7,11 @@
  * 不忘初心,不负梦想
 -->
 
-## 最后更新时间 2023-05-12 09-17-39
+## 最后更新时间(2023-11-14)
 
-## 日志模块
-
-> 1. 访问日志记录模块 winston
-
-> 2. 输出日志记录模块 morgan
-
-> 3. 辅助模块(按日期切割日志文件) winston-daily-rotate-file
-
-## 安装依赖
+- [访问日志记录模块 winston](https://github.com/winstonjs/winston)
+- [输出日志记录模块 morgan](https://github.com/expressjs/morgan)
+- [辅助模块(按日期切割日志文件) winston-daily-rotate-file](https://github.com/winstonjs/winston-daily-rotate-file)
 
 ```js
 npm i morgan winston moment winston-daily-rotate-file -S
