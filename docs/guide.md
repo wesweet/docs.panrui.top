@@ -7,7 +7,7 @@
  * 不忘初心,不负梦想
 -->
 
-# 文档指南 最后更新时间(2023-11-14)
+# 文档指南 最后更新时间(2023-11-15)
 
 - [docsify](https://docsify.js.org/#/?id=docsify)
 - [命令行工具](https://github.com/docsifyjs/docsify-cli)
@@ -25,6 +25,7 @@ npm install -g docsify-cli
 | README.md |                                |                                            |                                        |
 | skill.md  | 技巧文档                       |                                            | 记录该技术使用过程的小技巧或者常规使用 |
 | base.md   | 基础文档                       |                                            | 记录该技术的基础知识点                 |
+| record.md | 记录文档                       |                                            | 记录该技术的其他知识点                 |
 
 ### 文件内容结构
 
