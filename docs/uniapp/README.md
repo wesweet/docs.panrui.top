@@ -2,16 +2,25 @@
  * @Description: uniapp文档
  * @Author: panrui
  * @Date: 2021-05-20 16:44:03
- * @LastEditTime: 2022-12-07 17:08:20
- * @LastEditors: panrui
+ * @LastEditTime: 2023-11-17 08:42:39
+ * @LastEditors: prui
  * 不忘初心,不负梦想
 -->
 
-# uniapp
+# uniapp 最后更新时间(2023-11-17)
 
-> uniCloud 使用文档
+- [uniapp 官方文档](https://uniapp.dcloud.net.cn/)
 
-#### 使用文档
+### 子菜单技术文档
+
+| 菜单        | 说明     | 包含文件 | 功能说明 |
+| ----------- | -------- | -------- | -------- |
+| base.md     | 基础文档 | -------- | -------- |
+| uniCloud.md | ----     | -------- | -------- |
+
+### 基础文档
+
+### 记录文档
 
 ```js
 // 底部tabbar不显示

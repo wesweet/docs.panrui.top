@@ -1,5 +1,5 @@
 <!--
- * @Description:
+ * @Description: html2canvas使用文档
  * @Author: panrui
  * @Date: 2023-07-14 15:09:45
  * @LastEditTime: 2023-07-14 15:12:21
@@ -7,7 +7,7 @@
  * 不忘初心,不负梦想
 -->
 
-## 最后更新时间：2023-07-14 15-09-51
+## 最后更新时间(2023-11-17)
 
 - [英文文档](http://html2canvas.hertzen.com/documentation)
 

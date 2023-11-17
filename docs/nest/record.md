@@ -2,14 +2,41 @@
  * @Description: 记录文档
  * @Author: panrui
  * @Date: 2023-11-15 09:25:43
- * @LastEditTime: 2023-11-15 09:29:59
- * @LastEditors: panrui
+ * @LastEditTime: 2023-11-16 09:18:15
+ * @LastEditors: prui
  * 不忘初心,不负梦想
 -->
 
 ## 最后更新时间(2023-11-15)
 
 ## 策略
+
+- 策略是具有 @Injectable() 装饰器的类。管道应实现 PassportStrategy 接口
+- 对于每个策略，Passport 将使用适当的特定于策略的一组参数调用 verify 函数(使用 @nestjs/Passport 中的 validate() 方法实现)
+
+```js
+@Injectable()
+export class LocalStrategy extends PassportStrategy(Strategy) {
+  constructor(private readonly authService: AuthService) {
+    super();
+  }
+
+  /**
+   * 验证用户名和密码
+   * @param username 用户名
+   * @param password 密码
+   * @returns Promise<any> 返回验证通过的用户对象
+   * @throws UnauthorizedException 抛出未授权异常
+   */
+  async validate(username: string, password: string): Promise<any> {
+    const user = await this.authService.validateUser(username, password);
+    if (!user) {
+      throw new UnauthorizedException();
+    }
+    return user;
+  }
+}
+```
 
 ## 技术
 

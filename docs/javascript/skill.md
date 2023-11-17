@@ -7,7 +7,7 @@
  * 不忘初心,不负梦想
 -->
 
-## 最后更新时间：2023-05-30 09-36-32
+## 最后更新时间(2023-11-17)
 
 ## 常用小技巧
 
@@ -106,7 +106,6 @@ const num = 3;
 !!(num % 2); // true
 ```
 
-
 ## 函数防抖与节流
 
 #### 防抖
@@ -169,29 +168,33 @@ function throttle() {
 
 ![宽松相等真值表](http://work.panrui.top:8083/static/ToPrimitive_20210630102406.jpg)
 
-## 前端实现图片下载 通过Blob对象
+## 前端实现图片下载 通过 Blob 对象
 
 ```js
-let imgDom = document.querySelector('.el-image__inner');
+let imgDom = document.querySelector(".el-image__inner");
 // 创建canvas
-let canvas = document.createElement('canvas');
-const context = canvas.getContext('2d');
+let canvas = document.createElement("canvas");
+const context = canvas.getContext("2d");
 canvas.width = imgDom.width;
 canvas.height = imgDom.height;
 context.drawImage(imgDom, 0, 0, imgDom.width, imgDom.height);
 // 转成Blob
-canvas.toBlob(function (blob) {
+canvas.toBlob(
+  function (blob) {
     // 创建隐藏的可下载链接
     let url = URL.createObjectURL(blob);
-    let a = document.createElement('a');
+    let a = document.createElement("a");
     a.href = url;
     // 时间戳
     let timestamp = new Date().getTime();
-    a.download = timestamp + '.jpg';
+    a.download = timestamp + ".jpg";
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
     // 释放掉blob对象
     URL.revokeObjectURL(url);
-}, 'image/jpeg', 1);
+  },
+  "image/jpeg",
+  1
+);
 ```

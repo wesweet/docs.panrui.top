@@ -99,6 +99,7 @@
   - [学习文档](/react/react)
 - [腾讯云](/tencent/)
 - [uniapp](/uniapp/)
+  - [基础文档](/uniapp/base)
   - [uniCloud 文档](/uniapp/uniCloud)
 - [vant](/vant/)
   - [weapp](/vant/weapp)
