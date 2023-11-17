@@ -181,6 +181,9 @@ await app.listen(3000);
 - 扩展基本函数行为
 - 根据所选条件完全重写函数 (例如, 缓存目的)
 - 每个拦截器都有 intercept() 方法，它接收 2 个参数。
+  | nest | express | 描述 |
+  | ------------------ | ------- | ---------------------------------------------------- |
+  |FileInterceptor|--------------|拦截单个文件|
 
 ## 自定义装饰器(Custom decorators)
 
@@ -196,3 +199,4 @@ await app.listen(3000);
 | @UseGuards()       |         | 绑定守卫                                             |
 | @UseInterceptors() |         | 绑定拦截器                                           |
 | @UsePipes()        |         | 绑定管道                                             |
+| @UploadedFile()    |         | 从请求中读取file                                         |

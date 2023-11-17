@@ -2,8 +2,8 @@
  * @Description: html5使用技巧
  * @Author: panrui
  * @Date: 2023-04-25 08:57:17
- * @LastEditTime: 2023-08-31 15:05:16
- * @LastEditors: panrui
+ * @LastEditTime: 2023-11-17 14:24:08
+ * @LastEditors: prui
  * 不忘初心,不负梦想
 -->
 
@@ -54,3 +54,10 @@ attachFastClick(document.body);
 ```Javascript
 <a href="javaScript:;">阻止a标签默认事件</a>
 ```
+
+<!-- ## window.open 在 ios 上兼容问题
+
+```js
+// 使用window.open在ios上面可能打开新页面
+window.location.href = "http://www.baidu.com";
+``` -->
