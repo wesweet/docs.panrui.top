@@ -2,8 +2,8 @@
  * @Description: 定制侧边栏
  * @Author: panrui
  * @Date: 2021-05-20 16:43:32
- * @LastEditTime: 2023-11-14 11:06:51
- * @LastEditors: panrui
+ * @LastEditTime: 2023-11-23 17:24:22
+ * @LastEditors: prui
  * 不忘初心,不负梦想
 -->
 
@@ -19,6 +19,7 @@
   - [使用技巧](/css/skill)
   - [代码规范](/css/standard)
 - [钉钉](/dingding/)
+- [electronjs](/electronjs/)
 - [elementui](/elementui/)
   - [组件使用](/elementui/skill)
 - [git](/git/)
