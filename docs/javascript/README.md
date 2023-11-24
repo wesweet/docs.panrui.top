@@ -2,7 +2,7 @@
  * @Description: JavaScript文档
  * @Author: panrui
  * @Date: 2021-05-20 16:44:03
- * @LastEditTime: 2023-11-17 10:39:58
+ * @LastEditTime: 2023-11-24 13:28:59
  * @LastEditors: prui
  * 不忘初心,不负梦想
 -->
@@ -18,7 +18,6 @@
 | base.md                  | 基础文档 |          |            |
 | ES6.md                   |          |          |            |
 | event.md                 |          |          |            |
-| executionContextScope.md |          |          |            |
 | html2canvas.md           |          |          | 页面转图片 |
 | implicitConversion.md    |          |          |            |
 | jspdf.md                 |          |          | 图片转 PDF |

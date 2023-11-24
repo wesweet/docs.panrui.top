@@ -2,7 +2,7 @@
  * @Description: 定制侧边栏
  * @Author: panrui
  * @Date: 2021-05-20 16:43:32
- * @LastEditTime: 2023-11-23 17:24:22
+ * @LastEditTime: 2023-11-24 13:19:05
  * @LastEditors: prui
  * 不忘初心,不负梦想
 -->
@@ -36,7 +36,6 @@
   - [基础文档](/javascript/base)
   - [ES6](/javascript/ES6)
   - [事件](/javascript/event)
-  - [执行上下文与作用域](/javascript/executionContextScope)
   - [html2canvas](/javascript/html2canvas)
   - [隐式转换](/javascript/implicitConversion)
   - [jspdf](/javascript/jspdf)

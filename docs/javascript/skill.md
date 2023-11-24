@@ -2,8 +2,8 @@
  * @Description:
  * @Author: panrui
  * @Date: 2023-04-25 08:57:17
- * @LastEditTime: 2023-05-30 09:36:32
- * @LastEditors: panrui
+ * @LastEditTime: 2023-11-24 13:14:02
+ * @LastEditors: prui
  * 不忘初心,不负梦想
 -->
 
@@ -106,7 +106,50 @@ const num = 3;
 !!(num % 2); // true
 ```
 
-## 函数防抖与节流
+## 高阶函数
+
+> 接收另一个函数作为参数或者返回值是一个函数的函数称之为高阶函数
+
+#### 柯里化
+
+```js
+function curry(fn) {
+  let slice = Array.prototype.slice, // 将slice缓存起来
+    args = slice.call(arguments, 1); // 这里将arguments转成数组并保存
+
+  return function () {
+    // 将新旧的参数拼接起来
+    let newArgs = args.concat(slice.call(arguments));
+    return fn.apply(null, newArgs); // 返回执行的fn并传递最新的参数
+  };
+}
+```
+
+#### 节流
+
+```js
+// func 函数; delay 延迟执行毫秒数; type  1 时间戳版(立即执行)，2 定时器版(结束在执行一次)
+let delay = 3000;
+let type = 1;
+function throttle() {
+  if (type == 1) {
+    let previous = 0;
+    let now = Date.now();
+    if (now - previous > delay) {
+      previous = now;
+      console.log("执行业务逻辑");
+    }
+  } else {
+    let timeout;
+    if (!timeout) {
+      timeout = setTimeout(() => {
+        timeout = null;
+        console.log("执行业务逻辑");
+      }, delay);
+    }
+  }
+}
+```
 
 #### 防抖
 
@@ -136,33 +179,7 @@ debounce() {
 },
 ```
 
-#### 节流
-
-```js
-// func 函数; delay 延迟执行毫秒数; type  1 时间戳版(立即执行)，2 定时器版(结束在执行一次)
-let delay = 3000;
-let type = 1;
-function throttle() {
-  if (type == 1) {
-    let previous = 0;
-    let now = Date.now();
-    if (now - previous > delay) {
-      previous = now;
-      console.log("执行业务逻辑");
-    }
-  } else {
-    let timeout;
-    if (!timeout) {
-      timeout = setTimeout(() => {
-        timeout = null;
-        console.log("执行业务逻辑");
-      }, delay);
-    }
-  }
-}
-```
-
-## 高阶函数
+#### 组合函数
 
 ## 宽松相等 || 隐式转换真值表
 
