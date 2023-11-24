@@ -13,6 +13,8 @@
 - [vue-awesome-swiper](https://www.npmjs.com/package/vue-awesome-swiper)
 - [前端持久化插件](https://github.com/robinvdvleuten/vuex-persistedstate)
 - [vxe-table](https://xuliangzhan_admin.gitee.io/vxe-table/#/table/start/use)
+- [vue-3](https://cn.vuejs.org/guide/introduction.html)
+- [vue-2](https://v2.cn.vuejs.org/)
 
 ### 子菜单技术文档
 
