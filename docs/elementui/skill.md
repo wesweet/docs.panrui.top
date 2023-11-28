@@ -2,12 +2,12 @@
  * @Description: elementui组件使用技巧
  * @Author: panrui
  * @Date: 2023-05-22 15:40:54
- * @LastEditTime: 2023-07-13 09:52:35
- * @LastEditors: panrui
+ * @LastEditTime: 2023-11-27 10:30:25
+ * @LastEditors: prui
  * 不忘初心,不负梦想
 -->
 
-## 最后更新时间(2023-11-14)
+## 最后更新时间(2023-11-27)
 
 ## DatePicker 组件
 
@@ -239,3 +239,17 @@ export default {
 ```js
 getEnableLicenseList(index, val) {}
 ```
+
+## el-form表单 el-form-item标签添加自定义label
+
+```html
+<el-form-item prop="propName">
+  <template #label>
+    <!-- 在这里添加自定义的 label 内容 -->
+    <span class="custom-label">项目名称</span>
+  </template>
+  <el-input v-model="baseForm.propName" @change="changeName"></el-input>
+</el-form-item>
+```
+
+## el-table表格 添加插槽

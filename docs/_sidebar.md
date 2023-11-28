@@ -101,6 +101,7 @@
 - [uniapp](/uniapp/)
   - [基础文档](/uniapp/base)
   - [uniCloud 文档](/uniapp/uniCloud)
+  - [uviewui](/uniapp/uviewui)
 - [vant](/vant/)
   - [weapp](/vant/weapp)
 - [vue](/vue/)
