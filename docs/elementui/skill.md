@@ -240,7 +240,7 @@ export default {
 getEnableLicenseList(index, val) {}
 ```
 
-## el-form表单 el-form-item标签添加自定义label
+## el-form 表单 el-form-item 标签添加自定义 label
 
 ```html
 <el-form-item prop="propName">
@@ -252,4 +252,21 @@ getEnableLicenseList(index, val) {}
 </el-form-item>
 ```
 
-## el-table表格 添加插槽
+## el-table 表格组件多选功能，设置某些项无法选中效果
+
+```js
+setCheckboxDisabled() {
+  const table = this.$refs.myTable; // 通过ref获取组件实例
+  const bodyWrapper = table.$el.querySelector(".el-table__body-wrapper");
+  table.data.forEach((item, index) => {
+    if (item.isGrey == 1) {
+      const original = bodyWrapper.querySelectorAll(
+        ".el-checkbox__original"
+      );
+      original[index].setAttribute("disabled", true);
+      const input = bodyWrapper.querySelectorAll(".el-checkbox__input");
+      input[index].setAttribute("class", "el-checkbox__input is-disabled");
+    }
+  });
+},
+```
