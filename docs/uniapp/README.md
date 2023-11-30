@@ -2,12 +2,12 @@
  * @Description: uniapp文档
  * @Author: panrui
  * @Date: 2021-05-20 16:44:03
- * @LastEditTime: 2023-11-28 09:29:37
+ * @LastEditTime: 2023-11-30 14:36:43
  * @LastEditors: prui
  * 不忘初心,不负梦想
 -->
 
-# uniapp 最后更新时间(2023-11-17)
+# uniapp 最后更新时间(2023-11-30)
 
 - [uniapp 官方文档](https://uniapp.dcloud.net.cn/)
 
@@ -16,6 +16,7 @@
 | 菜单        | 说明           | 包含文件 | 功能说明 |
 | ----------- | -------------- | -------- | -------- |
 | base.md     | 基础文档       | -------- | -------- |
+| record.md   | 记录文档       | -------- | -------- |
 | uniCloud.md | ----           | -------- | -------- |
 | uviewui.md  | uviewui 组件库 | -------- | -------- |
 

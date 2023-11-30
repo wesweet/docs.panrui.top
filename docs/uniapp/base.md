@@ -2,7 +2,7 @@
  * @Description:
  * @Author: prui
  * @Date: 2023-11-17 08:43:09
- * @LastEditTime: 2023-11-17 14:50:04
+ * @LastEditTime: 2023-11-30 14:35:55
  * @LastEditors: prui
  * 不忘初心,不负梦想
 -->
@@ -20,7 +20,6 @@ const uploadFile = () => {
   uni.chooseImage({
     count: 1,
     success: (res) => {
-      console.log(res);
       uni.uploadFile({
         url: HTTP_REQUEST_URL + appApi.uploadFile,
         filePath: res.tempFilePaths[0],
