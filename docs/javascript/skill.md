@@ -7,7 +7,7 @@
  * 不忘初心,不负梦想
 -->
 
-## 最后更新时间(2023-11-24)
+## 最后更新时间(2024-01-16)
 
 ## 常用小技巧
 
@@ -82,6 +82,20 @@ undefined * 1; // NaN
 Object.keys(obj).length === 0;
 // 方法2
 JSON.stringify(obj) === "{}";
+```
+
+#### 对象转数组
+
+```js
+// Object.keys 返回对象的属性名数组
+// Object.values 返回对象的属性值数组
+const obj = { a: 1, b: 2, c: 3 };
+const arr = Object.keys(obj).map((key) => {
+  return {
+    value: Number(key),
+    label: obj[key],
+  };
+});
 ```
 
 ## 优化方案

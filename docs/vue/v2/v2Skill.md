@@ -2,14 +2,24 @@
  * @Description:
  * @Author: panrui
  * @Date: 2023-07-07 08:59:05
- * @LastEditTime: 2023-08-31 09:08:04
- * @LastEditors: panrui
+ * @LastEditTime: 2024-01-16 16:46:43
+ * @LastEditors: prui
  * 不忘初心,不负梦想
 -->
 
-## 最后更新时间：2021-08-31 09-08-04
+## 最后更新时间(2024-01-16)
 
 - v2 使用小技巧
+
+## 通过 this.$options.data()来还原默认值
+
+```js
+this.obj = this.$options.data().obj; // this.$options.data() 函数返回的是一个对象，包含组件创建时属性的默认值
+```
+
+## 通过设置 key 来阻止组件缓存
+
+当一个页面不通区块使用同一个组件的时候，并且对组件进行传值 props 传值的时候，会存在组件缓存的原因，使用 key 来阻止组件缓存
 
 ## 动态设置 class
 
