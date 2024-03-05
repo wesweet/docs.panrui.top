@@ -7,7 +7,7 @@
  * 不忘初心,不负梦想
 -->
 
-## 最后更新时间(2024-01-16)
+## 最后更新时间(2024-03-05)
 
 ## 常用小技巧
 
@@ -228,4 +228,17 @@ canvas.toBlob(
   "image/jpeg",
   1
 );
+```
+
+## PC 端实现点击复制功能
+
+```js
+navigator.clipboard
+  .writeText('要复制的文案')
+  .then(() => {
+    this.$message.success("复制成功");
+  })
+  .catch(() => {
+    this.$message.error("复制失败");
+  });
 ```
