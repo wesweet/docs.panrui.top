@@ -2,143 +2,82 @@
  * @Description:
  * @Author: panrui
  * @Date: 2023-11-14 11:22:37
- * @LastEditTime: 2024-03-05 15:35:37
+ * @LastEditTime: 2024-03-14 09:31:46
  * @LastEditors: prui
  * 不忘初心,不负梦想
 -->
 
-## 最后更新时间(2023-11-24)
+## 最后更新时间(2024-03-14)
 
-## 原型链 和 继承
+## switch
 
-> 1.  访问一个对象的属性时，会先在基本属性中查找，如果没有，就会沿着**proto**这条链向上查找，这就是原型链
-> 2.  由于原型链的存在，我们可以在原型对象上定义方法和属性，这些方法和属性可以被该原型对象的所有实例对象共享，这就是继承
-
-## 函数与对象 prototype、**proto**、constructor 的关系
-
-> 1.  函数是对象，对象是函数的实例，对象的原型是函数的原型对象
-> 2.  函数的原型对象的原型是 Object.prototype
-> 3.  函数拥有 prototype 属性，对象拥有**proto**属性
+- 使用严格运算符 === 进行判断
+- 多个 case 与提供的值匹配，则选择匹配的第一个 case
+- break 确保程序立即从相关的 case 子句中跳出 switch，并接着执行 switch 之后的语句，若 break 被省略，程序会继续执行 switch 语句中的下一条语句。
+- 默认情况下，整个 switch 为一个块级作用域
 
 ```js
-function Person() {} // 函数是对象
-var person = new Person(); // 对象是函数的实例
-console.log(Person.prototype); // 函数的原型对象
-console.log(person.__proto__); // 对象的原型 隐式原型
-console.log(Person.prototype.constructor === Person); // true 函数的原型对象的构造函数是函数本身
-console.log(person.__proto__ === Person.prototype); // true 对象的原型是函数的原型对象
-console.log(Person.prototype.__proto__ === Object.prototype); // true 函数的原型对象的原型是Object.prototype
-console.log(Object.prototype.__proto__ === null); // true Object.prototype的原型是null
-
-instanceof // 判断对象是否是某个构造函数的实例 就是通过上面那种方式去找，如果两条线相交就是true
-```
-
-## 代码段
-
-```js
-// 全局代码
-<script type="text/javascript">// 代码段...</script>;
-
-// eval代码接收的也是一段文本形式的代码
-eval("alert(123)");
-
-// 函数体是代码是因为函数在创建时，本质上是new Function(...)得来的，其中需要传入一个文本形式的参数作为函数体
-function fn(x) {
-  console.log(x + 5);
+// 基于第三点产生骚操作
+// 多case - 单一操作
+var Animal = "Giraffe";
+switch (Animal) {
+  case "Cow":
+  case "Giraffe":
+  case "Dog":
+  case "Pig":
+    console.log("This animal will go on Noah's Ark.");
+    break;
+  case "Dinosaur":
+  default:
+    console.log("This animal will not.");
+}
+// 多case - 关联操作 (应用范围属实有点难匹配)
+var foo = 1;
+var output = "Output: ";
+switch (foo) {
+  case 0:
+    output += "So ";
+  case 1:
+    output += "What ";
+    output += "Is ";
+  case 2:
+    output += "Your ";
+  case 3:
+    output += "Name";
+  case 4:
+    output += "?";
+    console.log(output);
+    break;
+  case 5:
+    output += "!";
+    console.log(output);
+    break;
+  default:
+    console.log("Please pick a number from 0 to 5!");
 }
 ```
 
-## 自由变量
-
-> 1.  在 A 作用域中使用过了变量 X，但是却没有在 A 作用域中声明，对于 A 作用域来说，X 就是一个自由变量
-> 2.  寻找自由变量的值，要到创建这个函数的作用域取值(是创建)，而不是(调用)----这就是所谓的"静态作用域"
-
-## 执行上下文
-
-在一段 JS 代码执行之前，浏览器会做一些准备工作
-
-> 1.  对代码段中的 <span class="red-text">变量,函数表达式进行声明, </span>而不是赋值,<span class="red-text">变量赋值 </span>是在赋值语句执行的时候进行的
-> 2.  对代码段中的 <span class="red-text">this </span> 进行赋值
-> 3.  对代码段中的<span class="red-text">函数声明 </span>进行赋值
-
-如果代码段是函数体情况
-
-> 4.  对 <span class="red-text">arguments</span> 变量进行赋值
-> 5.  对自由变量进行赋值,并确定取值<span class="red-text">作用域</span>
-
-## 执行上下文环境
-
-在代码执行之前,将要用到的所有变量都事先拿出来，有的直接赋值，有的先用 undefined 占个空
-
-> 1.  函数每被调用一次,都会产生一个新的执行上下文环境.(因为不同的调用可能会有不同的参数)
-> 2.  函数在<span class="red-text">定义</span>的时候(不是调用的时候),就已经确定了函数体内部<span class="red-text">自由变量的作用域</span>
-
-## 执行上下文栈
-
-> 1.  执行全局代码时，会产生一个执行上下文环境
-> 2.  每次调用函数都又会产生执行上下文环境
-> 3.  当函数调用完成时，这个上下文环境以及其中的数据都会被消除，再重新回到全局上下文环境
-> 4.  处于活动状态的执行上下文环境永远只有一个
-> 5.  其实这是一个压栈出栈的过程--执行上下文栈
-
-## 作用域
-
-最大的用处就是隔离变量，不同作用域下同名变量不会有冲突
-
-> 1.  JavaScript 除了全局作用域之外，只有函数可以创建的作用域
-> 2.  一段代码中，每一个函数都会形成一个作用域
-> 3.  作用域有上下级的关系，上下级关系的确定就看函数在那个作用域下创建的
-> 4.  作用域只是一个地盘，一个抽象的概念，其中没有变量，要通过作用域对应的执行上下文环境获取变量的值，同一个作用域下，不同的调用会产生不同的执行上下文环境，继而产生不同的变量的值。
-> 5.  所以，作用域中变量的值是在执行过程中产生确定的，但是作用域是在函数创建时就确定了。
-> 6.  所以，如果要查找一个作用域下某个变量的值，就需要找到这个作用域对应的执行上下文环境，再到其中寻找变量的值
-
-## 作用域链
-
-沿着作用域上下级寻找，我们称之为作用域链
-
-## this
-
-> 1.  构造函数中的 this，this 指向构造函数创建出来的对象
-> 2.  函数作为一个对象的属性，并且作为对象的一个属性被调用时，函数中的 this 指向该对象
-> 3.  函数用 call 或者 apply 调用时，this 的值就取传入的对象的值。
-> 4.  全局&调用普通函数 this 指向 window 5.在构造函数的 prototype 中 this,指向当前对象的值
-
-注释：在函数中 this 到底取何值，是在函数真正被调用执行的时候确定的，函数定义的时候确定不了，因为 this 的取值是执行上下文环境的一部分，每次调用函数，都会产生一个新的执行上下文环境
-
-## 总结
-
-> 1.  作用域的上下级，在函数创建时候就已经确定了。
-> 2.  this 的指向问题取决于函数执行时候。
-> 3.  函数中自由变量的取值，需要创建这个函数时的作用域查找。
-
-## 闭包
-
-> 读取其他函数内部变量的函数
-
-## call apply bind
-
-## 事件循环
-
-## 事件委托
-
-## 事件模型
-
-## 事件捕获
-
-## 事件冒泡
-
-## 事件流
-
-## 事件对象
-
-## 事件类型
-
-## 事件处理程序
-
-## 事件监听
-
-## 事件绑定
-
-## 事件代理
-
-## web API接口参考 TODO优先开发
+```js
+// 基于第四点作用域解释
+// 第一种解决方式 (使用括号包裹) // Unexpected lexical declaration in case block 不知道这个错误还会不会提示，因为 ECMAScript 规定，在 switch 语句的 case 或 default 子句内部不允许直接声明变量。TODO待验证....
+const action = "say_hello";
+switch (action) {
+  case "say_hello": {
+    // added brackets
+    let message = "hello";
+    console.log(message);
+    break;
+  } // added brackets
+  case "say_hi": {
+    // added brackets
+    let message = "hi";
+    console.log(message);
+    break;
+  } // added brackets
+  default: {
+    // added brackets
+    console.log("Empty action received.");
+    break;
+  } // added brackets
+}
+```

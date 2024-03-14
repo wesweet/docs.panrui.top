@@ -2,12 +2,66 @@
  * @Description: elementui组件使用技巧
  * @Author: panrui
  * @Date: 2023-05-22 15:40:54
- * @LastEditTime: 2024-03-05 15:25:13
+ * @LastEditTime: 2024-03-14 09:43:36
  * @LastEditors: prui
  * 不忘初心,不负梦想
 -->
 
-## 最后更新时间(2024-03-05)
+## 最后更新时间(2024-03-14)
+
+## MessageBox 组件
+
+- 从场景上说，MessageBox 的作用是美化系统自带的 alert、confirm 和 prompt，因此适合展示较为简单的内容。如果需要弹出较为复杂的内容，请使用 Dialog。
+
+```js
+this.$alert("这是一段内容", "标题名称", {
+  confirmButtonText: "确定",
+  callback: (action) => {
+    this.$message({
+      type: "info",
+      message: `action: ${action}`,
+    });
+  },
+});
+
+this.$confirm("此操作将永久删除该文件, 是否继续?", "提示", {
+  confirmButtonText: "确定",
+  cancelButtonText: "取消",
+  type: "warning",
+})
+  .then(() => {
+    this.$message({
+      type: "success",
+      message: "删除成功!",
+    });
+  })
+  .catch(() => {
+    this.$message({
+      type: "info",
+      message: "已取消删除",
+    });
+  });
+
+this.$prompt("请输入邮箱", "提示", {
+  confirmButtonText: "确定",
+  cancelButtonText: "取消",
+  inputPattern:
+    /[\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*@(?:[\w](?:[\w-]*[\w])?\.)+[\w](?:[\w-]*[\w])?/,
+  inputErrorMessage: "邮箱格式不正确",
+})
+  .then(({ value }) => {
+    this.$message({
+      type: "success",
+      message: "你的邮箱是: " + value,
+    });
+  })
+  .catch(() => {
+    this.$message({
+      type: "info",
+      message: "取消输入",
+    });
+  });
+```
 
 ## Checkbox 组件
 
@@ -303,3 +357,7 @@ handleRemove(file) {
 }
 
 ```
+
+## Pagination 组件
+
+- 分页组件事件传递额外参数
