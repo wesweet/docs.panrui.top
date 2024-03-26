@@ -51,6 +51,8 @@ dnf install bind-utils
 ```
 vim /etc/ddns/config.json
 
+cat /var/log/cron_log/ddns_cron.log
+
 // 重启服务
 使用绝对路径执行 run.sh 文件：在命令行中输入 "/path/to/run.sh"（其中 "/path/to/" 是 run.sh 文件的完整路径）。
 使用相对路径执行 run.sh 文件：如果 run.sh 文件和你的命令行在同一目录下，你可以输入 "./run.sh" 来执行该文件。
