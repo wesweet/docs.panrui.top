@@ -2,7 +2,7 @@
  * @Description:
  * @Author: panrui
  * @Date: 2023-07-07 08:59:05
- * @LastEditTime: 2024-01-16 16:46:43
+ * @LastEditTime: 2024-03-26 10:16:23
  * @LastEditors: prui
  * 不忘初心,不负梦想
 -->
@@ -20,6 +20,37 @@ this.obj = this.$options.data().obj; // this.$options.data() 函数返回的是�
 ## 通过设置 key 来阻止组件缓存
 
 当一个页面不通区块使用同一个组件的时候，并且对组件进行传值 props 传值的时候，会存在组件缓存的原因，使用 key 来阻止组件缓存
+
+## 深度监听组件接收的数据
+
+```js
+export default {
+  // 接收数据
+  props: {
+    mtData: {
+      type: Object,
+      default: () => {},
+    },
+  },
+  data() {
+    return {
+      // 绑定自定义数据
+      data: this.mtData,
+    };
+  },
+  watch: {
+    // 监听自定义数据
+    data: {
+      handler(val) {
+        // 触发父组件更新数据，执行单项数据流
+        this.$emit("update:mtData", val);
+      },
+      deep: true,
+      immediate: false,
+    },
+  },
+};
+```
 
 ## 动态设置 class
 
@@ -58,11 +89,11 @@ this.obj = this.$options.data().obj; // this.$options.data() 函数返回的是�
 ```js
 methods {
     //定义
-    handInputDate: function () {
+    handInputDate() {
         console.log(123)
     },
     //触发
-    getDate: function () {
+    getDate() {
         this.$refs.inputResult.click() //重点看这里
     },
 }
@@ -115,13 +146,4 @@ post: {
 ```markup
 input 事件在输入的过程中不断被触发
 change 在输入之后,input标签blur才会触发
-```
-
-## 修改 element-ui 组件默认样式(通过::v-deep)
-
-```css
-::v-deep .el-dialog {
-  height: 70%;
-  overflow: auto;
-}
 ```
