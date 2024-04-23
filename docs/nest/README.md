@@ -2,8 +2,8 @@
  * @Description:
  * @Author: panrui
  * @Date: 2023-09-04 13:29:42
- * @LastEditTime: 2023-11-15 10:01:05
- * @LastEditors: panrui
+ * @LastEditTime: 2024-04-23 15:28:59
+ * @LastEditors: prui
  * 不忘初心,不负梦想
 -->
 
@@ -32,3 +32,10 @@ nest new project-name --strict
 ### 基础文档
 
 ### 记录文档
+
+### 快速文档
+
+| 名称          | 类型   | 描述                 | 功能说明 |
+| ------------- | ------ | -------------------- | -------- |
+| @ApiTags      | 装饰器 | 标签                 |          |
+| @ApiOperation | 装饰器 | 描述这个方法是干啥的 |          |
