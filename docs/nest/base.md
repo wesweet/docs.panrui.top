@@ -1,4 +1,12 @@
-## 最后更新时间(2023-11-15)
+<!--
+ * @Description: nest 基础文档
+ * @Author: prui
+ * @Date: 2023-11-14 10:38:25
+ * @LastEditTime: 2024-04-23 13:29:09
+ * @LastEditors: prui
+ * 不忘初心,不负梦想
+-->
+## 最后更新时间(2024-04-23)
 
 ## 模块(module)
 
@@ -40,6 +48,37 @@ export class CatsController {
   findAll(): string {
     return "This action returns all cats";
   }
+}
+```
+
+#### 基类控制器
+
+> 解决只有路由不同，但是方法相同逻辑相同时候的重复代码
+
+```js
+// 创建基类控制器
+export abstract class BaseWanderController {
+  protected constructor(protected readonly wanderService: WanderService) {}
+
+  /**
+   * 获取游历列表
+   * @param query 查询参数
+   * @param apiResponse 响应装饰器对象
+   */
+  @SkipAuth()
+  @Get('/getWanderList')
+  async getWanderList(@Query() query: any, @ApiResponse() apiResponse: any) {
+  }
+}
+
+// 具体控制器
+@Controller('/h5')
+export class H5WanderController extends BaseWanderController {
+  constructor(wanderService: WanderService) {
+    super(wanderService);
+  }
+
+  // 如果有 /h5 特有的方法，可以在这里定义
 }
 ```
 
