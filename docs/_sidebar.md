@@ -108,6 +108,7 @@
 - [uniapp](/uniapp/)
   - [基础文档](/uniapp/base)
   - [记录文档](/uniapp/record)
+  - [技巧文档](/uniapp/skill)
   - [uniCloud 文档](/uniapp/uniCloud)
   - [uviewui](/uniapp/uviewui)
 - [vant](/vant/)
