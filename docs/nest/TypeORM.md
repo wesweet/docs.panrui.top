@@ -2,17 +2,106 @@
  * @Description: typeorm
  * @Author: panrui
  * @Date: 2023-09-05 14:04:12
- * @LastEditTime: 2023-10-31 13:18:12
- * @LastEditors: panrui
+ * @LastEditTime: 2024-04-23 13:41:55
+ * @LastEditors: prui
  * 不忘初心,不负梦想
 -->
 
-## 最后更新时间：2023-10-31
+## 最后更新时间(2024-04-23)
 
 ## 文档
 
 - [TypeORM](https://typeorm.biunav.com/zh/embedded-entities.html)
 - [中文文档](https://typeorm.bootcss.com/)
+
+## Entity 创建
+```js
+import {
+  Column,
+  Entity,
+  PrimaryGeneratedColumn,
+  BeforeInsert,
+  CreateDateColumn,
+  UpdateDateColumn,
+} from 'typeorm';
+import bcrypt from 'bcryptjs';
+
+export enum GenderEnum {
+  Male = 'M',
+  Female = 'F',
+  Other = 'O',
+}
+
+@Entity({ name: 'pr_id_users' })
+export class Users {
+  // 定义自增长数据类型
+  @PrimaryGeneratedColumn()
+  id: number;
+
+  @Column()
+  encryptedPassword: string;
+
+  // 定义enum数据类型
+  @Column({
+    type: 'enum',
+    enum: GenderEnum,
+    default: GenderEnum.Other,
+  })
+  gender: GenderEnum;
+
+  // 定义布尔类型
+  @Column({
+    type: 'boolean',
+    default: false,
+  })
+  mobileConfirmed: boolean;
+
+  // 定义时间类型
+  @Column({
+    type: 'timestamp',
+  })
+  registerDate: Date;
+
+  // 定义自动更新时间类型
+  @UpdateDateColumn()
+  updateDate: Date;
+
+  // 定义自动创建时间类型
+  @CreateDateColumn()
+  createDate: Date;
+
+  public password: string;
+
+  // 使用装饰器,定义函数，再执行save执行自动执行
+  @BeforeInsert()
+  async hashPassword() {
+    try {
+      console.log(this.password);
+      this.encryptedPassword = await bcrypt.hash(this.password, 10); // 加强加密强度
+      // const isMatch = await bcrypt.compare(this.password, this.encryptedPassword);  // 验证密码是否正确(因为无法解密的)
+      console.log(this.encryptedPassword);
+    } catch (error) {
+      console.log(error);
+      throw new Error('密码加密失败');
+    }
+  }
+
+  async validatePassword(plainPassword: string): Promise<boolean> {
+    try {
+      return await bcrypt.compare(plainPassword, this.encryptedPassword);
+    } catch (error) {
+      throw new Error('密码验证失败');
+    }
+  }
+}
+
+// 使用
+const user = new Users();
+user.username = 'exampleUser';
+user.password = 'examplePassword'; // 提供原始密码
+await user.hashPassword(); // 调用 hashPassword 方法加密密码
+await repository.save(user);
+```
 
 ## mysql 列类型
 
