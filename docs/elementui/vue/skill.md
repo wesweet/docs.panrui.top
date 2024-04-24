@@ -2,12 +2,12 @@
  * @Description: elementui组件使用技巧
  * @Author: panrui
  * @Date: 2023-05-22 15:40:54
- * @LastEditTime: 2024-03-25 14:29:39
+ * @LastEditTime: 2024-04-24 15:18:49
  * @LastEditors: prui
  * 不忘初心,不负梦想
 -->
 
-## 最后更新时间(2024-03-14)
+## 最后更新时间(2024-04-24)
 
 ## 修改 element-ui 组件默认样式(通过::v-deep)
 
@@ -369,5 +369,71 @@ handleRemove(file) {
 
 ## Pagination 组件
 
-- 分页组件事件传递额外参数
+- 分页组件事件传递额外参数 
+- 无法直接通过已有事件解决
+
+```js
+// 通过封装Pagination组件解决
+<template>
+  <el-pagination
+    :key="logicType"
+    @current-change="handleCurrentChange"
+    :total="total"
+    :page-size="pageSize"
+    :current-page.sync="currentPage"
+  ></el-pagination>
+</template>
+
+<script>
+export default {
+  props: {
+    logicType: String,
+    total: Number,
+    pageSize: Number,
+    currentPage: {
+      type: Number,
+      required: true,
+      default: 1,
+    },
+  },
+  methods: {
+    handleCurrentChange(pageNumber) {
+      this.$emit('custom-current-change', pageNumber, this.logicType);
+    },
+  },
+};
+</script>
+
+// 父组件当中使用
+<my-pagination
+  :logic-type="'A'"
+  :total="total"
+  :page-size="pageSize"
+  :current-page.sync="currentPage"
+  @custom-current-change="onPageChange"
+></my-pagination>
+<script>
+export default {
+  methods: {
+    onPageChange(pageNumber, logicType) {
+      switch (logicType) {
+        case 'A':
+          console.log('当前页码:', pageNumber);
+          console.log('执行逻辑 A');
+          // 在此处实现逻辑 A
+          break;
+        case 'B':
+          console.log('当前页码:', pageNumber);
+          console.log('执行逻辑 B');
+          // 在此处实现逻辑 B
+          break;
+        // 添加更多逻辑类型...
+        default:
+          console.warn('未知逻辑类型:', logicType);
+      }
+    },
+  },
+};
+</script>
+```
 
