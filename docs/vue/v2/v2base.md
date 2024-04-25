@@ -2,7 +2,7 @@
  * @Description:
  * @Author: panrui
  * @Date: 2023-07-07 08:59:33
- * @LastEditTime: 2024-04-25 10:00:21
+ * @LastEditTime: 2024-04-25 13:25:32
  * @LastEditors: prui
  * 不忘初心,不负梦想
 -->
@@ -60,4 +60,39 @@ export default {
 ```js
 import mixin from "./mixin";
 Vue.mixin(mixin);
+```
+
+## ref 使用(获取原生 DOM 与组件实例)
+
+!> 用于获取 DOM 元素或子组件实例的引用。
+!> ref 引用在组件挂载后才能访问到。在 mounted 生命周期钩子中或其后的钩子（如 updated）中使用 ref 是安全的。在 created 钩子或更早阶段，$refs 中的引用可能还不可用
+
+```html
+<!-- 获取 DOM 元素引用 -->
+<div ref="myDiv">Hello, World!</div>
+
+<!-- 获取子组件引用 -->
+<child-component ref="myChild"></child-component>
+
+<script>
+  export default {
+    methods: {
+      doSomething() {
+        const myDiv = this.$refs.myDiv; // 获取 DOM 元素
+        const myChild = this.$refs.myChild; // 获取子组件实例
+      },
+    },
+  };
+</script>
+```
+
+#### 数组形式的 ref
+
+```html
+<div v-for="(item, index) in items" :ref="`itemRef-${index}`"></div>
+<script>
+  this.$refs.itemRef.forEach((item, index) => {
+    // ...
+  });
+</script>
 ```

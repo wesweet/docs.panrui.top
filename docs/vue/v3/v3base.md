@@ -2,14 +2,14 @@
  * @Description: v3使用指南
  * @Author: panrui
  * @Date: 2023-04-25 08:57:17
- * @LastEditTime: 2024-04-25 13:15:21
+ * @LastEditTime: 2024-04-25 13:32:30
  * @LastEditors: prui
  * 不忘初心,不负梦想
 -->
 
 ## 最后更新时间(2024-04-25)
 
-## 组合式函数(mixin)
+## mixin 使用
 
 !> 利用 Vue 的组合式 API 来封装和复用有状态逻辑的函数
 
@@ -46,6 +46,71 @@ export default function useUser(initialName = "", initialAge = 0) {
 import { defineComponent } from "vue";
 import useUser from "@/composables/useUser";
 const { userName, userAge, greetUser } = useUser("John", 25);
+</script>
+```
+
+## ref 使用(获取原生 DOM 与组件实例)
+
+```html
+<!-- 单个DOM 元素 或者组件实例 -->
+<div ref="myDiv">Hello, Vue 3!</div>
+<child-component ref="myChild"></child-component>
+<script setup>
+  import { ref, onMounted } from "vue";
+  import ChildComponent from './ChildComponent.vue';
+
+  const myDiv = ref(null);
+  const myChild = ref<InstanceType<typeof ChildComponent> | null>(null);
+
+  onMounted(() => {
+    // 在组件挂载后，myDiv.value 就指向了真实的 DOM 元素
+    const domElement = myDiv.value;
+    console.log(domElement.tagName); // 输出：'DIV'
+
+    // 在组件挂载后，myChild.value 就指向了子组件实例
+    const childInstance = myChild.value;
+    if (childInstance) {
+      childInstance.someMethod();
+    }
+  });
+</script>
+```
+
+```html
+<!-- 数组形式DOM 元素 或者组件实例 -->
+<div v-for="(item, index) in items" :ref="`itemRef-${index}`">
+  {{ item.text }}
+</div>
+<child-component
+  v-for="(item, index) in items"
+  :ref="`childRef-${index}`"
+  :item="item"
+></child-component>
+<script setup>
+  import { ref, onMounted } from 'vue';
+  import ChildComponent from './ChildComponent.vue';
+
+  const items = [/*...*/];
+  const itemRefs = ref<Array<HTMLDivElement | null>>([]);
+  const childRefs = ref<Array<InstanceType<typeof ChildComponent> | null>>([]);
+
+  onMounted(() => {
+    // 在组件挂载后，填充 itemRefs 数组
+    for (let i = 0; i < items.length; i++) {
+      itemRefs.value[i] = document.querySelector(`[ref="itemRef-${i}"]`);
+    }
+    // 在组件挂载后，填充 childRefs 数组
+    for (let i = 0; i < items.length; i++) {
+      childRefs.value[i] = getChildComponentByRef(`childRef-${i}`);
+    }
+    function getChildComponentByRef(refName: string): InstanceType<typeof ChildComponent> | null {
+      const el = document.querySelector(`[ref="${refName}"]`);
+      if (el instanceof ChildComponent) {
+        return el;
+      }
+      return null;
+    }
+  });
 </script>
 ```
 
