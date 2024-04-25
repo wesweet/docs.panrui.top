@@ -2,7 +2,7 @@
  * @Description:
  * @Author: panrui
  * @Date: 2023-04-25 08:57:17
- * @LastEditTime: 2024-04-25 14:35:43
+ * @LastEditTime: 2024-04-25 15:18:00
  * @LastEditors: prui
  * 不忘初心,不负梦想
 -->
@@ -18,20 +18,19 @@
 
 ### 子菜单技术文档
 
-| 菜单            | 说明            | 包含文件 | 功能说明             |
-| --------------- | --------------- | -------- | -------------------- |
-| base.md         | 基础文档        |          | 记录 vue 功能说明    |
-| componentLib.md | V2 组件库开发   |          |                      |
-| nuxt.md         | nuxt 服务端渲染 |          |                      |
-| plug.md         | vue 插件使用    |          |                      |
-| vuex.md         | vuex 状态管理器 |          |                      |
-| v2.md           | V2 使用指南     |          | 记录 v2 官网相关文档 |
-| v2base.md       | V2 使用文档     |          | 记录 v2 具体技术使用 |
-| v2Skill.md      | V2 使用技巧     |          | 记录 v2 使用技巧文档 |
-| pinia.md        | V3 pinia        |          |                      |
-| v3.md           | V3 使用指南     |          | 记录 v3 官网相关文档 |
-| v3base.md       | V3 使用文档     |          | 记录 v3 具体技术使用 |
-| v3Skill.md      | V3 使用技巧     |          | 记录 v3 使用技巧文档 |
+| 菜单         | 说明        | 包含文件 | 功能说明                 |
+| ------------ | ----------- | -------- | ------------------------ |
+| base.md      | 基础文档    |          | 基础文档                 |
+| nuxt.md      | nuxt 文档   |          | 服务端渲染               |
+| record.md    | 记录文档    |          | 基础文档中技术的实际使用 |
+| v2/base.md   | v2 基础文档 |          | v2 基础文档              |
+| v2/record.md | v2 记录文档 |          | v2 记录文档              |
+| v2/skill.md  | v2 技巧文档 |          | v2 技巧文档              |
+| v2/vuex.md   | vuex 文档   |          | vuex 文档                |
+| v3/base.md   | v3 基础文档 |          | v3 基础文档              |
+| v3/pinia.md  | pinia 文档  |          | pinia 文档               |
+| v3/record.md | v3 记录文档 |          | v3 记录文档              |
+| v3/skill.md  | v3 技巧文档 |          | v3 技巧文档              |
 
 ### 基础文档
 

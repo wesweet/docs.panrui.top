@@ -1,17 +1,17 @@
 <!--
- * @Description: 自定义组件库开发指南
- * @Author: panrui
- * @Date: 2021-07-08 11:36:43
- * @LastEditTime: 2023-07-05 13:21:09
- * @LastEditors: panrui
+ * @Description: vue记录文档
+ * @Author: prui
+ * @Date: 2024-04-25 15:20:01
+ * @LastEditTime: 2024-04-25 15:24:12
+ * @LastEditors: prui
  * 不忘初心,不负梦想
 -->
 
-## 最后更新时间(2024-03-25)
+## 最后更新时间(2024-04-25)
 
-- vue2.x 自定义组件库开发指南
+## vue2 组件开发流程
 
-## 项目目录结构
+#### 项目目录结构
 
 - ├── example // 测试组件的项目目录
   - └── assets // 静态资源
@@ -23,7 +23,7 @@
   - └── componentName // 组件
   - └── index.js // 注册组件
 
-## 组件开发
+#### 组件开发
 
 在 package 文件夹下面创建对应组件文件夹 例如：
 
@@ -48,7 +48,7 @@ PrCityPicker.install = function (Vue) {
 export default PrCityPicker;
 ```
 
-## 组件注册
+#### 组件注册
 
 ```js
 在 package 文件夹下 index.js 文件中,注册对应的组件,为组件添加installed方法
@@ -80,15 +80,4 @@ export default {
 };
 ```
 
-## 组件发布
-
-```js
-// 打包组件库
-npm run lib
-
-// 登录 输入对应的账号、密码、邮箱
-npm login
-
-// 发布
-npm publish
-```
+#### 组件发布

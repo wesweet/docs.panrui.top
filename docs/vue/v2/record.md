@@ -1,8 +1,8 @@
 <!--
- * @Description:
- * @Author: panrui
- * @Date: 2023-07-07 08:59:33
- * @LastEditTime: 2024-04-25 13:52:56
+ * @Description: vue2记录文档
+ * @Author: prui
+ * @Date: 2024-04-25 15:11:09
+ * @LastEditTime: 2024-04-25 15:30:50
  * @LastEditors: prui
  * 不忘初心,不负梦想
 -->

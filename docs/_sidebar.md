@@ -2,7 +2,7 @@
  * @Description: 定制侧边栏
  * @Author: panrui
  * @Date: 2021-05-20 16:43:32
- * @LastEditTime: 2024-03-25 13:34:29
+ * @LastEditTime: 2024-04-25 15:40:18
  * @LastEditors: prui
  * 不忘初心,不负梦想
 -->
@@ -115,17 +115,16 @@
   - [weapp](/vant/weapp)
 - [vue](/vue/)
   - [基础文档](/vue/base)
-  - [V2 组件库开发](/vue/componentLib)
-  - [nuxt](/vue/nuxt)
-  - [vue 插件使用](/vue/plug)
-  - [vuex](/vue/vuex)
-  - [V2 使用指南](/vue/v2/v2)
-  - [V2 使用文档](/vue/v2/v2base)
-  - [V2 使用技巧](/vue/v2/v2Skill)
-  - [v3 pinia](/vue/v3/pinia)
-  - [V3 使用指南](/vue/v3/v3)
-  - [V3 使用文档](/vue/v3/v3base)
-  - [V3 使用技巧](/vue/v3/v3Skill)
+  - [nuxt 文档](/vue/nuxt)
+  - [记录文档](/vue/record)
+  - [v2 基础文档](/vue/v2/base)
+  - [v2 记录文档](/vue/v2/record)
+  - [v2 技巧文档](/vue/v2/skill)
+  - [vuex 文档](/vue/v2/vuex)
+  - [v3 基础文档](/vue/v3/base)
+  - [pinia 文档](/vue/v3/pinia)
+  - [v3 记录文档](/vue/v3/record)
+  - [v3 技巧文档](/vue/v3/skill)
 - [vxetable](/vxetable/)
 - [web](/web/)
   - [http](/web/http)

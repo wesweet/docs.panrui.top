@@ -1,15 +1,13 @@
 <!--
- * @Description:
- * @Author: panrui
- * @Date: 2023-07-07 08:59:05
- * @LastEditTime: 2024-03-26 10:16:23
+ * @Description: vue2技巧文档
+ * @Author: prui
+ * @Date: 2024-04-25 15:11:18
+ * @LastEditTime: 2024-04-25 15:31:54
  * @LastEditors: prui
  * 不忘初心,不负梦想
 -->
 
 ## 最后更新时间(2024-01-16)
-
-- v2 使用小技巧
 
 ## 通过 this.$options.data()来还原默认值
 

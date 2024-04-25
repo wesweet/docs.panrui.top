@@ -1,11 +1,12 @@
 <!--
- * @Description:
- * @Author: panrui
- * @Date: 2023-07-07 08:57:04
- * @LastEditTime: 2024-04-25 14:09:01
+ * @Description: vue3基础文档
+ * @Author: prui
+ * @Date: 2024-04-25 15:14:04
+ * @LastEditTime: 2024-04-25 16:03:24
  * @LastEditors: prui
  * 不忘初心,不负梦想
 -->
+
 
 ## 最后更新时间(2024-04-25)
 

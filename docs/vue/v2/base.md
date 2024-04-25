@@ -1,15 +1,13 @@
 <!--
- * @Description: 
- * @Author: panrui
- * @Date: 2023-07-07 08:56:56
- * @LastEditTime: 2024-03-05 15:09:03
+ * @Description: vue2基础文档
+ * @Author: prui
+ * @Date: 2024-04-25 15:10:39
+ * @LastEditTime: 2024-04-25 15:29:26
  * @LastEditors: prui
  * 不忘初心,不负梦想
 -->
 
-## 最后更新时间(2024-03-05)
-
-- v2 使用指南
+## 最后更新时间(2024-04-25)
 
 ## v-for 中的 Ref 数组
 
@@ -162,5 +160,3 @@ app.use(VueRouter)
 ## VNode 生命周期事件
 
 ## 侦听数组
-
-1. 当侦听一个数组时，只有当数组被替换时才会触发回调。如果你需要在数组被改变时触发回调，必须指定 deep 选项
