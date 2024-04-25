@@ -2,7 +2,7 @@
  * @Description: v3使用指南
  * @Author: panrui
  * @Date: 2023-04-25 08:57:17
- * @LastEditTime: 2024-04-25 10:58:42
+ * @LastEditTime: 2024-04-25 13:15:21
  * @LastEditors: prui
  * 不忘初心,不负梦想
 -->
@@ -46,6 +46,100 @@ export default function useUser(initialName = "", initialAge = 0) {
 import { defineComponent } from "vue";
 import useUser from "@/composables/useUser";
 const { userName, userAge, greetUser } = useUser("John", 25);
+</script>
+```
+
+## defineProps
+
+!> 接收父组件传递的属性
+
+```vue
+// ParentComponent.vue
+<template>
+  <div>
+    <h2>Parent Component</h2>
+    <ChildComponent
+      v-bind:title="parentTitle"
+      :isEnabled="parentIsEnabled"
+      :items="parentItems"
+    />
+  </div>
+</template>
+
+<script setup lang="ts">
+import { ref } from "vue";
+import ChildComponent from "./ChildComponent.vue";
+
+// 定义父组件内部状态
+const parentTitle = ref<string>("From Parent");
+const parentIsEnabled = ref<boolean>(true);
+const parentItems = ref<string[]>(["Item 1", "Item 2", "Item 3"]);
+</script>
+
+// ChildComponent.vue
+<template>
+  <div>
+    <h3>{{ title }}</h3>
+    <p v-if="isEnabled">This feature is enabled.</p>
+    <ul>
+      <li v-for="(item, index) in items" :key="index">{{ item }}</li>
+    </ul>
+  </div>
+</template>
+
+<script setup lang="ts">
+import { defineProps } from "vue";
+
+// 声明 props 类型
+interface Props {
+  title: string;
+  isEnabled: boolean;
+  items: string[];
+}
+
+// 定义并获取 props
+const props = defineProps<Props>();
+</script>
+```
+
+## defineEmits
+
+!> 通过 emit 触发父组件自定义函数
+
+```vue
+// ParentComponent.vue
+<template>
+  <div>
+    <ChildComponent @customEvent="handleCustomEvent" />
+  </div>
+</template>
+
+<script setup lang="ts">
+function handleCustomEvent() {
+  console.log("Custom event received in parent component!");
+}
+</script>
+
+// ChildComponent.vue
+<template>
+  <div>
+    <!-- ... existing content ... -->
+    <button @click="handleClick">Trigger Custom Event</button>
+  </div>
+</template>
+
+<script setup lang="ts">
+import { defineEmits } from "vue";
+
+interface EmittedEvents {
+  (event: "customEvent"): void;
+}
+
+const emit = defineEmits<EmittedEvents>();
+
+function handleClick() {
+  emit("customEvent");
+}
 </script>
 ```
 
