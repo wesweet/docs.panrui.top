@@ -2,73 +2,50 @@
  * @Description: v3使用指南
  * @Author: panrui
  * @Date: 2023-04-25 08:57:17
- * @LastEditTime: 2024-04-25 10:13:07
+ * @LastEditTime: 2024-04-25 10:58:42
  * @LastEditors: prui
  * 不忘初心,不负梦想
 -->
 
 ## 最后更新时间(2024-04-25)
 
-- v3 使用文档
-
 ## 组合式函数(mixin)
 
-!> 替代 v2 中的 mixin 功能
-
 !> 利用 Vue 的组合式 API 来封装和复用有状态逻辑的函数
+
+> 1. 替代 v2 中的 mixin 功能
+> 2. vue-composable 或 @vueuse/core (专门支持 Composition API 的第三方库)
 
 1. 封装无状态逻辑的函数
 
 ```js
 // 按照惯例，组合式函数名以“use”开头
-export function useUserBasic() {
-  const userBasic = reactive({
-    username: "",
-    password: "",
-    remember: false,
-  });
-  const userBasicRules = reactive({
-    username: [
-      {
-        required: true,
-        message: "请输入用户名",
-        trigger: "blur",
-      },
-    ],
-    password: [
-      {
-        required: true,
-        message: "请输入密码",
-        trigger: "blur",
-      },
-    ],
-    remember: [
-      {
-        required: true,
-        message: "请勾选记住密码",
-        trigger: "change",
-      },
-    ],
-  });
-  return {
-    userBasic,
-    userBasicRules,
-  };
+import { ref } from "vue";
+
+export default function useUser(initialName = "", initialAge = 0) {
+  const userName = ref(initialName);
+  const userAge = ref(initialAge);
+
+  const greetUser = (name) => `Hello, ${name}!`;
+
+  return { userName, userAge, greetUser };
 }
 ```
 
 2. 使用组合式函数
 
-```html
+```vue
+<template>
+  <div>
+    <h1>{{ greetUser }}</h1>
+    <!-- ... -->
+  </div>
+</template>
+
 <script setup>
-  import { useUserBasic } from "./useUserBasic";
-  const { userBasic, userBasicRules } = useUserBasic();
-  const onSubmit = () => {
-    console.log(userBasic);
-    console.log(userBasicRules);
-    console.log("submit");
-    return false;
-  };
+import { defineComponent } from "vue";
+import useUser from "@/composables/useUser";
+const { userName, userAge, greetUser } = useUser("John", 25);
 </script>
 ```
 
