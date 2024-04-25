@@ -2,7 +2,7 @@
  * @Description:
  * @Author: panrui
  * @Date: 2023-07-07 08:59:33
- * @LastEditTime: 2024-04-25 13:25:32
+ * @LastEditTime: 2024-04-25 13:52:56
  * @LastEditors: prui
  * 不忘初心,不负梦想
 -->
@@ -70,6 +70,7 @@ Vue.mixin(mixin);
 ```html
 <!-- 获取 DOM 元素引用 -->
 <div ref="myDiv">Hello, World!</div>
+<div v-for="(item, index) in items" :ref="`itemRef-${index}`"></div>
 
 <!-- 获取子组件引用 -->
 <child-component ref="myChild"></child-component>
@@ -80,19 +81,39 @@ Vue.mixin(mixin);
       doSomething() {
         const myDiv = this.$refs.myDiv; // 获取 DOM 元素
         const myChild = this.$refs.myChild; // 获取子组件实例
+        this.$refs.itemRef.forEach((item, index) => {
+          // ...
+        });
       },
     },
   };
 </script>
 ```
 
-#### 数组形式的 ref
+## Provide / Inject
 
-```html
-<div v-for="(item, index) in items" :ref="`itemRef-${index}`"></div>
+!> provide 和 inject 绑定在 Vue 2 中是非响应式的。如果 provide 中的值是一个对象且对象内部的属性是响应式的，则子组件可以响应这些属性的变化。
+!> 如果多个祖先组件同时提供了相同的属性，子组件将使用最近的祖先提供的值（即离子组件最近的祖先覆盖较远的祖先）。
+
+```js
+<!-- 祖先组件 -->
 <script>
-  this.$refs.itemRef.forEach((item, index) => {
-    // ...
-  });
+export default {
+  provide: {
+    someValue: 'Hello from Parent',
+    someFunction: () => 'Parent function called'
+  }
+};
+</script>
+
+<!-- 子孙组件 -->
+<script>
+export default {
+  inject: ['someValue', 'someFunction'],
+  mounted() {
+    console.log(this.someValue); // 输出：'Hello from Parent'
+    console.log(this.someFunction()); // 输出：'Parent function called'
+  }
+};
 </script>
 ```

@@ -2,7 +2,7 @@
  * @Description:
  * @Author: prui
  * @Date: 2023-11-23 13:39:00
- * @LastEditTime: 2024-04-25 10:22:53
+ * @LastEditTime: 2024-04-25 13:47:56
  * @LastEditors: prui
  * 不忘初心,不负梦想
 -->
@@ -26,6 +26,46 @@ MyComponent.created
 ```
 
 ## 组件通信
+
+> 1. 父子组件通信 Props
+> 2. 子到父通信 Emit
+> 3. $parent 和 $children 直接访问父组件的实例方法或子组件实例
+> 4. ref 获取对子组件或 DOM 元素的直接引用，以便直接调用子组件的方法或访问其属性
+> 5. $attrs 和 $listeners
+> 6. Event Bus（事件总线）（当这些组件没有直接的父子关系）
+```js
+// event-bus.js
+import Vue from 'vue';
+
+export const EventBus = new Vue();
+
+// 发送组件
+import { EventBus } from './event-bus.js';
+
+// 触发一个名为 'customEvent' 的事件，并附带数据
+EventBus.$emit('customEvent', eventData);
+
+// 接收组件
+import { EventBus } from './event-bus.js';
+
+// 监听 'customEvent' 事件
+EventBus.$on('customEvent', handleCustomEvent);
+
+function handleCustomEvent(receivedEventData) {
+  console.log('Received event data:', receivedEventData);
+  // 在这里处理接收到的数据
+}
+
+// 在组件卸载时移除事件监听
+export default {
+  beforeDestroy() {
+    EventBus.$off('customEvent', handleCustomEvent);
+  }
+};
+```
+> 7. Provide/Inject
+> 8. Vuex
+> 9. 本地存储
 
 ## 组件(components 待修改)
 

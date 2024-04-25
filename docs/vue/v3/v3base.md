@@ -114,6 +114,36 @@ const { userName, userAge, greetUser } = useUser("John", 25);
 </script>
 ```
 
+## Provide / Inject
+
+!> Vue 3 中 provide 和 inject 的绑定现在是响应式的。无论是直接提供的值还是提供的对象的属性，只要它们是响应式的，子组件都能自动响应其变化。
+!> Vue 3 中也保留了祖先组件提供的值被最近祖先覆盖的特性。
+
+```js
+// 祖先组件
+import { provide } from 'vue';
+
+const someValue = 'Hello from Parent';
+const someFunction = () => 'Parent function called';
+
+provide('someValue', someValue);
+provide('someFunction', someFunction);
+</script>
+
+// 子孙组件
+import { inject } from 'vue';
+
+const someValue = inject('someValue');
+const someFunction = inject('someFunction');
+
+if (!someValue) {
+  throw new Error('someValue not provided');
+}
+
+console.log(someValue); // 输出：'Hello from Parent'
+console.log(someFunction()); // 输出：'Parent function called'
+```
+
 ## defineProps
 
 !> 接收父组件传递的属性
