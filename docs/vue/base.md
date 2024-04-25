@@ -2,14 +2,30 @@
  * @Description:
  * @Author: prui
  * @Date: 2023-11-23 13:39:00
- * @LastEditTime: 2024-03-05 15:33:17
+ * @LastEditTime: 2024-04-25 10:22:53
  * @LastEditors: prui
  * 不忘初心,不负梦想
 -->
 
-## 最后更新时间(2024-03-05)
+## 最后更新时间(2024-04-25)
 
-## 组件(components)
+## 混合(mixin)
+
+!> 一个包含组件选项对象的数组，这些选项都将被混入到当前组件的实例中
+
+- 执行顺序、合并规则、冲突以组件数据优先
+
+```
+当组件和混入中都定义了同一个生命周期钩子时，它们会被合并为一个数组。在执行时，会先按照混入注册的顺序执行混入中的钩子函数，然后执行组件自身的钩子函数。
+例如，如果有两个混入 mixin1 和 mixin2，以及组件 MyComponent，它们都定义了 created 钩子，那么执行顺序将是
+mixin1.created
+mixin2.created
+MyComponent.created
+当组件和混入对象含有同名选项时，这些选项将以恰当的方式进行“合并”。
+比如，数据对象在内部会进行递归合并，并在发生冲突时以组件数据优先
+```
+
+## 组件(components 待修改)
 
 > 组件注册的方式
 
@@ -124,62 +140,6 @@ app.component(
   "MyComponent",
   defineAsyncComponent(() => import("./components/MyComponent.vue"))
 );
-```
-
-## 混合(mixin)
-
-> 一个包含组件选项对象的数组，这些选项都将被混入到当前组件的实例中
-
-- 执行顺序、合并规则、冲突以组件数据优先
-
-```
-当组件和混入中都定义了同一个生命周期钩子时，它们会被合并为一个数组。在执行时，会先按照混入注册的顺序执行混入中的钩子函数，然后执行组件自身的钩子函数。
-例如，如果有两个混入 mixin1 和 mixin2，以及组件 MyComponent，它们都定义了 created 钩子，那么执行顺序将是
-mixin1.created
-mixin2.created
-MyComponent.created
-当组件和混入对象含有同名选项时，这些选项将以恰当的方式进行“合并”。
-比如，数据对象在内部会进行递归合并，并在发生冲突时以组件数据优先
-```
-
-## 组合式函数
-
-> 在 Vue 应用的概念中，“组合式函数”(Composables) 是一个利用 Vue 的组合式 API 来封装和复用有状态逻辑的函数。
-
-```js
-// mouse.js
-import { ref, onMounted, onUnmounted } from "vue";
-
-// 按照惯例，组合式函数名以“use”开头
-export function useMouse() {
-  // 被组合式函数封装和管理的状态
-  const x = ref(0);
-  const y = ref(0);
-
-  // 组合式函数可以随时更改其状态。
-  function update(event) {
-    x.value = event.pageX;
-    y.value = event.pageY;
-  }
-
-  // 一个组合式函数也可以挂靠在所属组件的生命周期上
-  // 来启动和卸载副作用
-  onMounted(() => window.addEventListener("mousemove", update));
-  onUnmounted(() => window.removeEventListener("mousemove", update));
-
-  // 通过返回值暴露所管理的状态
-  return { x, y };
-}
-```
-
-```html
-<script setup>
-  import { useMouse } from "./mouse.js";
-
-  const { x, y } = useMouse();
-</script>
-
-<template>Mouse position is at: {{ x }}, {{ y }}</template>
 ```
 
 ## 插件(plugins)

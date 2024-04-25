@@ -2,16 +2,77 @@
  * @Description: v3使用指南
  * @Author: panrui
  * @Date: 2023-04-25 08:57:17
- * @LastEditTime: 2023-05-18 14:48:22
- * @LastEditors: panrui
+ * @LastEditTime: 2024-04-25 10:13:07
+ * @LastEditors: prui
  * 不忘初心,不负梦想
 -->
 
-## 最后更新时间：2023-05-18 10-03-25
+## 最后更新时间(2024-04-25)
 
 - v3 使用文档
 
-## defineComponent
+## 组合式函数(mixin)
+
+!> 替代 v2 中的 mixin 功能
+
+!> 利用 Vue 的组合式 API 来封装和复用有状态逻辑的函数
+
+1. 封装无状态逻辑的函数
+
+```js
+// 按照惯例，组合式函数名以“use”开头
+export function useUserBasic() {
+  const userBasic = reactive({
+    username: "",
+    password: "",
+    remember: false,
+  });
+  const userBasicRules = reactive({
+    username: [
+      {
+        required: true,
+        message: "请输入用户名",
+        trigger: "blur",
+      },
+    ],
+    password: [
+      {
+        required: true,
+        message: "请输入密码",
+        trigger: "blur",
+      },
+    ],
+    remember: [
+      {
+        required: true,
+        message: "请勾选记住密码",
+        trigger: "change",
+      },
+    ],
+  });
+  return {
+    userBasic,
+    userBasicRules,
+  };
+}
+```
+
+2. 使用组合式函数
+
+```html
+<script setup>
+  import { useUserBasic } from "./useUserBasic";
+  const { userBasic, userBasicRules } = useUserBasic();
+  const onSubmit = () => {
+    console.log(userBasic);
+    console.log(userBasicRules);
+    console.log("submit");
+    return false;
+  };
+</script>
+```
+
+## defineComponent(待修改)
 
 > 1. 定义组件的函数，接收一个配置对象，返回一个组件对象，可以通过 app.component 方法注册到应用中
 
