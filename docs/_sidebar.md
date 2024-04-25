@@ -100,7 +100,7 @@
   - [乐都](/project/ledu)
   - [妙娱](/project/miaoyu)
 - [react](/react/)
-  - [hooks 使用](/react/base)
+  - [基础文档](/react/base)
   - [next](/react/next)
   - [router](/react/react-router-dom)
   - [学习文档](/react/react)

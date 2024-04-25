@@ -2,15 +2,20 @@
  * @Description: React文档
  * @Author: panrui
  * @Date: 2021-05-20 16:44:03
- * @LastEditTime: 2023-06-05 15:27:46
- * @LastEditors: panrui
+ * @LastEditTime: 2024-04-25 14:51:29
+ * @LastEditors: prui
  * 不忘初心,不负梦想
 -->
 
-# React 最后更新时间：2023-03-29 20-22-41
+# React 最后更新时间(2024-04-25)
 
-> 1.  [官方文档](https://react.docschina.org/learn)
+- [官方文档](https://react.docschina.org/learn)
+- [生命周期](https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)
 
-#### 学习文档
+### 子菜单技术文档
 
-> 1. [生命周期](https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)
+| 菜单     | 说明     | 包含文件 | 功能说明                |
+| -------- | -------- | -------- | ----------------------- |
+| base.md  | 基础文档 |          | 记录 react 具体技术使用 |
+| next.md  | next     |          |                         |
+| react.md | 基础文档 |          | 记录 react 官网相关文档 |
