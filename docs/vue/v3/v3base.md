@@ -238,6 +238,37 @@ function handleClick() {
 </script>
 ```
 
+## defineExpose
+
+!> 暴露内部属性和方法，帮助父组件通过 ref 调用子组件方法和属性
+
+```vue
+<template>
+  <div>
+    <span>{{ count }}</span>
+    <button @click="increment">Increment</button>
+  </div>
+</template>
+
+<script setup>
+import { ref } from "vue";
+
+// 响应式状态
+const count = ref(0);
+
+// 内部方法
+function increment() {
+  count.value++;
+}
+
+// 显式暴露 count 和 increment 给外部
+defineExpose({
+  count,
+  increment,
+});
+</script>
+```
+
 ## defineComponent(待修改)
 
 > 1. 定义组件的函数，接收一个配置对象，返回一个组件对象，可以通过 app.component 方法注册到应用中

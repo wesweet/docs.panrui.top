@@ -7,7 +7,7 @@
  * 不忘初心,不负梦想
 -->
 
-## 最后更新时间(2024-03-14)
+## 最后更新时间(2024-04-25)
 
 ## 双向绑定原理
 
@@ -51,7 +51,57 @@ Vue 判断两个节点是否相同时，主要是判断两者的`key`和`元素�
 
 ## V3 与 V2 的差别
 
-> V3 使用组合式 API 的形式
+> 通过 ref 调用子组件方法和属性的区别
+
+```
+vue2 默认子组件实例的所有公共方法和属性都是暴露，可以只用通过ref进行调用
+vue3 子组件需要使用defineExpose 暴露公共方法和属性，从而达到父组件进行调用
+```
+
+> API 形式的差别
+
+```js
+// vue2采用选项是api形式
+export default {
+  // data() 返回的属性将会成为响应式的状态
+  // 并且暴露在 `this` 上
+  data() {
+    return {
+      count: 0,
+    };
+  },
+
+  // methods 是一些用来更改状态与触发更新的函数
+  // 它们可以在模板中作为事件处理器绑定
+  methods: {
+    increment() {
+      this.count++;
+    },
+  },
+
+  // 生命周期钩子会在组件生命周期的各个不同阶段被调用
+  // 例如这个函数就会在组件挂载完成后被调用
+  mounted() {
+    console.log(`The initial count is ${this.count}.`);
+  },
+};
+
+// vue3 采用组合式api形式
+import { ref, onMounted } from "vue";
+
+// 响应式状态
+const count = ref(0);
+
+// 用来修改状态、触发更新的函数
+function increment() {
+  count.value++;
+}
+
+// 生命周期钩子
+onMounted(() => {
+  console.log(`The initial count is ${count.value}.`);
+});
+```
 
 > computed 本质是一个惰性求值的观察者，具有缓存性，只有当依赖变化后，第一次访问 computed 属性才会重新计算值。computed 适用于一个数据被多个数据影响 watch 相反
 
@@ -75,6 +125,7 @@ Vue 判断两个节点是否相同时，主要是判断两者的`key`和`元素�
 
 ## 组件通信
 
+[组件通信](https://wesweet_admin.gitee.io/docs.panrui.top/#/vue/base?id=%e7%bb%84%e4%bb%b6%e9%80%9a%e4%bf%a1)
 
 ## vue.use 与 vue 原型链区别
 

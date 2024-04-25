@@ -2,12 +2,12 @@
  * @Description:
  * @Author: panrui
  * @Date: 2023-09-04 13:29:42
- * @LastEditTime: 2024-04-23 15:28:59
+ * @LastEditTime: 2024-04-25 14:37:24
  * @LastEditors: prui
  * 不忘初心,不负梦想
 -->
 
-# nest 最后更新时间(2023-11-15)
+# nest 最后更新时间(2024-04-25)
 
 - [nest](https://nestjs.bootcss.com/)
 - [中文文档](https://docs.nestjs.cn/9/introduction)

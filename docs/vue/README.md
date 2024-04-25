@@ -2,7 +2,7 @@
  * @Description:
  * @Author: panrui
  * @Date: 2023-04-25 08:57:17
- * @LastEditTime: 2024-04-25 09:43:26
+ * @LastEditTime: 2024-04-25 14:35:43
  * @LastEditors: prui
  * 不忘初心,不负梦想
 -->
@@ -25,13 +25,13 @@
 | nuxt.md         | nuxt 服务端渲染 |          |                      |
 | plug.md         | vue 插件使用    |          |                      |
 | vuex.md         | vuex 状态管理器 |          |                      |
-| v2.md           | V2 使用指南     |          |                      |
+| v2.md           | V2 使用指南     |          | 记录 v2 官网相关文档 |
 | v2base.md       | V2 使用文档     |          | 记录 v2 具体技术使用 |
-| v2Skill.md      | V2 使用技巧     |          |                      |
+| v2Skill.md      | V2 使用技巧     |          | 记录 v2 使用技巧文档 |
 | pinia.md        | V3 pinia        |          |                      |
-| v3.md           | V3 使用指南     |          |                      |
+| v3.md           | V3 使用指南     |          | 记录 v3 官网相关文档 |
 | v3base.md       | V3 使用文档     |          | 记录 v3 具体技术使用 |
-| v3Skill.md      | V3 使用技巧     |          |                      |
+| v3Skill.md      | V3 使用技巧     |          | 记录 v3 使用技巧文档 |
 
 ### 基础文档
 
