@@ -58,7 +58,7 @@
   - [dto 文档](/nest/dto)
   - [记录文档](/nest/record)
   - [技巧文档](/nest/skill)
-  - [技巧 typeorm 文档文档](/nest/typeorm)
+  - [typeorm 文档](/nest/typeorm)
 - [nginx](/nginx/)
   - [基础文档](/nginx/base)
   - [安装文档](/nginx/install)
