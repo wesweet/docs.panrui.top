@@ -2,7 +2,7 @@
  * @Description:
  * @Author: panrui
  * @Date: 2023-09-04 13:29:42
- * @LastEditTime: 2024-04-26 09:43:35
+ * @LastEditTime: 2024-04-26 10:02:11
  * @LastEditors: prui
  * 不忘初心,不负梦想
 -->
@@ -28,7 +28,7 @@ nest new project-name --strict
 | dto.md     | dto 文档     |          | 接口参数校验             |
 | record.md  | 记录文档     |          | 基础文档中技术的实际使用 |
 | skill.md   | 技巧文档     |          | nest 技巧文档            |
-| typeorm.md | typeorm 文档 |          | 数据库文档               |
+| typeorm.md | typeorm 文档 |          | 关系映射库               |
 
 ### 基础文档
 
