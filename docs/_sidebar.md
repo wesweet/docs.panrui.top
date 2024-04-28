@@ -2,7 +2,7 @@
  * @Description: 定制侧边栏
  * @Author: panrui
  * @Date: 2021-05-20 16:43:32
- * @LastEditTime: 2024-04-28 14:12:51
+ * @LastEditTime: 2024-04-28 15:00:49
  * @LastEditors: prui
  * 不忘初心,不负梦想
 -->
@@ -38,18 +38,6 @@
   - [基础文档](/javascript/base)
   - [记录文档](/javascript/record)
   - [技巧文档](/javascript/skill)
-  <!-- - [代码规范](/javascript/airbnb)
-  - [数组](/javascript/Array)
-  - [基础文档](/javascript/base)
-  - [ES6](/javascript/ES6)
-  - [事件](/javascript/event)
-  - [html2canvas](/javascript/html2canvas)
-  - [隐式转换](/javascript/implicitConversion)
-  - [jspdf](/javascript/jspdf)
-  - [正则](/javascript/regex)
-  - [技巧文档](/javascript/skill)
-  - [ts](/javascript/typescript)
-  - [网络请求](/javascript/XMLHttpRequest) -->
 - [leetcode](/leetcode/)
   - [数组与字符串](/leetcode/arrayandstring)
 - [linux](/linux/)

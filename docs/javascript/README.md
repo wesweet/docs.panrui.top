@@ -2,12 +2,12 @@
  * @Description: JavaScript文档
  * @Author: panrui
  * @Date: 2021-05-20 16:44:03
- * @LastEditTime: 2024-04-28 14:10:42
+ * @LastEditTime: 2024-04-28 15:14:20
  * @LastEditors: prui
  * 不忘初心,不负梦想
 -->
 
-# JavaScript 最后更新时间(`2024-4-28 14:12:18`)
+# JavaScript 最后更新时间(2024-4-28 14:12:18)
 
 ### 子菜单技术文档
 
