@@ -7,7 +7,7 @@
  * 不忘初心,不负梦想
 -->
 
-# canvas 最后更新时间(2023-11-14)
+# canvas
 
 ## 创建画布
 
@@ -103,3 +103,5 @@ const linearGradient = ctx.createLinearGradient(x1, y1, x2, y2); // x1,y1 起点
 // 径向渐变
 const radialGradient = ctx.createRadialGradient(x1, y1, r1, x2, y2, r2); // x1,y1,r1 起点坐标和半径 x2,y2,r2 终点坐标和半径
 ```
+
+最后更新时间：2024-4-28 15:55:13

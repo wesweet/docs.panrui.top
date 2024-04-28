@@ -2,12 +2,12 @@
  * @Description: 指南
  * @Author: panrui
  * @Date: 2021-05-20 16:42:32
- * @LastEditTime: 2023-11-14 10:49:02
- * @LastEditors: panrui
+ * @LastEditTime: 2024-04-28 15:50:07
+ * @LastEditors: prui
  * 不忘初心,不负梦想
 -->
 
-# 文档指南 最后更新时间(2023-11-15)
+# 文档指南
 
 - [docsify](https://docsify.js.org/#/?id=docsify)
 - [命令行工具](https://github.com/docsifyjs/docsify-cli)
@@ -23,9 +23,9 @@ npm install -g docsify-cli
 | 一级菜单  | 一级菜单下面可以有多个二级菜单 | README.md 和二级菜单文件夹及其他功能性菜单 |                                        |
 | 二级菜单  | 常以技能名称为文件名           |                                            | 主要记录一级菜单下分支技能的使用方法   |
 | README.md |                                |                                            |                                        |
-| skill.md  | 技巧文档                       |                                            | 记录该技术使用过程的小技巧或者常规使用 |
 | base.md   | 基础文档                       |                                            | 记录该技术的基础知识点                 |
-| record.md | 记录文档                       |                                            | 记录该技术的其他知识点                 |
+| record.md | 记录文档                       |                                            | 记录该技术的基础知识点的实际使用       |
+| skill.md  | 技巧文档                       |                                            | 记录该技术使用过程的小技巧或者常规使用 |
 
 ### 文件内容结构
 
@@ -61,3 +61,5 @@ npm i -g @nestjs/cli // 安装及创建
 ```js
 docsify serve docs | npm run docs
 ```
+
+最后更新时间: 2024-4-28 15:52:32

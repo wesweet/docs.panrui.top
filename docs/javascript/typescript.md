@@ -7,9 +7,7 @@
  * 不忘初心,不负梦想
 -->
 
-## 最后更新时间：2023-05-18 13-52-26
-
-> 1.  [官方文档](https://ts.xcatliu.com/)
+-  [官方文档](https://ts.xcatliu.com/)
 > 2.  [github 中文仓库指南](https://github.com/zhongsp/TypeScript)
 > 3.  [中文文档](https://zhongsp.gitbooks.io/typescript-handbook/content/)
 
@@ -325,3 +323,6 @@ export as namespace UMD 库声明全局变量
 ```
 
 ## 函数类型 -->
+
+
+最后更新时间：2024-4-28 16:11:49
