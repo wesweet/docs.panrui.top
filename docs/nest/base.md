@@ -6,7 +6,6 @@
  * @LastEditors: prui
  * 不忘初心,不负梦想
 -->
-## 最后更新时间(2024-04-23)
 
 ## 模块(module)
 
@@ -316,4 +315,8 @@ app.enableCors({
 
 ## NestFactory
 
-> > NestFactory 是 Nest 应用程序实例的创建者。它也是一个基本的应用程序上下文，它是一个 NestApplicationContext 实例。它提供了一组方法，用于创建应用程序并创建一个可用于管理应用程序的应用程序实例。
+>  NestFactory 是 Nest 应用程序实例的创建者。它也是一个基本的应用程序上下文，它是一个 NestApplicationContext 实例。它提供了一组方法，用于创建应用程序并创建一个可用于管理应用程序的应用程序实例。
+
+
+
+最后更新时间：2024-4-28 16:14:46
