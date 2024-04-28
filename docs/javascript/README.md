@@ -15,6 +15,7 @@
 | -------------- | ---------------- | -------- | ------------------------ |
 | airbnb.md      | airbnb 文档      |          | 爱彼迎代码规范           |
 | base.md        | 基础文档         |          | 基础文档                 |
+| es6.md         | es6 文档         |          | es6 文档                 |
 | event.md       | 事件文档         |          | JavaScript 事件文档      |
 | html2canvas.md | html2canvas 文档 |          | html2canvas 使用文档     |
 | jspdf.md       | jspdf 文档       |          | jspdf 使用文档           |

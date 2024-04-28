@@ -37,6 +37,7 @@
 - [javascript](/javascript/)
   - [airbnb 文档](/javascript/airbnb)
   - [基础文档](/javascript/base)
+  - [es6文档](/javascript/es6)
   - [事件文档](/javascript/event)
   - [html2canvas 文档](/javascript/html2canvas)
   - [jspdf 文档](/javascript/jspdf)
