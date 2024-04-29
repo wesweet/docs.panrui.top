@@ -1,13 +1,12 @@
 <!--
- * @Description: vim使用规范
- * @Author: panrui
- * @Date: 2023-07-04 13:55:49
- * @LastEditTime: 2023-09-14 09:13:29
- * @LastEditors: panrui
+ * @Description: 
+ * @Author: prui
+ * @Date: 2024-04-29 15:39:32
+ * @LastEditTime: 2024-04-29 15:39:36
+ * @LastEditors: prui
  * 不忘初心,不负梦想
 -->
 
-## 最后更新时间：2023-08-01 08-48-18
 ## 基础操作 
 
 #### 模式选择
@@ -38,3 +37,7 @@ p
 // 删除整行
 dd
 ```
+
+
+
+最后更新时间：2024-4-29 15:40:37

@@ -7,11 +7,11 @@
  * 不忘初心,不负梦想
 -->
 
-# linux 最后更新时间: 2023-09-14 08-50-58
+# linux
 
 - [linux 命令大全](https://www.linuxcool.com/)
 
-#### 其他命令
+### 其他命令
 
 ```
 查询linux系统的版本信息
@@ -30,7 +30,7 @@ netstat -tuln | grep 80
 ip -6 addr show
 ```
 
-#### Rocky Linux 系统命令
+### Rocky Linux 系统命令
 
 ```
 dnf是一款软件包管理器与之类似的还有yum
@@ -46,7 +46,7 @@ dnf update
 dnf install bind-utils
 ```
 
-#### 修改 ddns 查看域名配置情况
+### 修改 ddns 查看域名配置情况
 
 ```
 vim /etc/ddns/config.json
@@ -58,7 +58,7 @@ cat /var/log/cron_log/ddns_cron.log
 使用相对路径执行 run.sh 文件：如果 run.sh 文件和你的命令行在同一目录下，你可以输入 "./run.sh" 来执行该文件。
 ```
 
-#### 防火墙
+### 防火墙
 
 ```
 查看防火墙状态
@@ -78,7 +78,7 @@ sudo firewall-cmd --remove-port=<port>/<protocol> [--permanent]
 
 ```
 
-#### 计划任务
+### 计划任务
 
 ```
 查看所有计划任务
@@ -89,3 +89,6 @@ sudo tail -f /var/log/cron.log
 
 添加计划任务
 ```
+
+
+最后更新时间：2024-4-29 15:39:13
