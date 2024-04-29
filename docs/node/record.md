@@ -1,13 +1,11 @@
 <!--
  * @Description:
- * @Author: panrui
- * @Date: 2023-06-02 09:28:35
- * @LastEditTime: 2023-06-02 09:35:30
- * @LastEditors: panrui
+ * @Author: prui
+ * @Date: 2024-04-29 15:27:29
+ * @LastEditTime: 2024-04-29 15:28:37
+ * @LastEditors: prui
  * 不忘初心,不负梦想
 -->
-
-## 最后更新时间：2023-06-02 09-28-56
 
 ## 常规跨域解决方案
 
@@ -100,3 +98,7 @@ http {
     }
 }
 ```
+
+
+
+最后更新时间：2024-4-29 15:30:40

@@ -1,13 +1,11 @@
 <!--
- * @Description: HTML5问题记录
- * @Author: panrui
- * @Date: 2023-08-31 11:27:02
- * @LastEditTime: 2023-08-31 11:27:08
- * @LastEditors: panrui
+ * @Description:
+ * @Author: prui
+ * @Date: 2024-04-29 14:51:02
+ * @LastEditTime: 2024-04-29 14:52:39
+ * @LastEditors: prui
  * 不忘初心,不负梦想
 -->
-
-## 最后更新时间(2023-11-14)
 
 ## HTML5 问题记录
 
@@ -23,3 +21,5 @@
 // 解决方法：在img标签上添加crossorigin属性 这种方案待测试
 <img crossorigin="anonymous" src="https://xxx.com/xxx.jpg" />
 ```
+
+最后更新时间：2024-4-29 14:53:19

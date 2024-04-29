@@ -1,4 +1,11 @@
-## 最后更新时间(2023-11-28)
+<!--
+ * @Description:
+ * @Author: prui
+ * @Date: 2023-11-28 09:29:26
+ * @LastEditTime: 2024-04-29 15:06:45
+ * @LastEditors: prui
+ * 不忘初心,不负梦想
+-->
 
 ## checkbox 传递参数(使用 event 对象)
 
@@ -35,3 +42,5 @@ checkboxChange(event, index) {
   </view>
 </u-modal>
 ```
+
+最后更新时间：2024-4-29 15:07:06

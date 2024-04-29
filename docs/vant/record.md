@@ -1,12 +1,11 @@
 <!--
- * @Description: 小程序UI组件库
- * @Author: panrui
- * @Date: 2023-03-29 19:52:44
- * @LastEditTime: 2023-04-16 11:11:08
- * @LastEditors: panrui
+ * @Description: 
+ * @Author: prui
+ * @Date: 2024-04-29 15:00:57
+ * @LastEditTime: 2024-04-29 15:01:15
+ * @LastEditors: prui
  * 不忘初心,不负梦想
 -->
-## 最后更新时间：2023-04-16 11-11-08
 
 ## dialog组件使用
 
@@ -23,3 +22,5 @@
 ```js
 点击遮蔽层关闭菜单的前置条件是需要绑定关闭事件，否则点击遮蔽层不会关闭
 ```
+
+最后更新时间：2024-4-29 15:01:59

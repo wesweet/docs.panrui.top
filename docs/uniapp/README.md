@@ -7,7 +7,7 @@
  * 不忘初心,不负梦想
 -->
 
-# uniapp 最后更新时间(2023-11-30)
+# uniapp
 
 - [uniapp 官方文档](https://uniapp.dcloud.net.cn/)
 
@@ -38,3 +38,5 @@ pages.json 文件中 pages 选项中 navigationStyle 设置为custom
 // APP环境请求
 一定需要使用https 或者http 不允许使用双 //
 ```
+
+最后更新时间：2024-4-29 15:04:48

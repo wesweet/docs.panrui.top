@@ -1,4 +1,11 @@
-## 最后更新时间(2023-11-30)
+<!--
+ * @Description:
+ * @Author: prui
+ * @Date: 2023-11-30 14:36:30
+ * @LastEditTime: 2024-04-29 15:05:40
+ * @LastEditors: prui
+ * 不忘初心,不负梦想
+-->
 
 ## 页面加载循序以及适合的操作
 
@@ -28,3 +35,5 @@
 page.$getAppWebview(); // 获取当前页面的webview对象实例	App
 page.route; // 获取当前页面的路由
 ```
+
+最后更新时间：2024-4-29 15:05:59

@@ -1,13 +1,11 @@
 <!--
- * @Description: html使用规范
- * @Author: panrui
- * @Date: 2023-04-25 08:57:17
- * @LastEditTime: 2023-05-19 09:12:47
- * @LastEditors: panrui
+ * @Description: 
+ * @Author: prui
+ * @Date: 2024-04-29 14:50:55
+ * @LastEditTime: 2024-04-29 14:51:43
+ * @LastEditors: prui
  * 不忘初心,不负梦想
 -->
-
-## 最后更新时间(2023-11-14)
 
 ## 语义化标签
 
@@ -321,3 +319,7 @@
   </div>
 </div>
 ```
+
+
+
+最后更新时间：2024-4-29 14:52:15

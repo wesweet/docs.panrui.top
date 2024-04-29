@@ -2,7 +2,7 @@
  * @Description: 定制侧边栏
  * @Author: panrui
  * @Date: 2021-05-20 16:43:32
- * @LastEditTime: 2024-04-29 14:26:40
+ * @LastEditTime: 2024-04-29 14:55:38
  * @LastEditors: prui
  * 不忘初心,不负梦想
 -->
@@ -10,6 +10,12 @@
 - [首页](/README)
 - [指南](/guide)
 - [git](/git/README)
+- [go](/go/README)
+  - [基础文档](/go/base)
+- [h5](/h5/README)
+  - [基础文档](/h5/base)
+  - [record 文档](/h5/record)
+  - [技巧文档](/h5/skill)
 - [JavaScript](/javascript/README)
   - [airbnb 文档](/javascript/airbnb)
   - [基础文档](/javascript/base)
@@ -27,10 +33,23 @@
   - [record 文档](/nest/record)
   - [技巧文档](/nest/skill)
   - [typeorm 文档](/nest/typeorm)
+- [nginx](/nginx/README)
+  - [基础文档](/nginx/base)
+  - [record 文档](/nginx/record)
+- [uniapp](/uniapp/README)
+  - [基础文档](/uniapp/base)
+  - [record 文档](/uniapp/record)
+  - [技巧文档](/uniapp/skill)
+  - [uniCloud 文档](/uniapp/uniCloud)
+  - [uviewui 文档](/uniapp/uviewui)
+- [vant](/vant/README)
+  - [基础文档](/vant/base)
+  - [record 文档](/vant/record)
 - [vue](/vue/README)
   - [基础文档](/vue/base)
   - [nuxt 文档](/vue/nuxt)
   - [record 文档](/vue/record)
+  - [vxetable 文档](/vue/vxetable)
   - v2
     - [v2 基础文档](/vue/v2/base)
     - [v2 记录文档](/vue/v2/record)

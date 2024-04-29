@@ -7,8 +7,6 @@
  * 不忘初心,不负梦想
 -->
 
-## 最后更新时间(2024-01-16)
-
 ## 页面开发注意细节
 
 - 文字注意是否换行或者超出
@@ -69,3 +67,6 @@ attachFastClick(document.body);
 // 使用window.open在ios上面可能打开新页面
 window.location.href = "http://www.baidu.com";
 ``` -->
+
+
+最后更新时间：2024-4-29 14:54:10
