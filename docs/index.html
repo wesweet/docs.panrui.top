@@ -1,16 +1,8 @@
 <!--
- * @Description: 
- * @Author: prui
- * @Date: 2023-07-04 13:55:31
- * @LastEditTime: 2024-04-28 16:57:30
- * @LastEditors: prui
- * 不忘初心,不负梦想
--->
-<!--
  * @Description: index.html
  * @Author: panrui
  * @Date: 2021-05-20 16:31:58
- * @LastEditTime: 2024-04-28 15:30:21
+ * @LastEditTime: 2024-04-29 13:42:39
  * @LastEditors: prui
  * 不忘初心,不负梦想
 -->
@@ -19,34 +11,44 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <title>初心杂货铺</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <!-- 网站描述+关键字+作者 -->
+  <meta name="description" content="初心的个人wiki站，收集、整理、提炼所学的知识">
+  <meta name="keywords" content="wiki,docsify,音乐爱好者">
+  <meta name="author" content="panr">
   <link rel="stylesheet" href="//cdn.bootcdn.net/ajax/libs/docsify/4.12.2/themes/vue.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./static/css/sidebar.min.css">
+  <link rel="stylesheet" href="./static/css/glable.css">
 </head>
 
 <body>
   <div id="app"></div>
-  <script src="//cdn.bootcss.com/react/15.6.1/react.js"></script>
+  <!-- <script src="//cdn.bootcss.com/react/15.6.1/react.js"></script>
   <script src="//cdn.bootcss.com/react/15.6.1/react-dom.js"></script>
   <script src="//cdn.bootcdn.net/ajax/libs/vue/2.6.14/vue.min.js"></script>
-  <script src="//cdn.bootcdn.net/ajax/libs/babel-standalone/7.21.4/babel.min.js"></script>
+  <script src="//cdn.bootcdn.net/ajax/libs/babel-standalone/7.21.4/babel.min.js"></script> -->
   <!-- <script src="//unpkg.com/vue/dist/vue.js"></script> -->
   <!-- <script src="//unpkg.com/babel-standalone@6/babel.min.js"></script> -->
-  <!-- <script src="//unpkg.com/docsify-demo-box-vue/dist/docsify-demo-box-vue.min.js"></script> -->
   <!-- <script src="//unpkg.com/docsify-edit-on-github/index.js"></script> -->
   <script>
     // 代码预览及演示
     // var jsResources = '<scr' + 'ipt src="//cdn.bootcss.com/react/15.6.1/react.js"></scr' + 'ipt>\n' +
     //   '<scr' + 'ipt src="//cdn.bootcss.com/react/15.6.1/react-dom.js"></scr' + 'ipt>'
-    var jsResources = '<scr' + 'ipt src="//unpkg.com/vue/dist/vue.js"></scr' + 'ipt>'
-    var cssResources = '@import url("//cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css");'
-    var bootCode = 'var globalVariable = "leon"'
-    var globalVariable = "leon"
+    // var jsResources = '<scr' + 'ipt src="//unpkg.com/vue/dist/vue.js"></scr' + 'ipt>'
+    // var cssResources = '@import url("//cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css");'
+    // var bootCode = 'var globalVariable = "leon"'
+    // var globalVariable = "leon"
 
     window.$docsify = {
+      loadNavbar: true,
+      loadSidebar: true, // 侧边栏
+      subMaxLevel: 2,
+      noEmoji: true,
+      maxLevel: 4,
+      name: '初心的杂货铺',
       count: {
         countable: true,
         position: 'top',
@@ -66,6 +68,27 @@
         color: "var(--theme-color,#42b983)",
         height: "3px",
       },
+      copyCode: {
+        buttonText: '复制文档',
+        errorText: '复制失败',
+        successText: '复制成功',
+      },
+      search: {
+        maxAge: 86400000,
+        paths: 'auto',
+        placeholder: '搜索',
+        noData: '暂无数据',
+        depth: 4,
+      },
+      pagination: {
+        previousText: '上一章节',
+        nextText: '下一章节',
+        crossChapter: true,
+        crossChapterText: true
+      },
+      coverpage: true, // 封面
+      onlyCover: true, // 只在访问主页时加载封面
+      relativePath: true, // 启用相对路径
       // 代码预览及演示
       // name: 'docsify-demo-box-vue',
       // repo: 'https://github.com/njleonzhang/docsify-demo-box-vue',
@@ -77,36 +100,27 @@
       // plugins: [
       //   DemoBoxReact.create(jsResources, cssResources, bootCode)
       // ],
-      noEmoji: true,
-      search: {
-        maxAge: 10000,
-        paths: 'auto',
-        placeholder: '搜索',
-        noData: '暂无数据',
-        depth: 4,
-      },
-      disqus: 'shortname',
-      relativePath: true, // 启用相对路径
-      auto2top: true, // 自动跳转到顶部
-      loadSidebar: true, // 侧边栏
-      subMaxLevel: 2,
-      // alias: {
-      //   '/.*/_sidebar.md': '/_sidebar.md'
-      // },
-      onlyCover: true, // 只在访问主页时加载封面
-      coverpage: true, // 封面
-      name: '',
-      repo: ''
+      // disqus: 'shortname',
+      // auto2top: true, // 自动跳转到顶部
+      // // alias: {
+      // //   '/.*/_sidebar.md': '/_sidebar.md'
+      // // },
+      // name: '',
+      // repo: ''
     }
   </script>
   <!-- Docsify v4 -->
   <script src="//cdn.bootcdn.net/ajax/libs/docsify/4.12.2/docsify.min.js"></script>
+  <script src="//cdn.bootcdn.net/ajax/libs/docsify-copy-code/3.0.0/docsify-copy-code.min.js"></script>
   <script src="//cdn.bootcdn.net/ajax/libs/docsify/4.12.2/plugins/search.min.js"></script>
-  <script src="//cdn.bootcdn.net/ajax/libs/docsify-copy-code/2.1.1/docsify-copy-code.min.js"></script>
-  <script src="./static/countable.min.js"></script>
+  <script src="./static/js/countable.min.js"></script>
+  <script src="./static/js/docsify-sidebar-collapse.min.js"></script>
+  <script src="./static/js/progress.min.js"></script>
+  <script src="./static/js/docsify-pagination.min.js"></script>
+  <!-- 
   <script src="./static/docsify-demo-box-react.min.js"></script>
   <script src="./static/docsify-demo-box-vue.min.js"></script>
-  <script src="./static/progress.min.js"></script>
+   -->
   <!-- <script src="//unpkg.com/docsify/lib/plugins/external-script.min.js"></script> -->
 </body>
 

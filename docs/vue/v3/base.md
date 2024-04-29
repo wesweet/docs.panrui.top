@@ -8,8 +8,6 @@
 -->
 
 
-## 最后更新时间(2024-04-25)
-
 - v3 使用指南
 
 ## setup 钩子函数使用情况
@@ -322,3 +320,6 @@ import { useRouter } from "vue-router";
 const router = useRouter();
 console.log(router.currentRoute); // 这里面获取当前路由传递的参数
 ```
+
+
+最后更新时间：2024-4-29 14:12:21

@@ -1,13 +1,12 @@
 <!--
- * @Description:
- * @Author: panrui
- * @Date: 2023-04-25 08:57:17
- * @LastEditTime: 2023-05-30 09:58:44
- * @LastEditors: panrui
+ * @Description: 
+ * @Author: prui
+ * @Date: 2024-04-29 14:37:16
+ * @LastEditTime: 2024-04-29 14:37:21
+ * @LastEditors: prui
  * 不忘初心,不负梦想
 -->
 
-## 最后更新时间 2023-05-30 09-45-53
 
 ## 问题记录
 
@@ -318,3 +317,7 @@ getUserProFile 只在2.16.0及以上版本中,提供加密字符串,并且加密
 code2Session
 通过wx.login 登录接口获取到的code 可以查询用户的openid等信息
 ```
+
+
+
+最后更新时间：2024-4-29 14:38:16

@@ -7,7 +7,7 @@
  * 不忘初心,不负梦想
 -->
 
-# Vue 最后更新时间(2024-04-25)
+# Vue
 
 - [Vue Cli3](https://cli.vuejs.org/zh/guide/mode-and-env.html#%E6%A8%A1%E5%BC%8F)
 - [vue-awesome-swiper](https://www.npmjs.com/package/vue-awesome-swiper)
@@ -35,3 +35,6 @@
 ### 基础文档
 
 ### 记录文档
+
+
+最后更新时间：2024-4-29 13:59:16

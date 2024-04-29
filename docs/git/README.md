@@ -2,12 +2,12 @@
  * @Description: git使用规范
  * @Author: panrui
  * @Date: 2023-04-25 08:57:17
- * @LastEditTime: 2023-05-19 08:40:55
- * @LastEditors: panrui
+ * @LastEditTime: 2024-04-29 14:28:47
+ * @LastEditors: prui
  * 不忘初心,不负梦想
 -->
 
-# GIT 最后更新时间(2023-11-14)
+# GIT
 
 - [学习教程](https://learngitbranching.js.org/?locale=zh_CN)
 - [提交格式](https://github.com/kazupon/git-commit-message-convention)
@@ -129,3 +129,5 @@ git rm -r –cached .
 git add .
 git commit -m 'update .gitignore'
 ```
+
+最后更新时间：2024-4-29 14:28:52

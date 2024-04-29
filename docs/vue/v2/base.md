@@ -2,12 +2,10 @@
  * @Description: vue2基础文档
  * @Author: prui
  * @Date: 2024-04-25 15:10:39
- * @LastEditTime: 2024-04-25 15:29:26
+ * @LastEditTime: 2024-04-29 14:06:49
  * @LastEditors: prui
  * 不忘初心,不负梦想
 -->
-
-## 最后更新时间(2024-04-25)
 
 ## v-for 中的 Ref 数组
 
@@ -160,3 +158,6 @@ app.use(VueRouter)
 ## VNode 生命周期事件
 
 ## 侦听数组
+
+
+最后更新时间：2024-4-29 14:07:02

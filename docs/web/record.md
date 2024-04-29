@@ -1,15 +1,13 @@
 <!--
  * @Description:
- * @Author: panrui
- * @Date: 2023-06-07 13:24:24
- * @LastEditTime: 2023-06-07 13:56:17
- * @LastEditors: panrui
+ * @Author: prui
+ * @Date: 2024-04-29 14:40:32
+ * @LastEditTime: 2024-04-29 14:41:36
+ * @LastEditors: prui
  * 不忘初心,不负梦想
 -->
 
-## 最后更新时间：2023-06-07 13-24-27
-
-> 1.  [文档](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Basics_of_HTTP)
+- [文档](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Basics_of_HTTP)
 
 ## HTTP
 
@@ -32,8 +30,6 @@ Content-Length: 指明发送给接收方的消息主体的大小，即用十进�
 Host: 指明了请求将要发送到的服务器主机名和端口号
 Origin: 表示了请求的来源（协议、主机、端口）
 Referer: 当前请求页面的来源页面的地址，即表示当前页面是通过此来源页面里的链接进入的。
-
-
 
 Accept-Charset: 告知（服务器）客户端可以处理的字符集
 Accept-Encoding: 告知（服务器）客户端可以处理的压缩编码
@@ -83,3 +79,8 @@ CONNECT: HTTP/1.1 协议中预留给能够将连接改为管道方式的代理�
 OPTIONS: 允许客户端查看服务器的性能
 TRACE: 回显服务器收到的请求，主要用于测试或诊断
 ```
+
+
+
+
+最后更新时间：2024-4-29 14:42:36

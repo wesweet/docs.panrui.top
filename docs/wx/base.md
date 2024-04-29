@@ -1,13 +1,11 @@
 <!--
- * @Description:
- * @Author: panrui
- * @Date: 2021-09-14 15:19:49
- * @LastEditTime: 2023-04-16 11:20:34
- * @LastEditors: panrui
+ * @Description: 
+ * @Author: prui
+ * @Date: 2024-04-29 14:36:17
+ * @LastEditTime: 2024-04-29 14:36:35
+ * @LastEditors: prui
  * 不忘初心,不负梦想
 -->
-
-## 最后更新时间：2023-04-16 11-18-14
 ## 注意事项 
 
 > wx.navigateTo、wx.redirectTo 不允许跳转到 tabbar 页面；wx.reLaunch 可以跳转

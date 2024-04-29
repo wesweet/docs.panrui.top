@@ -7,7 +7,6 @@
  * 不忘初心,不负梦想
 -->
 
-## 最后更新时间：2023-05-30 09-29-31
 
 ## 获取 appid、小程序版本、开发环境
 
@@ -152,3 +151,7 @@ if (agent.match(/MicroMessenger/i) == "micromessenger") {
 > canvas 画布组件创建时，一定要保证 dom 标签存在且宽高都在。就算设置 display:none 都将创建失败
 
 > canvas 在自定义组件中创建 canvas 画布时，需要绑定当前组件 this，或者使用 this.createSelectorQuery 来创建画布
+
+
+
+最后更新时间：2024-4-29 14:35:32
