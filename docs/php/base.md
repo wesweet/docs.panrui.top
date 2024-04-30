@@ -1,15 +1,16 @@
 <!--
- * @Description: PHP 教程基础
- * @Author: panrui
- * @Date: 2021-11-17 18:06:04
- * @LastEditTime: 2021-12-22 15:13:59
- * @LastEditors: panrui
+ * @Description: 
+ * @Author: prui
+ * @Date: 2024-04-30 13:33:25
+ * @LastEditTime: 2024-04-30 13:38:08
+ * @LastEditors: prui
  * 不忘初心,不负梦想
 -->
 
+
 ## 变量
 
-##### 声明变量
+#### 声明变量
 
 ```
 变量以 $ 符号开始，后面跟着变量的名称
@@ -19,7 +20,7 @@
 变量名是区分大小写的（$y 和 $Y 是两个不同的变量）
 ```
 
-##### 变量作用域
+#### 变量作用域
 
 ```
 local、global、static、parameter
@@ -32,7 +33,7 @@ local、global、static、parameter
 
 > 参数是在参数列表中声明的，作为函数声明的一部分
 
-##### 超级全局变量
+#### 超级全局变量
 
 ```
 1. $GLOBALS (包含了全部变量的全局组合数组)
@@ -40,7 +41,7 @@ local、global、static、parameter
 3. $_REQUEST
 ```
 
-##### 魔术常量
+#### 魔术常量
 
 ```
 __LINE__(文件中的当前行号)、__FILE__(文件的完整路径和文件名)、__DIR__(文件所在的目录)、__FUNCTION__(函数名称)
@@ -217,3 +218,6 @@ class_exists() 检查类是否已经存在
 > (PHP 数组函数)[https://www.runoob.com/php/php-ref-array.html]
 
 ## PHP 7新特性
+
+
+最后更新时间：2024-4-30 13:38:34

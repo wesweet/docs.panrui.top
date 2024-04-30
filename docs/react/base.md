@@ -7,8 +7,6 @@
  * 不忘初心,不负梦想
 -->
 
-## 最后更新时间：2023-06-14 16-24-28
-
 ## React.FC
 
 > 1.  FC 是一个泛型类型，代表 FunctionComponent 的缩写。FunctionComponent 是一个 React 函数组件的类型定义，它接收一个泛型类型参数，用于指定组件的 props 类型，返回一个 React 元素或者 null。
@@ -399,3 +397,6 @@ function MyComponent() {
   return <button onClick={handleClick}>Go to my path</button>;
 }
 ```
+
+
+最后更新时间：2024-4-30 09:49:40

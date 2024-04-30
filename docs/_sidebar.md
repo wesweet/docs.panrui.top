@@ -2,13 +2,26 @@
  * @Description: 定制侧边栏
  * @Author: panrui
  * @Date: 2021-05-20 16:43:32
- * @LastEditTime: 2024-04-29 14:55:38
+ * @LastEditTime: 2024-04-30 13:54:41
  * @LastEditors: prui
  * 不忘初心,不负梦想
 -->
 
 - [首页](/README)
 - [指南](/guide)
+- [antd](/antd/README)
+  - react
+    - [技巧文档](/antd/react/skill)
+  - vue
+    - [技巧文档](/antd/vue/skill)
+- [canvas](/canvas/README)
+- [css](/css/README)
+  - [技巧文档](/css/skill)
+  - [standard 文档](/css/standard)
+- [钉钉](/dingding/README)
+- [elementui](/elementui/README)
+  - vue
+    - [技巧文档](/elementui/vue/skill)
 - [git](/git/README)
 - [go](/go/README)
   - [基础文档](/go/base)
@@ -16,6 +29,11 @@
   - [基础文档](/h5/base)
   - [record 文档](/h5/record)
   - [技巧文档](/h5/skill)
+- [interview](/interview/README)
+  - [基础文档](/interview/base)
+  - [js 面试题](/interview/js)
+  - [record 文档](/interview/record)
+  - [vue 面试题](/interview/vue)
 - [JavaScript](/javascript/README)
   - [airbnb 文档](/javascript/airbnb)
   - [基础文档](/javascript/base)
@@ -39,6 +57,32 @@
 - [nginx](/nginx/README)
   - [基础文档](/nginx/base)
   - [record 文档](/nginx/record)
+- [node](/node/README)
+  - [axios 文档](/node/axios)
+  - [基础文档](/node/base)
+  - [cli 文档](/node/cli)
+  - [commander 文档](/node/commander)
+  - [dotenv 文档](/node/dotenv)
+  - [download-git-repo 文档](/node/download-git-repo)
+  - [ejs 文档](/node/ejs)
+  - [express 文档](/node/express)
+  - [logger 文档](/node/logger)
+  - [mysql 文档](/node/mysql)
+  - [nodeMysql 文档](/node/nodeMysql)
+  - [ora 文档](/node/ora)
+  - [pm2 文档](/node/pm2)
+  - [record 文档](/node/record)
+  - [schedule 文档](/node/schedule)
+  - [技巧文档](/node/skill)
+- [php](/php/README)
+  - [基础文档](/php/base)
+  - [record 文档](/php/record)
+  - [技巧文档](/php/skill)
+- [react](/react/README)
+  - [基础文档](/react/base)
+  - [next 文档](/react/next)
+  - [react-router-dom 文档](/react/react-router-dom)
+  - [record 文档](/react/record)
 - [uniapp](/uniapp/README)
   - [基础文档](/uniapp/base)
   - [record 文档](/uniapp/record)
@@ -67,7 +111,7 @@
   - [基础文档](/web/base)
   - [record 文档](/web/record)
   - [技巧文档](/web/skill)
-- [微信](/wx/README)
+- [wx](/wx/README)
   - [基础文档](/wx/base)
   - [record 文档](/wx/record)
   - [技巧文档](/wx/skill)

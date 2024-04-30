@@ -7,8 +7,6 @@
  * 不忘初心,不负梦想
 -->
 
-## 最后更新时间：2021-07-03 13-06-00
-
 ## 文档
 
 ## 基础使用
@@ -410,3 +408,5 @@ DELETE FROM `user` WHERE `id` = 1;
 -- 插入数据
 INSERT INTO `user` (`username`, `password`, `email`, `phone`, `avatar`, `introduce`, `resume`, `create_time`, `update_time`) VALUES ('panrui', '123456', '1', '1', '1', '1', '1', '2021-07-03 10:17:00', '2021-07-03 10:17:00');
 ``` -->
+
+最后更新时间：2024-4-30 09:59:27

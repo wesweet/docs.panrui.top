@@ -7,7 +7,7 @@
  * 不忘初心,不负梦想
 -->
 
-# DINGDING 最后更新时间(2023-11-14)
+# DINGDING
 
 - [自定义机器人](https://open.dingtalk.com/document/robots/custom-robot-access)
 
@@ -121,3 +121,6 @@
   }
 }
 ```
+
+
+最后更新时间：2024-4-30 13:50:48

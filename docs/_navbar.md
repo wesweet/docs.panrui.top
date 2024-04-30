@@ -2,11 +2,11 @@
  * @Description: 
  * @Author: prui
  * @Date: 2024-04-29 09:44:08
- * @LastEditTime: 2024-04-29 09:44:37
+ * @LastEditTime: 2024-04-30 10:18:01
  * @LastEditors: prui
  * 不忘初心,不负梦想
 -->
-* Getting started
+<!-- * Getting started
 
   * [Quick start](quickstart.md)
   * [Writing more pages](more-pages.md)
@@ -18,4 +18,4 @@
   * [Themes](themes.md)
   * [Using plugins](plugins.md)
   * [Markdown configuration](markdown.md)
-  * [Language highlight](language-highlight.md)
+  * [Language highlight](language-highlight.md) -->

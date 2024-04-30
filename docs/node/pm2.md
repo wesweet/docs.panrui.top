@@ -7,8 +7,6 @@
  * 不忘初心,不负梦想
 -->
 
-## 最后更新时间(2023-11-14)
-
 - [pm2](https://pm2.keymetrics.io/docs/usage/quick-start/)
 
 ```js
@@ -123,3 +121,5 @@ module.exports = {
 // 查看PM2 文件有那些进程
 [PM2] Successfully saved in /root/.pm2/dump.pm2
 ```
+
+最后更新时间：2024-4-30 10:00:20

@@ -7,8 +7,6 @@
  * 不忘初心,不负梦想
 -->
 
-## 最后更新时间(2023-11-14)
-
 - [访问日志记录模块 winston](https://github.com/winstonjs/winston)
 - [输出日志记录模块 morgan](https://github.com/expressjs/morgan)
 - [辅助模块(按日期切割日志文件) winston-daily-rotate-file](https://github.com/winstonjs/winston-daily-rotate-file)
@@ -182,3 +180,6 @@ Logger.initRequestLogger(app); // 初始化日志模块
 ```js
 Logger.info("Server is running: 9000");
 ```
+
+
+最后更新时间：2024-4-30 09:58:12

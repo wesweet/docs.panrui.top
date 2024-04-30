@@ -7,8 +7,6 @@
  * 不忘初心,不负梦想
 -->
 
-## 最后更新时间：2023-05-29 13-12-22
-
 ## 文档
 
 > 1. [axios](http://www.axios-js.com/zh-cn/docs/)
@@ -76,3 +74,5 @@ axios.interceptors.response.use(
   }
 );
 ```
+
+最后更新时间：2024-4-30 09:54:04

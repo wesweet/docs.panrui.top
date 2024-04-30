@@ -7,8 +7,6 @@
  * 不忘初心,不负梦想
 -->
 
-## 最后更新时间(2023-11-14)
-
 ## 设置 input 标签 placeholder 的字体样式
 
 ```css
@@ -197,3 +195,5 @@ border-image 与 border-radius 的使用
 ## clip-path 使用
 
 ## css3过渡效果
+
+最后更新时间：2024-4-30 13:53:12

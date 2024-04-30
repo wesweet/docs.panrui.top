@@ -1,3 +1,11 @@
+<!--
+ * @Description: 
+ * @Author: prui
+ * @Date: 2023-07-04 13:55:49
+ * @LastEditTime: 2024-04-30 09:55:46
+ * @LastEditors: prui
+ * 不忘初心,不负梦想
+-->
 ## 介绍
 
 ```
@@ -24,3 +32,5 @@ if (envFound.error) {
 
 // 2. 直接使用 process.env
 ```
+
+最后更新时间：2024-4-30 09:56:00

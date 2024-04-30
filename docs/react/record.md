@@ -1,13 +1,12 @@
 <!--
- * @Description:
- * @Author: panrui
- * @Date: 2023-03-29 20:23:30
- * @LastEditTime: 2023-06-05 15:15:00
- * @LastEditors: panrui
+ * @Description: 
+ * @Author: prui
+ * @Date: 2024-04-30 09:48:01
+ * @LastEditTime: 2024-04-30 09:48:06
+ * @LastEditors: prui
  * 不忘初心,不负梦想
 -->
 
-## 文档 最后更新时间：2023-03-30 22-34-01
 
 ## 函数组件与 class 组件的区别
 
@@ -54,3 +53,6 @@ React.memo()只会对 props 进行浅比较。如果 props 中包含了复杂的
 > 14. 如果函数的名字以 “use” 开头并调用其他 Hook，我们就说这是一个自定义 Hook
 
 > 15. useContext 让你不使用组件嵌套就可以订阅 React 的 Context，另外 useReducer 可以让你通过 reducer 来管理组件本地的复杂 state -->
+
+
+最后更新时间：2024-4-30 09:48:44

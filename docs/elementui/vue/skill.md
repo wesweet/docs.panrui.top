@@ -2,12 +2,10 @@
  * @Description: elementui组件使用技巧
  * @Author: panrui
  * @Date: 2023-05-22 15:40:54
- * @LastEditTime: 2024-04-24 15:18:49
+ * @LastEditTime: 2024-04-30 13:48:39
  * @LastEditors: prui
  * 不忘初心,不负梦想
 -->
-
-## 最后更新时间(2024-04-24)
 
 ## 修改 element-ui 组件默认样式(通过::v-deep)
 
@@ -437,3 +435,5 @@ export default {
 </script>
 ```
 
+
+最后更新时间：2024-4-30 13:48:45
