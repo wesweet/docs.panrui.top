@@ -2,18 +2,35 @@
  * @Description: nuxt文档
  * @Author: panrui
  * @Date: 2021-08-13 13:34:20
- * @LastEditTime: 2023-08-01 09:50:04
- * @LastEditors: panrui
+ * @LastEditTime: 2024-05-08 15:46:16
+ * @LastEditors: prui
  * 不忘初心,不负梦想
 -->
 
 ## 文档
 
 - [nuxt](https://www.nuxtjs.cn/guide)
+- [中文文档](https://www.nuxt.com.cn/)
 
 ```
 npm i -g create-nuxt-app
 ```
+
+## 基础知识
+
+#### 入口
+
+> 1. 默认情况下会将根路径的App.vue 作为入口点
+
+#### 组件
+
+> 1. 所有组件都创建在components 目录下，并且他们会自动导入整个应用，无需显式导入
+
+##### 页面
+
+> 1. 默认情况下，Nuxt.js 会自动将所有页面文件（.vue 文件）放在 pages 目录下，并且会自动生成路由。
+
+#### 布局
 
 ## 使用
 
@@ -96,7 +113,4 @@ export default {
 }
 ```
 
-
-
-
-最后更新时间：2024-4-29 14:03:11
+最后更新时间：2024-5-8 15:46:09
