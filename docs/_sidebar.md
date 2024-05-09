@@ -2,7 +2,7 @@
  * @Description: 定制侧边栏
  * @Author: panrui
  * @Date: 2021-05-20 16:43:32
- * @LastEditTime: 2024-04-30 13:54:41
+ * @LastEditTime: 2024-05-09 14:15:51
  * @LastEditors: prui
  * 不忘初心,不负梦想
 -->
@@ -29,7 +29,7 @@
   - [基础文档](/h5/base)
   - [record 文档](/h5/record)
   - [技巧文档](/h5/skill)
-- [hexo](/hexo/README]
+- [hexo](/hexo/README)
   - [基础文档](/hexo/base)
   - [record 文档](/hexo/record)
   - [技巧文档](/hexo/skill)
