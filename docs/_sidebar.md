@@ -29,6 +29,10 @@
   - [基础文档](/h5/base)
   - [record 文档](/h5/record)
   - [技巧文档](/h5/skill)
+- [hexo](/hexo/README]
+  - [基础文档](/hexo/base)
+  - [record 文档](/hexo/record)
+  - [技巧文档](/hexo/skill)
 - [interview](/interview/README)
   - [基础文档](/interview/base)
   - [js 面试题](/interview/js)
