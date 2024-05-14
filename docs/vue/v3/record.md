@@ -2,7 +2,7 @@
  * @Description: vue3记录文档
  * @Author: prui
  * @Date: 2024-04-25 15:14:16
- * @LastEditTime: 2024-04-25 16:04:11
+ * @LastEditTime: 2024-05-14 16:00:00
  * @LastEditors: prui
  * 不忘初心,不负梦想
 -->
@@ -329,5 +329,21 @@ setup() {
   }
 ```
 
+## 渲染函数&JSX
 
-最后更新时间：2024-4-29 14:12:50
+> 1. 子节点的表示：子节点可以是一个字符串，用于表示文本内容；也可以是一个数组，用于表示多个子节点。如果子节点是一个数组，那么数组中的每个元素都可以是一个由 h 函数创建的虚拟节点。
+> 2. 事件监听器的表示：在 props 对象中，可以使用 on 或 nativeOn 来添加事件监听器。例如，{ onClick: this.handleClick }。
+> 3. 组件的表示：如果 tag 是一个组件，那么 props 就表示该组件的 props，children 表示该组件的默认插槽内容。
+> 4. 自闭合元素：对于自闭合元素，例如 input，children 应该是 null 或 undefined
+> 5. 特殊属性：对于某些特殊的属性，例如 style 和 class，Vue 提供了特殊的处理方式。例如，style 可以是一个字符串，也可以是一个对象；class 可以是一个字符串，也可以是一个数组或对象。
+> 6. Fragment 和 Teleport：Vue 3 支持 Fragment 和 Teleport 这两种新的特性。Fragment 允许一个组件有多个根元素，而 Teleport 允许将子元素渲染到 DOM 树的其他位置。
+> 7. 函数式组件：在 Vue 3 中，函数式组件的写法有所改变，现在需要使用 FunctionalComponent 类型，并且不再需要 functional: true 选项
+
+```js
+render() {
+  return h('div', { class: 'my-div', id: 'myId' }, 'Hello, world!');
+}
+```
+
+
+最后更新时间：2024-5-14 15:59:53
