@@ -2,13 +2,12 @@
  * @Description: vue3基础文档
  * @Author: prui
  * @Date: 2024-04-25 15:14:04
- * @LastEditTime: 2024-04-25 16:03:24
+ * @LastEditTime: 2024-05-14 17:04:12
  * @LastEditors: prui
  * 不忘初心,不负梦想
 -->
 
-
-- v3 使用指南
+## 数据获取
 
 ## setup 钩子函数使用情况
 
