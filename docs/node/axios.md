@@ -75,4 +75,48 @@ axios.interceptors.response.use(
 );
 ```
 
-最后更新时间：2024-4-30 09:54:04
+
+## 使用axios下载文件
+```js
+export const downloadFile = (
+  url,
+  params,
+  loading = true,
+  filename = "download"
+) => {
+  return new Promise((resolve, reject) => {
+    instance({
+      url: url,
+      method: "GET",
+      params: params,
+      responseType: "blob", // 指示服务器响应的数据类型
+      headers: {
+        loading: loading,
+      },
+    })
+      .then((response) => {
+        const contentType =
+          response.headers["content-type"] || "application/octet-stream";
+        const blob = new Blob([response.data], { type: contentType });
+        const downloadUrl = URL.createObjectURL(blob);
+        const link = document.createElement("a");
+        link.href = downloadUrl;
+        link.download = filename;
+        document.body.append(link);
+        link.click();
+        URL.revokeObjectURL(link.href);
+        link.remove(); // 正确的移除方式
+        resolve();
+      })
+      .catch((error) => {
+        console.error("Download error:", error);
+        reject(error);
+      })
+      .finally(() => {
+        if (loading) $da.hideLoading();
+      });
+  });
+};
+```
+
+最后更新时间：2024-5-17 12:57:13
