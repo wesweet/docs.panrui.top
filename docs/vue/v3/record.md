@@ -2,7 +2,7 @@
  * @Description: vue3记录文档
  * @Author: prui
  * @Date: 2024-04-25 15:14:16
- * @LastEditTime: 2024-05-15 09:51:10
+ * @LastEditTime: 2024-05-23 10:36:38
  * @LastEditors: prui
  * 不忘初心,不负梦想
 -->
@@ -289,6 +289,44 @@ defineOptions({
 ```
 
 ## defineModel
+
+> props emit 的替代方案
+> 使用 v-model 实现双向绑定
+
+```html
+<!-- 父组件 -->
+<el-card class="box-card">
+  <div slot="header" class="clearfix" style="margin-bottom: 20px">
+    <span>测试vue3.4 defineModel 属性</span>
+  </div>
+  <el-row :gutter="20" class="form-row">
+    <el-col :span="6">年龄：</el-col>
+    <el-col :span="6">{{ form.age }}</el-col>
+    <el-col :span="6"> <Children v-model="form" /> </el-col>
+  </el-row>
+</el-card>
+<script lang="ts" setup>
+  const form = ref({
+    age: 18,
+  });
+</script>
+
+<!-- 子组件 -->
+<el-row :gutter="20" class="form-row">
+  <el-col :span="10"
+    ><el-button type="primary" @click="handleEditAge"
+      >修改年龄</el-button
+    ></el-col
+  >
+</el-row>
+<script lang="ts" setup>
+  const form: any = defineModel();
+
+  const handleEditAge = () => {
+    form.value.age = Math.floor(Math.random() * 100);
+  };
+</script>
+```
 
 ## 渲染函数&JSX
 
