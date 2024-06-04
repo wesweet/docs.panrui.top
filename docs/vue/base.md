@@ -198,9 +198,88 @@ app.component(
 
 ## 全局指令(globalDirectives)
 
+```js
+
+/**
+ * 如果需要支持多个颜色变量的话，可以使用一个对象来映射，需要在这里添加对应的颜色值
+ * 通过 v-highLight:yellow 来使用, 可以自定义颜色
+ * 如果没有传入颜色值，则使用默认颜色，也可以修改默认颜色
+ */
+const defaultColor = '#F47D20'
+const colorMap = {
+    yellow: 'yellow',
+}
+
+// 通过传入高亮关键字
+const highLightByKeyword = (el, binding, vnode, prevVnode) => {
+    const color = colorMap[binding.arg] || defaultColor
+    const value = binding.value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); // 转义特殊字符
+    const text = el.innerText
+    if (value) {
+        const regex = new RegExp(value, 'gi')
+        const result = text.replace(regex, (matched) => `<span style="color:${color}">${matched}</span>`)
+        el.innerHTML = result
+    }
+}
+
+
+// 通过标签名高亮
+const highLightByTag = (el, binding, vnode, prevVnode) => {
+    let emElements = el.querySelectorAll('em');
+    emElements.forEach(em => {
+        em.style.color = colorMap[binding.arg] || defaultColor;
+        em.style.fontStyle = 'unset';
+    });
+}
+
+
+const highLightEnv = (el, binding, vnode, prevVnode) => {
+    if(binding.value) {
+        highLightByKeyword(el, binding, vnode, prevVnode)
+    } else {
+        highLightByTag(el, binding, vnode, prevVnode)
+    }
+
+}
+
+// 控制页面高亮元素的自定义指令
+const highLight = {
+    // 在绑定元素的 attribute 前
+    // 或事件监听器应用前调用
+    created(el, binding, vnode, prevVnode) {
+        // 下面会介绍各个参数的细节
+    },
+    // 在元素被插入到 DOM 前调用
+    beforeMount(el, binding, vnode, prevVnode) {
+        highLightEnv(el, binding, vnode, prevVnode)
+    },
+    // 在绑定元素的父组件
+    // 及他自己的所有子节点都挂载完成后调用
+    mounted(el, binding, vnode, prevVnode) {
+
+    },
+    // 绑定元素的父组件更新前调用
+    beforeUpdate(el, binding, vnode, prevVnode) {
+        highLightEnv(el, binding, vnode, prevVnode)
+    },
+    // 在绑定元素的父组件
+    // 及他自己的所有子节点都更新后调用
+    updated(el, binding, vnode, prevVnode) { },
+    // 绑定元素的父组件卸载前调用
+    beforeUnmount(el, binding, vnode, prevVnode) { },
+    // 绑定元素的父组件卸载后调用
+    unmounted(el, binding, vnode, prevVnode) { }
+
+}
+
+
+
+export default highLight
+```
+
 ## 全局过滤器(globalFilters)
 
 ## 全局钩子(globalHooks)
 
 
-最后更新时间：2024-4-29 14:01:58
+最后更新时间：2024-6-4 10:17:38
