@@ -7,6 +7,29 @@
  * 不忘初心,不负梦想
 -->
 
+## 设置字体背景颜色
+
+```css
+.title {
+  position: relative;
+  color: #235eac;
+  line-height: 24px;
+  font-size: 16px;
+  font-weight: bold;
+  z-index: 1;
+  &::after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    content: "";
+    width: 100%;
+    height: 8px;
+    z-index: -1;
+    background-color: #fdeadb;
+  }
+}
+```
+
 ## 设置 input 标签 placeholder 的字体样式
 
 ```css
@@ -194,6 +217,6 @@ border-image 与 border-radius 的使用
 
 ## clip-path 使用
 
-## css3过渡效果
+## css3 过渡效果
 
-最后更新时间：2024-4-30 13:53:12
+最后更新时间：2024-7-8 13:07:57
