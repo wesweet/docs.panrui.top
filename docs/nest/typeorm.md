@@ -2,8 +2,8 @@
  * @Description: typeorm文档
  * @Author: prui
  * @Date: 2024-04-26 09:45:09
- * @LastEditTime: 2024-04-26 15:32:32
- * @LastEditors: prui
+ * @LastEditTime: 2024-07-25 10:52:36
+ * @LastEditors: panr99 1547177202@qq.com
  * 不忘初心,不负梦想
 -->
 
@@ -54,5 +54,10 @@ export class Post {
 ```
 
 
+
+## createQueryBuilder的使用
+
+
+#### getManyAndCount
 
 最后更新时间：2024-4-28 16:16:41
