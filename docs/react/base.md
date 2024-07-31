@@ -2,8 +2,8 @@
  * @Description: react hook
  * @Author: panrui
  * @Date: 2023-06-05 09:05:09
- * @LastEditTime: 2023-09-04 13:05:32
- * @LastEditors: panrui
+ * @LastEditTime: 2024-07-31 10:52:02
+ * @LastEditors: panr99 1547177202@qq.com
  * 不忘初心,不负梦想
 -->
 
@@ -29,7 +29,10 @@ const Greeting: React.FC<Props> = ({ name }) => {
 
 ## useState
 
-useState 是 React Hooks 中的一个基础 Hook, 用于在函数组件中添加状态,useState Hook 接收一个初始状态的参数，返回一个数组，该数组包含了当前状态的值和一个更新状态的函数。唯一的参数就是初始的 state
+> 1. 类型: Hook
+> 2. 描述：用于在函数组件中添加状态
+> 3. 用法：const [count, setCount] = useState(0); 第一个元素是当前状态值，第二个是一个更新这个状态的函数
+> 4. 副作用: 当状态改变时，组件将会重新渲染。（使用 useState 可以触发副作用（通过 useEffect）或其他依赖于状态更新的操作）
 
 ```js
 import React, { useState } from "react";
@@ -46,10 +49,12 @@ function Counter() {
 
 ## useEffect
 
-useEffect 是 React 中的一个 Hook，用于在函数组件中添加类似于生命周期函数的行为。
+> 1. 类型: Hook
+> 2. 描述：允许你在函数组件中执行副作用操作(类似于生命周期函数)。副作用操作可以包括数据获取、订阅数据流、手动更改 DOM 或者清除之前的副作用等
+> 3. 用法：useEffect(effect, dependencies)(第一个参数是一个函数，用于执行副作用操作；第二个参数是一个数组，它用于控制副作用代码的执行时间)
 
-> 1.  它可以在组件渲染后执行副作用操作（effect），如订阅数据、更新 DOM 等。通常情况下，我们可能会在类组件的 componentDidMount，componentDidUpdate 和 componentWillUnmount 等生命周期方法中添加这些副作用。而 useEffect 可以让我们在函数组件中完成这些操作。
-> 2.  useEffect Hook 接收两个参数：第一个参数是一个函数，用于执行副作用操作；第二个参数是一个数组，它用于控制副作用代码的执行时间
+<!-- > 1.  它可以在组件渲染后执行副作用操作（effect），如订阅数据、更新 DOM 等。通常情况下，我们可能会在类组件的 componentDidMount，componentDidUpdate 和 componentWillUnmount 等生命周期方法中添加这些副作用。而 useEffect 可以让我们在函数组件中完成这些操作。
+> 2.  useEffect Hook 接收两个参数：第一个参数是一个函数，用于执行副作用操作；第二个参数是一个数组，它用于控制副作用代码的执行时间 -->
 
 执行时间：
 
@@ -80,33 +85,11 @@ function Example() {
 }
 ```
 
-## useContext
-
-useContext 是 React 中的一个 Hook，Context API 是 React 提供的一种跨组件传递数据的方式
-
-> 1.  使用 useContext 函数，你可以在函数组件中访问 Context 中的数据，而不需要使用类组件中的 this.context 或者 Consumer 组件。useContext 接收一个 <span class="red-text"> Context 对象</span>作为参数，并返回该 Context 的当前值。如果没有对应的 Provider，useContext 的返回值等同于 Context 对象的 defaultValue 参数
-
-需要注意的是，如果你想在函数组件中使用多个 Context 对象，你需要多次调用 useContext 函数。每次调用 useContext 函数时，你需要传递一个不同的 Context 对象作为参数。
-
-```js
-import React, { useContext } from "react";
-import { ThemeContext } from "./theme-context";
-function ThemeTogglerButton() {
-  const { theme, toggleTheme } = useContext(ThemeContext);
-  return (
-    <button
-      onClick={toggleTheme}
-      style={{ backgroundColor: theme.background, color: theme.foreground }}
-    >
-      Toggle Theme
-    </button>
-  );
-}
-```
-
 ## useRef
 
-useRef 是 React 中的一个 Hook，它可以用于获取 DOM 节点或者 <span class="red-text">保存任何可变值</span> 的“盒子”。useRef 的返回值是一个包含 .current 属性的对象(ref)，该属性指向被保存的值。返回的 ref 对象在组件的整个生命周期内保持不变，它类似于在 class 组件中使用实例属性的方式
+> 1. 类型: Hook
+> 2. 描述：用于获取 DOM 节点或者保存任何可变值
+> 3. 用法：const ref = useRef(initialValue); useRef 的返回值是一个包含 .current 属性的对象(ref)
 
 > 1.  我们可以使用 useRef 来保存组件或者 DOM 元素的引用，通过它我们可以实现与 DOM 元素进行交互。
 
@@ -144,6 +127,30 @@ function Counter() {
       <h1>Current count: {count}</h1>
       <button onClick={() => setCount(count + 1)}>+</button>
     </div>
+  );
+}
+```
+
+## useContext
+
+useContext 是 React 中的一个 Hook，Context API 是 React 提供的一种跨组件传递数据的方式
+
+> 1.  使用 useContext 函数，你可以在函数组件中访问 Context 中的数据，而不需要使用类组件中的 this.context 或者 Consumer 组件。useContext 接收一个 <span class="red-text"> Context 对象</span>作为参数，并返回该 Context 的当前值。如果没有对应的 Provider，useContext 的返回值等同于 Context 对象的 defaultValue 参数
+
+需要注意的是，如果你想在函数组件中使用多个 Context 对象，你需要多次调用 useContext 函数。每次调用 useContext 函数时，你需要传递一个不同的 Context 对象作为参数。
+
+```js
+import React, { useContext } from "react";
+import { ThemeContext } from "./theme-context";
+function ThemeTogglerButton() {
+  const { theme, toggleTheme } = useContext(ThemeContext);
+  return (
+    <button
+      onClick={toggleTheme}
+      style={{ backgroundColor: theme.background, color: theme.foreground }}
+    >
+      Toggle Theme
+    </button>
   );
 }
 ```
@@ -398,5 +405,4 @@ function MyComponent() {
 }
 ```
 
-
-最后更新时间：2024-4-30 09:49:40
+最后更新时间：2024-7-31 09:02:23
