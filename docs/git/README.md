@@ -68,7 +68,6 @@ git stash save "描述"
 git stash list
 // 还原储藏
 git stash apply stash@{0}
-
 // 创建ssh秘钥
 ssh-keygen -t rsa -C "youremail@example.com"
 // 默认秘钥地址 id_rsa.pub公钥 id_rsa私钥
@@ -78,6 +77,8 @@ git remote add origin git@github.com:michaelliao/learngit.git
 // (refusing to merge unrelated histories) 拒绝合并不相关的历史
 // 解决办法：
 git pull origin master --allow-unrelated-histories
+// 取消冲突合并
+git merge --abort
 ```
 
 #### 分支管理
@@ -130,4 +131,4 @@ git add .
 git commit -m 'update .gitignore'
 ```
 
-最后更新时间：2024-4-29 14:28:52
+最后更新时间：2024-8-22 14:11:15
