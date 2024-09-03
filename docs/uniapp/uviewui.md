@@ -2,12 +2,12 @@
  * @Description:
  * @Author: prui
  * @Date: 2023-11-28 09:29:26
- * @LastEditTime: 2024-04-29 15:06:45
- * @LastEditors: prui
+ * @LastEditTime: 2024-09-03 14:32:28
+ * @LastEditors: panr99 1547177202@qq.com
  * 不忘初心,不负梦想
 -->
 
-## checkbox 传递参数(使用 event 对象)
+## checkbox 额外传递参数(使用 event 对象) (相似情况input标签)
 
 ```html
 <view class="list-item" v-for="(item, index) in itemList">
@@ -43,4 +43,4 @@ checkboxChange(event, index) {
 </u-modal>
 ```
 
-最后更新时间：2024-4-29 15:07:06
+最后更新时间：2024-9-3 14:30:22
