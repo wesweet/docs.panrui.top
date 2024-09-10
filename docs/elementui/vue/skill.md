@@ -2,8 +2,8 @@
  * @Description: elementui组件使用技巧
  * @Author: panrui
  * @Date: 2023-05-22 15:40:54
- * @LastEditTime: 2024-04-30 13:48:39
- * @LastEditors: prui
+ * @LastEditTime: 2024-09-10 13:30:59
+ * @LastEditors: panr99 1547177202@qq.com
  * 不忘初心,不负梦想
 -->
 
@@ -14,6 +14,25 @@
   height: 70%;
   overflow: auto;
 }
+```
+
+## Loading 组件 (实用*****)
+
+- Element 提供了两种调用 Loading 的方法：指令和服务。对于自定义指令v-loading，只需要绑定Boolean即可。默认状况下，Loading 遮罩会插入到绑定元素的子节点，通过添加body修饰符，可以使遮罩插入至 DOM 中的 body 上。
+
+- 通过指令的方法是
+```html
+<el-table
+    v-loading="loading"
+    :data="tableData"
+    style="width: 100%">
+  </el-table>
+```
+
+- 通过服务的方法
+```js
+import { Loading } from 'element-ui';
+Loading.service(options);
 ```
 
 ## MessageBox 组件
@@ -436,4 +455,4 @@ export default {
 ```
 
 
-最后更新时间：2024-4-30 13:48:45
+最后更新时间：2024-9-10 13:34:17
