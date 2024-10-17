@@ -108,6 +108,7 @@
   - [vxetable 文档](/vue/vxetable)
   - v2
     - [v2 基础文档](/vue/v2/base)
+    - [v2 组件使用文档](/vue/v2/components)
     - [v2 记录文档](/vue/v2/record)
     - [v2 技巧文档](/vue/v2/skill)
     - [vuex 文档](/vue/v2/vuex)
