@@ -1,11 +1,17 @@
 <!--
- * @Description:
- * @Author: prui
- * @Date: 2023-11-28 09:29:26
- * @LastEditTime: 2024-09-03 14:32:28
+ * @Author: panr99 1547177202@qq.com
+ * @Date: 2024-06-24 13:51:12
  * @LastEditors: panr99 1547177202@qq.com
- * 不忘初心,不负梦想
+ * @LastEditTime: 2024-10-25 16:04:43
+ * @FilePath: \docs.panrui.top\docs\uniapp\uviewui.md
+ * @Description: uview组件库使用记录
 -->
+
+## DatetimePicker选择器
+
+- mode设置成datetime时，通过时间戳设置组件默认选中时间，回显异常。
+
+- 出现问题的原因在于我v-model绑定的默认值时候设为0，最好设置一个时间
 
 ## checkbox 额外传递参数(使用 event 对象) (相似情况input标签)
 
@@ -43,4 +49,4 @@ checkboxChange(event, index) {
 </u-modal>
 ```
 
-最后更新时间：2024-9-3 14:30:22
+最后更新时间：2024-10-25 16:07:37
