@@ -2,18 +2,28 @@
  * @Author: panr99 1547177202@qq.com
  * @Date: 2024-06-24 13:51:12
  * @LastEditors: panr99 1547177202@qq.com
- * @LastEditTime: 2024-10-25 16:04:43
+ * @LastEditTime: 2024-10-28 09:06:35
  * @FilePath: \docs.panrui.top\docs\uniapp\uviewui.md
  * @Description: uview组件库使用记录
 -->
 
-## DatetimePicker选择器
+## picker
 
-- mode设置成datetime时，通过时间戳设置组件默认选中时间，回显异常。
+- picker 组件滚动其他选项，再次打开的时候还会停留在上一次选择的值上面
 
-- 出现问题的原因在于我v-model绑定的默认值时候设为0，最好设置一个时间
+```js
+// 通过这种方式可以保证每次点开的时候，默认显示的是当前选择的值
+const picker = this.$refs.picker;
+picker.setIndexs([index]);
+```
 
-## checkbox 额外传递参数(使用 event 对象) (相似情况input标签)
+## DatetimePicker 选择器
+
+- mode 设置成 datetime 时，通过时间戳设置组件默认选中时间，回显异常。
+
+- 出现问题的原因在于我 v-model 绑定的默认值时候设为 0，最好设置一个时间
+
+## checkbox 额外传递参数(使用 event 对象) (相似情况 input 标签)
 
 ```html
 <view class="list-item" v-for="(item, index) in itemList">
@@ -49,4 +59,4 @@ checkboxChange(event, index) {
 </u-modal>
 ```
 
-最后更新时间：2024-10-25 16:07:37
+最后更新时间：2024-10-28 09:06:27
