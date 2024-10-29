@@ -19,9 +19,20 @@ picker.setIndexs([index]);
 
 ## DatetimePicker 选择器
 
-- mode 设置成 datetime 时，通过时间戳设置组件默认选中时间，回显异常。
+- 修复时间插件回显异常 在插件外层嵌套一个标签，并使用 v-if 来控制显示隐藏，目的在于每次点开的时候，时间选择器都相当于重新创建，这样就不会保留上一次滚动的值
 
-- 出现问题的原因在于我 v-model 绑定的默认值时候设为 0，最好设置一个时间
+```html
+<view v-if="time.show">
+  <u-datetime-picker
+    :show="time.show"
+    v-model="time.value"
+    :mode="time.mode"
+    @close="time.show = false"
+    @confirm="selectTime"
+    @cancel="time.show = false"
+  ></u-datetime-picker>
+</view>
+```
 
 ## checkbox 额外传递参数(使用 event 对象) (相似情况 input 标签)
 
@@ -59,4 +70,4 @@ checkboxChange(event, index) {
 </u-modal>
 ```
 
-最后更新时间：2024-10-28 09:06:27
+最后更新时间：2024-10-29 09:36:51
