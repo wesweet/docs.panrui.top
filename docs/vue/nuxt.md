@@ -32,6 +32,25 @@ npm i -g create-nuxt-app
 
 #### 布局
 
+
+#### 数据获取
+
+- useFetch、useAsyncData 和 $fetch (内置函数和内置库)
+
+```
+1. useFetch  这个组合函数是 useAsyncData 组合函数和 $fetch 工具的封装。
+事实上，useFetch(url) 几乎等同于 useAsyncData(url, () => $fetch(url)) - 它是为最常见的用例提供的开发者体验糖
+```
+
+```
+2. $fetch 是ofetch工具库的全局别名
+```
+
+```
+3. useAsyncData
+```
+
+
 ## 使用
 
 - 通过<nuxt-link></nuxt-link>切换路由
