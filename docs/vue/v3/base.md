@@ -1,10 +1,10 @@
 <!--
- * @Description: vue3基础文档
- * @Author: prui
- * @Date: 2024-04-25 15:14:04
- * @LastEditTime: 2024-05-14 17:04:12
- * @LastEditors: prui
- * 不忘初心,不负梦想
+ * @Author: panr99 1547177202@qq.com
+ * @Date: 2024-06-24 13:51:12
+ * @LastEditors: panr99 1547177202@qq.com
+ * @LastEditTime: 2024-11-04 13:21:00
+ * @FilePath: \docs.panrui.top\docs\vue\v3\base.md
+ * @Description: Vue3基础文档
 -->
 
 ## 数据获取
@@ -320,5 +320,11 @@ const router = useRouter();
 console.log(router.currentRoute); // 这里面获取当前路由传递的参数
 ```
 
+
+
+#### 
+```
+ref、toRefs、defineProps、defineEmits、onUnmounted、@update:model-value 的使用
+```
 
 最后更新时间：2024-4-29 14:12:21
