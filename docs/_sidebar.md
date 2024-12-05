@@ -1,10 +1,10 @@
 <!--
- * @Description: 定制侧边栏
- * @Author: panrui
- * @Date: 2021-05-20 16:43:32
- * @LastEditTime: 2024-05-09 14:15:51
- * @LastEditors: prui
- * 不忘初心,不负梦想
+ * @Author: panrui 1547177202@qq.com
+ * @Date: 2024-04-06 10:48:31
+ * @LastEditors: panrui 1547177202@qq.com
+ * @LastEditTime: 2024-12-05 22:00:15
+ * @FilePath: \docs.panrui.top\docs\_sidebar.md
+ * @Description: 侧边栏
 -->
 
 - [首页](/README)
@@ -24,6 +24,8 @@
   - vue
     - [技巧文档](/elementui/vue/skill)
 - [git](/git/README)
+  - [基础文档](/git/base)
+  - [优秀的git仓库](/git/record)
 - [go](/go/README)
   - [基础文档](/go/base)
 - [h5](/h5/README)
