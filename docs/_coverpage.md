@@ -13,5 +13,5 @@
 <small>一个神奇的文档网站。</small>
 
 <!-- [GitHub](https://github.com/docsifyjs/docsify/) -->
-[初心不负](http://vue.panrui.top:8001)
+[初心不负](http://blog.panrui.top)
 [Get Started](/README)

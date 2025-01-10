@@ -9,6 +9,8 @@
 
 ## 实体创建
 
+- [中文文档](https://typeorm.bootcss.com/)
+
 #### PrimaryGeneratedColumn 使用
 
 ```ts
