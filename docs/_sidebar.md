@@ -2,7 +2,7 @@
  * @Author: panrui 1547177202@qq.com
  * @Date: 2024-04-06 10:48:31
  * @LastEditors: panrui 1547177202@qq.com
- * @LastEditTime: 2024-12-05 22:00:15
+ * @LastEditTime: 2024-12-08 19:00:34
  * @FilePath: \docs.panrui.top\docs\_sidebar.md
  * @Description: 侧边栏
 -->
@@ -31,7 +31,6 @@
 - [h5](/h5/README)
   - [基础文档](/h5/base)
   - [record 文档](/h5/record)
-  - [技巧文档](/h5/skill)
 - [hexo](/hexo/README)
   - [基础文档](/hexo/base)
   - [record 文档](/hexo/record)
@@ -128,3 +127,4 @@
   - [record 文档](/wx/record)
   - [技巧文档](/wx/skill)
 - [日志](/daylog)
+- [叮叮心理复盘](/source)
