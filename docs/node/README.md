@@ -2,12 +2,12 @@
  * @Description:
  * @Author: panrui
  * @Date: 2023-04-25 08:57:17
- * @LastEditTime: 2023-11-14 10:49:47
- * @LastEditors: panrui
+ * @LastEditTime: 2025-01-14 18:46:08
+ * @LastEditors: panrui 1547177202@qq.com
  * 不忘初心,不负梦想
 -->
 
-# Node 最后更新时间(2023-11-14)
+# Node
 
 - [Node 最新文档](https://nodejs.org/dist/latest-v16.x/docs/api/)
 - [Node 中文文档](https://www.nodeapp.cn/)
@@ -15,6 +15,9 @@
 ```js
 // 安装淘宝镜像
 npm install -g cnpm --registry=https://registry.npm.taobao.org
+
+安装腾讯镜像
+npm config set registry https://mirrors.cloud.tencent.com/npm/
 
 // 还原npm配置
 npm config set registry http://registry.npmjs.org
@@ -58,3 +61,6 @@ npm config set registry http://registry.npmjs.org
 ### 基础文档
 
 ### 记录文档
+
+
+最后更新时间： 2025-01-14 18:45:01
