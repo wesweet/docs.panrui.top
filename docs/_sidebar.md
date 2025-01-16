@@ -2,7 +2,7 @@
  * @Author: panrui 1547177202@qq.com
  * @Date: 2024-04-06 10:48:31
  * @LastEditors: panrui 1547177202@qq.com
- * @LastEditTime: 2024-12-08 19:00:34
+ * @LastEditTime: 2025-01-16 22:58:57
  * @FilePath: \docs.panrui.top\docs\_sidebar.md
  * @Description: 侧边栏
 -->
@@ -72,6 +72,7 @@
   - [download-git-repo 文档](/node/download-git-repo)
   - [ejs 文档](/node/ejs)
   - [express 文档](/node/express)
+  - [howler 文档](/node/howler)
   - [logger 文档](/node/logger)
   - [mysql 文档](/node/mysql)
   - [nodeMysql 文档](/node/nodeMysql)
