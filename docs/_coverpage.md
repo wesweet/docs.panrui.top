@@ -14,4 +14,4 @@
 
 <!-- [GitHub](https://github.com/docsifyjs/docsify/) -->
 [初心不负](http://blog.panrui.top)
-[Get Started](/README)
+[Get Started](/home)

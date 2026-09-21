@@ -7,7 +7,7 @@
  * @Description: 侧边栏
 -->
 
-- [首页](/README)
+- [首页](/home)
 - [指南](/guide)
 - [antd](/antd/README)
   - react
