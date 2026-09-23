@@ -96,6 +96,7 @@
   - [record 文档](/react/record)
 - [temu](/temu/README)
   - [产品文档](/temu/product)
+  - [场景提示词文档](/temu/scene‌)
 - [uniapp](/uniapp/README)
   - [基础文档](/uniapp/base)
   - [record 文档](/uniapp/record)
